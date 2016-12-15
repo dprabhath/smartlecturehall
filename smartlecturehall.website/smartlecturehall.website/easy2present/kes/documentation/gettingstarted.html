@@ -1,0 +1,1985 @@
+
+<!DOCTYPE html> 
+<html lang="en-US" class="static detail-documentation dir-ltr contents" dir="ltr"> 
+
+<!-- Mirrored from www.microsoft.com/cognitive-services/en-us/KES/documentation/gettingstarted by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Nov 2016 10:37:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Microsoft Cognitive Services - Documentation</title> 
+    <link data-timestamped="true" href="../../../Themes/ProjectOxford/Styles/github-markdown.min3cd0.css?v=636141902484842263" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../../../Themes/ProjectOxford/Bootstrap/css/bootstrap.min7c34.css?v=636141902423279305" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../../../Themes/ProjectOxford/Bootstrap/css/bootstrap-theme.min7c34.css?v=636141902423279305" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../../../Themes/ProjectOxford/Styles/site.minc7c8.css?v=636141902423462979" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../../../Themes/ProjectOxford/Styles/main-navigationc7c8.css?v=636141902423462979" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../../../Modules/GitContent/Styles/NavigationBar3cd0.css?v=636141902484842263" rel="stylesheet" type="text/css" />
+<script src="../../../Modules/Orchard.jQuery/scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script data-timestamped="true" src="../../../Modules/Orchard.jQuery/Scripts/jquery.cookie.minfb61.js?v=636141902424695845" type="text/javascript"></script>
+<script data-timestamped="true" src="../../../Themes/ProjectOxford/Bootstrap/js/bootstrap.min3832.js?v=636141902425175830" type="text/javascript"></script>
+<script data-timestamped="true" src="../../../Themes/ProjectOxford/Scripts/angular.minec96.js?v=636141902425310581" type="text/javascript"></script>
+<script data-timestamped="true" src="../../../Themes/ProjectOxford/Scripts/angular-contenteditableec96.js?v=636141902425310581" type="text/javascript"></script>
+<script data-timestamped="true" src="../../../Themes/ProjectOxford/Scripts/appec96.js?v=636141902425310581" type="text/javascript"></script>
+<script data-timestamped="true" src="../../../Themes/ProjectOxford/Scripts/siteec96.js?v=636141902425310581" type="text/javascript"></script>
+<script src="../../../Modules/Orchard.jQuery/scripts/ui/jquery-ui.min.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/cognitive-services/Core/Shapes/scripts/html5.js" type="text/javascript"></script>
+<![endif]-->
+<meta content="Orchard" name="generator" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="width=device-width" name="viewport" />
+<link href="https://www.microsoft.com/cognitive-services/modules/orchard.themes/Content/orchard.ico" rel="shortcut icon" type="image/x-icon" />
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('a[name^="user-content-"]').each(function (i, a) {
+                    $(this).prop('name', a.name.replace('user-content-', ''));
+                }); 
+            });
+        </script>
+
+    <script src="../../../../../cdn.optimizely.com/js/6213472562.js"></script>
+    <script>
+        var e = document.createElement("script");
+        e.async = true;
+        e.src = "https://ad.atdmt.com/m/a.js;m=11087206420460;cache=" + Math.random();
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(e, s);
+    </script>
+    <noscript>
+        <iframe style="display:none;"
+                src="https://ad.atdmt.com/m/a.html;m=11087206420460;noscript=1"></iframe>
+    </noscript>
+
+
+    <script>(function(d){d.className="dyn"+d.className.substring(6,d.className.length);})(document.documentElement);</script> 
+    <script>window.isRTL = false;</script>
+</head> 
+<body>
+
+    <link rel="stylesheet" href="../../../../../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+<div ng-app="projectOxfordApp">
+    <div id="layout-wrapper">
+        <header id="layout-header" role="banner" style="position:fixed;">
+            <div class="container">
+                <div class="zone zone-header"><!-- hero area -->
+<div id="branding">
+    <a id="microsoftLink" class="text--md" href="https://www.microsoft.com/"><img class="img-responsive" src="../../../Themes/ProjectOxford/Content/Images/microsoftLogo.png" alt="Microsoft Cognitive Services" /></a>
+    <a class="text--md" id="cognitiveservicelogo" href="https://www.microsoft.com/cognitive-services">Cognitive Services</a>
+</div>
+
+<article class="widget-UserLogin widget-header widget-user-login-form widget">
+    
+<div class="container">
+    <div id="loginWidget" class="login-profile nav navbar-nav navbar-right text--xs">
+            <div>
+                <a class="get-start-btn btn--yellow text--semilight" href="../../sign-up.html">Get started for free</a>
+                <a href="../../sign-up93d6.html" class="text-reg" onclick="ga('send','event','subscription','myaccount');">
+                    <span>
+                        My account
+                    </span>
+                    <img style="height:24px;vertical-align:middle;" src="../../../Modules/Microsoft.ProjectOxford.Website.Subscription/Images/Login/login.png" />
+                </a>
+            </div>
+    </div>
+</div>
+</article></div>
+            </div>
+        </header>
+            <div id="layout-navigation">
+            <div class="zone zone-navigation">
+<article class="widget-navigation widget-menu-widget widget">
+    
+<script type="text/javascript">
+    $(function () {
+        $('.navigation .sub-menuitem li a').each(function () {
+            if ($(this).attr('href').lastIndexOf('.') > 0) {
+                var urlDomain = $(this).attr('href').substring(0, $(this).attr('href').lastIndexOf('.')).toLowerCase();
+                if (urlDomain.indexOf('msdn') > 0) {
+                    $(this).attr("onclick", "ga('send', 'event', 'outbound', 'msdn', 'navbar')");
+                }
+                if (urlDomain.indexOf('stackoverflow') > 0) {
+                    $(this).attr("onclick", "ga('send', 'event', 'outbound', 'stackOverflow', 'navbar')");
+                }
+                if (urlDomain.indexOf('uservoice') > 0) {
+                    $(this).attr("onclick", "ga('send', 'event', 'outbound', 'userVoice', 'navbar')");
+                }
+            }
+        });
+
+    })
+</script>
+<div class="container main-navigation">
+
+    <nav class="col navbar navbar-default navbar-static-top" id="nav" role="navigation" aria-label="Main menu">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand visible-xs">
+                    <a href="https://www.microsoft.com/">
+                        <img class="brandImg" src="../../../Themes/ProjectOxford/Content/Images/microsoftLogo.png" alt="Microsoft">
+                    </a>
+                    <a href="https://www.microsoft.com/cognitive-services">
+                        <div class="brandTitle">Cognitive Services</div>
+                    </a>
+                </div>
+                <div id="newWidgetContainer" class="visible-xs">
+
+                </div>
+                <button type="button" id="brandBtn" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse @*hidden-xs*@" id="navbar-collapse-1" role="menubar">
+                <ul class="nav navbar-nav mobile-nav">
+                            <li aria-label="Home" class="mobile-nav-item dropdown-toggle" role="menuitem">
+                                
+                                                                            <a href="https://www.microsoft.com/cognitive-services" class="text--xs">Home</a>
+                            </li>
+                            <li aria-label="APIs" class="mobile-nav-item dropdown-toggle dropdown" role="menuitem">
+                                
+                                    <a id="topLinkAPIs" href="#" class="text--xs">APIs<span class="arrow1"></span></a>
+                                    <div class="dropdown-menu tier-1">
+                                        <div class="container-fluid navigation">
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Vision" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Vision
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Vision</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../computer-vision-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Computer Vision
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../content-moderator.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Content Moderator
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../emotion-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Emotion
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../face-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Face
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../video-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Video
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Speech" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Speech
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Speech</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../speech-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Speech
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../custom-recognition-intelligent-service-cris.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Custom Recognition
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../speaker-recognition-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Speaker Recognition
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Language" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Language
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Language</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../bing-spell-check-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Spell Check
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../language-understanding-intelligent-service-luis.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Language Understanding
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../linguistic-analysis-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Linguistic Analysis
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../text-analytics-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Text Analytics
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../translator-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Translator
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../web-language-model-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                WebLM
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Knowledge" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Knowledge
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Knowledge</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../academic-knowledge-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Academic
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../entity-linking-intelligence-service.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Entity Linking
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../knowledge-exploration-service.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Knowledge Exploration
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../recommendations-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Recommendations
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Search" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Search
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Search</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../bing-autosuggest-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Autosuggest
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../bing-image-search-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Image Search
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../bing-news-search-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing News Search
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../bing-video-search-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Video Search
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../bing-web-search-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Web Search
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                            <div class="container-fluid row" id="nav-bar-footer">
+                                                <div class="container" style="margin-bottom:10px;border-top-style:solid;border-top-width:1px;border-top-color:#505050;text-align:right;">
+                                                    <h3 id="hideWhenMobil" class="text--reg text--black text--xs hidden-xs" style="display:inline-block">
+                                                        Still looking for the right API?
+                                                    </h3>
+                                                    <a class="text--xs text--reg text--darkteal" style="margin-left:20px;" href="../../apis.html">
+                                                        See the entire collection >
+                                                    </a>
+                                                </div>
+                                            </div>
+                                    </div>
+                            </li>
+                            <li aria-label="Applications" class="mobile-nav-item dropdown-toggle" role="menuitem">
+                                
+                                                                            <a href="../../applications.html" class="text--xs">Applications</a>
+                            </li>
+                            <li aria-label="Developers" class="mobile-nav-item dropdown-toggle dropdown" role="menuitem">
+                                
+                                    <a id="topLinkDevelopers" href="#" class="text--xs">Developers<span class="arrow1"></span></a>
+                                    <div class="dropdown-menu tier-1">
+                                        <div class="container-fluid navigation">
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Resources" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Resources
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Resources</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../documentation.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Documentation
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="../../SDK-Sample.html"  class="text--reg text--xs text--darkteal ">
+                                                                                SDKs &amp; Samples
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Community" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Community
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Community</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="https://stackoverflow.com/questions/tagged/microsoft-cognitive" target=&quot;_blank&quot; class="text--reg text--xs text--darkteal upgrade--img">
+                                                                                Stack Overflow
+                                                                                    <div class="darkreal"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="https://cognitive.uservoice.com/" target=&quot;_blank&quot; class="text--reg text--xs text--darkteal upgrade--img">
+                                                                                UserVoice
+                                                                                    <div class="darkreal"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                    </div>
+                            </li>
+                            <li aria-label="Pricing" class="mobile-nav-item dropdown-toggle" role="menuitem">
+                                
+                                                                            <a href="../../pricing.html" class="text--xs">Pricing</a>
+                            </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>
+</article></div>
+        </div>
+        <div id="layout-main-container" role="main">
+        <div id="layout-main">
+            <div id="layout-content">
+                    <div class="clearfix">
+                        <div class="zone zone-before-content">
+<article class="widget-before-content widget-html-widget widget">
+    <div class="mini-hero-banner-container row document-widget" style="background-image: url('../../../../../portalstoragewu.blob.core.windows.net/media/Default/Media/Hero%20Images/Documentation.jpg');">
+<div class="hero-banner__content-container container">
+<div class="mini-hero-banner__content col-xs-12 col-md-9">
+<h1 class="text--light text--xlg text--white">Documentation</h1>
+</div>
+</div>
+</div>
+</article></div>
+                    </div>
+                                    <div id="content" style="padding-top:30px;">
+                        <div class="container">
+                            <div class="row">
+                                <div id="left-panel" class="col-md-3">
+                                    <div class="zone zone-left-panel">
+<article class="widget-left-panel widget-menu-widget widget">
+    
+
+
+<script>
+    var collapsed = true;
+
+    var navOldWidth = 0;
+
+    var currentWidth = window.innerWidth;
+
+    function SetCurrentText() {
+        $("#CurrentText").text("Microsoft Cognitive Services");
+    }
+
+    function SetContentShowOrHide() {
+        //reset nav state
+        collapsed = true;
+
+        if (window.innerWidth <= 768) {
+            $("#menu-content").hide();
+            $("#menu-content").width($("#mobilNav").width());
+            $("#menu-content nav").width($("#mobilNav").width());
+        }
+        else {
+            $("#menu-content").show();
+            $("#menu-content").width(navOldWidth);
+            $("#menu-content nav").width(navOldWidth);
+        }
+    }
+
+    $(document).ready(function () {
+
+        navOldWidth = $("#home-nav-blade").width();
+
+        SetContentShowOrHide();
+
+        SetCurrentText();
+
+        $('[data-toggle=offcanvas]').click(function () {
+            $('.row-offcanvas').toggleClass('active');
+        });
+
+        $("#mobilNav").click(function (e) {
+            e.preventDefault();
+            if (collapsed) {
+                $("#menu-content").slideDown();
+                $("#menu-content").css("display", "block !important");
+                $(".clearfix.col-md-9").slideUp();
+                $(".topMenu").addClass("collapsed");
+            } else {
+                $("#menu-content").slideUp();
+                $("#menu-content").css("display", "block !important");
+                $(".clearfix.col-md-9").slideDown();
+                $(".topMenu").removeClass("collapsed");
+            }
+            collapsed = !collapsed;
+        });
+
+        $(window).resize(function () {
+            if (window.innerWidth != currentWidth) {
+                SetContentShowOrHide();
+            }
+        });
+    });
+
+
+</script>
+
+
+
+<div id="docNavMenu" class="container-fluid" style="background:#ffffff !important;">
+    <div id="mobilNav" class="visible-sm visible-xs">
+        <div class="active-submenu topMenu">
+            <span id="CurrentText"> </span>
+            <span class="arrow"></span>
+        </div>
+    </div>
+    <span id="toggleLeftPanelContainer" style="display:none; float: left"><span id="toggleLeftPanel" class="glyphicon"></span></span>
+    <div id="menu-content">
+        <nav class="nav-blade gray-d3-bgc" id="home-nav-blade">
+            <ul class="home-nav-list nav-list">
+                        <li>
+            <a class="text--sm text--black  text--bold" href="../../documentation.html"  >Microsoft Cognitive Services</a>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item2" data-toggle="collapse">
+                Academic Knowledge API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item2">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Academic-Knowledge-API/documentation/overview-2.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Academic-Knowledge-API/documentation/InterpretMethod.html"  >Interpret Method</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Academic-Knowledge-API/documentation/EvaluateMethod.html"  >Evaluate Method</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Academic-Knowledge-API/documentation/CalcHistogramMethod.html"  >CalcHistogram Method</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Academic-Knowledge-API/documentation/QueryExpressionSyntax.html"  >Query Expression Syntax</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Academic-Knowledge-API/documentation/EntityAttributes.html"  >Entity Attributes</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://dev.projectoxford.ai/docs/services/56332331778daf02acc0a50b" onclick = &quot;trackOutboundLink(&#39;https://dev.projectoxford.ai/docs/services/56332331778daf02acc0a50b&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item10" data-toggle="collapse">
+                Bing Autosuggest API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item10">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Bing-autosuggest-API/documentation-2.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://dev.cognitive.microsoft.com/docs/services/56c7694ecf5ff801a090fbd1/operations/56c769a2cf5ff801a090fbd2" onclick = &quot;trackOutboundLink(&#39;https://dev.cognitive.microsoft.com/docs/services/56c7694ecf5ff801a090fbd1/operations/56c769a2cf5ff801a090fbd2&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item13" data-toggle="collapse">
+                Bing Image Search API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item13">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Bing-image-search-API/documentation-2.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://dev.cognitive.microsoft.com/docs/services/56b43f0ccf5ff8098cef3808" onclick = &quot;trackOutboundLink(&#39;https://dev.cognitive.microsoft.com/docs/services/56b43f0ccf5ff8098cef3808&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item16" data-toggle="collapse">
+                Bing News Search API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item16">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Bing-news-search-API/documentation-2.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://dev.cognitive.microsoft.com/docs/services/56b43f72cf5ff8098cef380a" onclick = &quot;trackOutboundLink(&#39;https://dev.cognitive.microsoft.com/docs/services/56b43f72cf5ff8098cef380a&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item19" data-toggle="collapse">
+                Bing Speech API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item19">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Speech-api/documentation/overview-2.html"  >Overview</a>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--reg" data-target="#item21" data-toggle="collapse">
+                Speech Recognition
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item21">
+                        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--reg" data-target="#item22" data-toggle="collapse">
+                REST API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item22">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Speech-api/documentation/API-Reference-REST/BingVoiceRecognition.html"  >API Reference</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Speech-api/documentation/GetStarted/GetStarted-cURL.html"  >Get started in cURL</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Speech-api/documentation/GetStarted/GetStartedJS.html"  >Get started in JavaScript</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--reg" data-target="#item26" data-toggle="collapse">
+                Client Library
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item26">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Speech-api/documentation/GetStarted/GetStartedCSharpDesktop.html"  >Get started in C#</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Speech-api/documentation/GetStarted/GetStartedJavaAndroid.html"  >Get started with Android</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Speech-api/documentation/GetStarted/Get-Started-ObjectiveC-iOS.html"  >Get started with iOS</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--reg" data-target="#item30" data-toggle="collapse">
+                Windows API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item30">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Speech-api/documentation/GetStarted/GetStartedCSharpWin10.html"  >Get started with Windows 10 Universal App</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Speech-api/documentation/GetStarted/GetStartedCSharpWinPhone.html"  >Get started with Windows Phone</a>
+        </li>
+
+            </ul>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--reg" data-target="#item33" data-toggle="collapse">
+                Text To Speech
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item33">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Speech-api/documentation/API-Reference-REST/BingVoiceOutput.html"  >API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item35" data-toggle="collapse">
+                Bing Spell Check API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item35">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Bing-Spell-check-API/documentation-2.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679" onclick = &quot;trackOutboundLink(&#39;https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item38" data-toggle="collapse">
+                Bing Video Search API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item38">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Bing-video-search-API/documentation-2.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://dev.cognitive.microsoft.com/docs/services/56b43f3ccf5ff8098cef3809" onclick = &quot;trackOutboundLink(&#39;https://dev.cognitive.microsoft.com/docs/services/56b43f3ccf5ff8098cef3809&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item41" data-toggle="collapse">
+                Bing Web Search API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item41">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../bing-web-search-api/documentation.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://dev.cognitive.microsoft.com/docs/services/56b43eeccf5ff8098cef3807" onclick = &quot;trackOutboundLink(&#39;https://dev.cognitive.microsoft.com/docs/services/56b43eeccf5ff8098cef3807&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item44" data-toggle="collapse">
+                Computer Vision API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item44">
+                        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--reg" data-target="#item45" data-toggle="collapse">
+                How-to Topics
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item45">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Computer-Vision-API/documentation/vision-api-how-to-topics/HowToCallVisionAPI.html"  >How to call Computer Vision API</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Computer-Vision-API/documentation/vision-api-how-to-topics/HowtoAnazlyzeVideo_Vision-2.html"  >How to Analyze Videos in Real-time</a>
+        </li>
+
+            </ul>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Computer-Vision-API/documentation-2.html"  >Overview</a>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--reg" data-target="#item49" data-toggle="collapse">
+                Get Started with Vision API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item49">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Computer-Vision-API/documentation/GetStarted/GetStartedVisionAPIforWindows.html"  >Get Started in C#</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Computer-Vision-api/documentation/GetStarted/GetStartedWithPython.html"  >Get Started in Python</a>
+        </li>
+
+            </ul>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Computer-Vision-API/documentation/AnalyzeImage.html"  >Analyze Image</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Computer-Vision-API/documentation/Images/86categories.html"  >Categories</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Computer-Vision-API/documentation/TaggingImages.html"  >Tag Image</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Computer-Vision-API/documentation/DescribingImages.html"  >Describe Image</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Computer-Vision-API/documentation/Domain-specificModels.html"  >Develop with Domain-specific Models</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Computer-Vision-API/documentation/OCR.html"  >OCR</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Computer-Vision-API/documentation/GetThumbnail.html"  >Get Thumbnail</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739" onclick = &quot;trackOutboundLink(&#39;https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item60" data-toggle="collapse">
+                Content Moderator
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item60">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Content-Moderator/documentation-2.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../content-moderator/documentation/quickstart.html"  >Quick Start</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../content-moderator/documentation/review-api.html"  >Review API</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../content-moderator/documentation/image-moderation-api.html"  >Image Moderation API</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../content-moderator/documentation/text-moderation-api.html"  >Text Moderation API</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../content-moderator/documentation/video-moderation-api.html"  >Video Moderation API</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../content-moderator/documentation/sdk-samples.html"  >SDKs and Samples</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../content-moderator/documentation/api-reference.html"  >API Reference</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../content-moderator/documentation/faq.html"  >FAQ</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item70" data-toggle="collapse">
+                Emotion API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item70">
+                        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--reg" data-target="#item71" data-toggle="collapse">
+                How-to Topics
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item71">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Emotion-api/documentation/emotion-api-how-to-topics/HowtoCallEmotionForVideo.html"  >How to Call Emotion API for Video</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Emotion-api/documentation/emotion-api-how-to-topics/HowtoAnazlyzeVideo_Emotion-2.html"  >How to Analyze Videos in Real-time</a>
+        </li>
+
+            </ul>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Emotion-api/documentation-2.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Emotion-api/documentation/GetStarted.html"  >Get Started in C#</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Emotion-api/documentation/GetStartedWithPython.html"  >Get Started in Python</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89" onclick = &quot;trackOutboundLink(&#39;https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item78" data-toggle="collapse">
+                Entity Linking API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item78">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="https://dev.projectoxford.ai/docs/services/56f0eabfca730713cc392442" onclick = &quot;trackOutboundLink(&#39;https://dev.projectoxford.ai/docs/services/56f0eabfca730713cc392442&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../EntityLinking-API/documentation/overview-2.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../entitylinking-api/documentation/GettingStarted.html"  >Get Started in C#</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item82" data-toggle="collapse">
+                Face API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item82">
+                        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--reg" data-target="#item83" data-toggle="collapse">
+                Getting Started
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item83">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../face-api/documentation/get-started-with-face-api/GettingStartedwithFaceAPIinPython.html"  >Get Started in Python</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../face-api/documentation/get-started-with-face-api/GettingStartedwithFaceAPIinCSharp.html"  >Get Started in C#</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../face-api/documentation/get-started-with-face-api/GettingStartedwithFaceAPIinJavaforAndroid.html"  >Get Started With Android</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--reg" data-target="#item87" data-toggle="collapse">
+                How-to Topics
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item87">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../face-api/documentation/face-api-how-to-topics/HowtoDetectFacesinImage.html"  >How to Detect Faces in Image</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../face-api/documentation/face-api-how-to-topics/howtoidentifyfacesinimage.html"  >How to Identify Faces in Image</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../face-api/documentation/face-api-how-to-topics/HowtoAnalyzeVideo_Face.html"  >How to Analyze Videos in Real-time</a>
+        </li>
+
+            </ul>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../face-api/documentation/overview.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d" onclick = &quot;trackOutboundLink(&#39;https://dev.projectoxford.ai/docs/services/563879b61984550e40cbbe8d&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../face-api/documentation/glossary.html"  >Glossary</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu  text--bold" data-target="#item94" data-toggle="collapse">
+                Knowledge Exploration Service
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse in" id="item94">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="overview-2.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black active text--reg" href="gettingstarted.html"  >Getting Started</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="commandline.html"  >Command Line Interface</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="schemaformat.html"  >Schema Format</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="dataformat.html"  >Data Format</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="grammarformat.html"  >Grammar Format</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="semanticinterpretation.html"  >Semantic Interpretation</a>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--reg" data-target="#item102" data-toggle="collapse">
+                Web API Interface
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item102">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="webapi.html"  >Web API Interface Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="interpretmethod.html"  >interpret Method</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="evaluatemethod.html"  >evaluate Method</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="calchistogrammethod.html"  >calchistogram Method</a>
+        </li>
+
+            </ul>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="expressions.html"  >Structured Query Expression</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item108" data-toggle="collapse">
+                Linguistic Analysis API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item108">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Linguistic-Analysis-API/documentation/overview-2.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Linguistic-Analysis-API/documentation/Analyzer-Names.html"  >Analyzer Names</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Linguistic-Analysis-API/documentation/Constituency-Parsing.html"  >Constituency Parsing</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Linguistic-Analysis-API/documentation/POS-tagging.html"  >Part-of-Speech Tagging</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Linguistic-Analysis-API/documentation/Sentences-and-Tokens.html"  >Sentences and Tokens</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Linguistic-Analysis-API/documentation/AnalyzeMethod.html"  >Analyze Method</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Linguistic-Analysis-API/documentation/AnalyzersMethod.html"  >Analyzers Method</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Linguistic-Analysis-API/documentation/APIReference.html"  >API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item117" data-toggle="collapse">
+                LUIS API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item117">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../LUIS-api/documentation/home-2.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../LUIS-api/documentation/GetStartedWithLUIS-Basics.html"  >Get Started With LUIS-Basics</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../LUIS-api/documentation/GetStartedWithLUIS-Advanced.html"  >Get Started With LUIS-Advanced</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../LUIS-api/documentation/Pre-builtEntities.html"  >Pre-built Entities</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../LUIS-api/documentation/Pre-builtApplication.html"  >Pre-built Application</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../LUIS-api/documentation/ActiveLearning.html"  >Active Learning</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../LUIS-api/documentation/AzureIbizaSubscription.html"  >Azure Ibiza Subscription</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../LUIS-api/documentation/ImprovingPerformance.html"  >Improving Performance</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../LUIS-api/documentation/Channels-2.html"  >Channels</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../LUIS-api/documentation/ImportingAndExporting.html"  >Importing and Exporting</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../LUIS-api/documentation/PublishingToABot.html"  >Publishing to a Bot</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item129" data-toggle="collapse">
+                Recommendations
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item129">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../Recommendations/documentation-2.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://azure.microsoft.com/en-us/documentation/articles/cognitive-services-recommendations-quick-start" onclick = &quot;trackOutboundLink(&#39;https://azure.microsoft.com/en-us/documentation/articles/cognitive-services-recommendations-quick-start&#39;)&quot; target=&quot;_blank&quot;>Getting Started</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://azure.microsoft.com/en-us/documentation/articles/cognitive-services-recommendations-buildtypes" onclick = &quot;trackOutboundLink(&#39;https://azure.microsoft.com/en-us/documentation/articles/cognitive-services-recommendations-buildtypes&#39;)&quot; target=&quot;_blank&quot;>Build Types and Model Quality</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://azure.microsoft.com/en-us/documentation/articles/cognitive-services-recommendations-collecting-data" onclick = &quot;trackOutboundLink(&#39;https://azure.microsoft.com/en-us/documentation/articles/cognitive-services-recommendations-collecting-data&#39;)&quot; target=&quot;_blank&quot;>Collecting Data to Train your Model</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://westus.dev.cognitive.microsoft.com/docs/services/Recommendations.V4.0" onclick = &quot;trackOutboundLink(&#39;https://westus.dev.cognitive.microsoft.com/docs/services/Recommendations.V4.0&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item135" data-toggle="collapse">
+                Speaker Recognition API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item135">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../speaker-recognition-api/documentation.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://dev.projectoxford.ai/docs/services/563309b6778daf02acc0a508" onclick = &quot;trackOutboundLink(&#39;https://dev.projectoxford.ai/docs/services/563309b6778daf02acc0a508&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item138" data-toggle="collapse">
+                Text Analytics
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item138">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../text-analytics/documentation.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://azure.microsoft.com/en-us/documentation/articles/cognitive-services-text-analytics-quick-start/" onclick = &quot;trackOutboundLink(&#39;https://azure.microsoft.com/en-us/documentation/articles/cognitive-services-text-analytics-quick-start/&#39;)&quot; target=&quot;_blank&quot;>Getting Started</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://westus.dev.cognitive.microsoft.com/docs/services/TextAnalytics.V2.0/operations/56f30ceeeda5650db055a3c7" onclick = &quot;trackOutboundLink(&#39;https://westus.dev.cognitive.microsoft.com/docs/services/TextAnalytics.V2.0/operations/56f30ceeeda5650db055a3c7&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item142" data-toggle="collapse">
+                Translator API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item142">
+                        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--reg" data-target="#item143" data-toggle="collapse">
+                Web Widget
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item143">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../translator-api/documentation/widget/GettingStartedWithTheTranslatorWebWidget.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../translator-api/documentation/widget/AddingTheWidgetToYourPage.html"  >Add Web Widget To Your Page</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../translator-api/documentation/widget/CusomizingTheWebWidget.html"  >Customizing the Web Widget</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../translator-api/documentation/widget/TheTranslatorWebWidgetAPI.html"  >Web Widget API</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--reg" data-target="#item148" data-toggle="collapse">
+                Speech Translation API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item148">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../translator-api/documentation/speech/overview.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="http://docs.microsofttranslator.com/speech-translate.html" onclick = &quot;trackOutboundLink(&#39;http://docs.microsofttranslator.com/speech-translate.html&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--reg" data-target="#item151" data-toggle="collapse">
+                Text Translation API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item151">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../translator-api/documentation/Text/overview.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="http://docs.microsofttranslator.com/text-translate.html" onclick = &quot;trackOutboundLink(&#39;http://docs.microsofttranslator.com/text-translate.html&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../translator-api/documentation/TranslatorInfo/overview.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../translator-api/documentation/languages/languages.html"  >Languages</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../translator-api/documentation/TranslatorHub/overview.html"  >Hub</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../translator-api/documentation/CTF/ReportingAPI.html"  >CTF</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item158" data-toggle="collapse">
+                Video API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item158">
+                        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--reg" data-target="#item159" data-toggle="collapse">
+                How To
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item159">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../video-api/documentation/How-To/HowtoCallVideoAPIs.html"  >How to Call Video APIs</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../video-api/documentation/How-To/HowtoAnalyzeVideo_Video.html"  >How to Analyze Videos in Real-time</a>
+        </li>
+
+            </ul>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Video-api/documentation/Home-2.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Video-api/documentation/GetStarted.html"  >Get Started in C#</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="../../Video-api/documentation/Glossary.html"  >Glossary</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://dev.projectoxford.ai/docs/services/565d6516778daf15800928d5" onclick = &quot;trackOutboundLink(&#39;https://dev.projectoxford.ai/docs/services/565d6516778daf15800928d5&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a class="text--sm text--black active-submenu collapsed text--bold" data-target="#item166" data-toggle="collapse">
+                Web Language Model API
+                <span class="arrow"></span>
+            </a>
+            <ul class="collapse" id="item166">
+                        <li>
+            <a class="text--sm text--black  text--reg" href="../../web-language-model-api/documentation.html"  >Overview</a>
+        </li>
+        <li>
+            <a class="text--sm text--black  text--reg" href="https://dev.projectoxford.ai/docs/services/55de9ca4e597ed1fd4e2f104" onclick = &quot;trackOutboundLink(&#39;https://dev.projectoxford.ai/docs/services/55de9ca4e597ed1fd4e2f104&#39;)&quot; target=&quot;_blank&quot;>API Reference</a>
+        </li>
+
+            </ul>
+        </li>
+
+            </ul>
+        </nav>
+    </div>
+</div>
+
+</article></div>
+                                </div>
+                                <div class="clearfix col-md-9">
+                                    <div class="zone zone-content">
+
+
+<style> 
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        margin: 0 auto;
+    } 
+</style>
+
+<article class="markdown-body">
+    <div class="container-fluid">
+        <div class="row">
+            
+
+<p><a name="user-content-getting-started"></a></p>
+
+<h1>
+<a id="user-content-getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h1>
+
+<p>In this walkthrough, we will use the Knowledge Exploration Service (KES) to create the backend engine for an interactive search experience over academic publications.  The command line tool <a href="CommandLine-3.html"><code>kes.exe</code></a> and all example files can be installed from the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=51488">Knowledge Exploration Service SDK</a>.</p>
+
+<p>The academic publications example contains a sample of 1000 academic papers published by researchers at Microsoft.  Each paper is associated with a title, publication year, authors, and keywords.  Each author is represented by an ID, name, and affiliation at the time of publication.  Each keyword may be associated with a set of synonyms (ex. <em>support vector machine</em> → <em>svm</em>).</p>
+
+<p>We will walk through the following steps to create a KES cloud service for the academic domain:</p>
+
+<ol>
+<li><a href="#defining-schema">Defining schema</a></li>
+<li><a href="#generating-data">Generating data</a></li>
+<li><a href="#building-index">Building index</a></li>
+<li><a href="#authoring-grammar">Authoring grammar</a></li>
+<li><a href="#compiling-grammar">Compiling grammar</a></li>
+<li><a href="#hosting-service">Hosting service</a></li>
+<li><a href="#scaling-up">Scaling up</a></li>
+<li><a href="#deploying-service">Deploying service</a></li>
+<li><a href="#testing-service">Testing service</a></li>
+</ol>
+
+<p><a name="user-content-defining-schema"></a></p>
+
+<h2>
+<a id="user-content-defining-schema" class="anchor" href="#defining-schema" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Defining schema</h2>
+
+<p>The schema describes the attribute structure of the objects in our domain.  It specifies the name and data type for each attribute in a JSON file format.  Below is the content of the file <em>Academic.schema</em> that we use in this example:</p>
+
+<div class="highlight highlight-source-json"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>attributes<span class="pl-pds">"</span></span>:[
+    {<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Title<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>String<span class="pl-pds">"</span></span>},
+    {<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Year<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Int32<span class="pl-pds">"</span></span>},
+    {<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Author<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Composite<span class="pl-pds">"</span></span>},
+    {<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Author.Id<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Int64<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>operations<span class="pl-pds">"</span></span>:[<span class="pl-s"><span class="pl-pds">"</span>equals<span class="pl-pds">"</span></span>]},
+    {<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Author.Name<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>String<span class="pl-pds">"</span></span>},
+    {<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Author.Affiliation<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>String<span class="pl-pds">"</span></span>},
+    {<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Keyword<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>String<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>synonyms<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Keyword.syn<span class="pl-pds">"</span></span>}
+  ]
+}</pre></div>
+
+<p>Here, we define <em>Title</em>, <em>Year</em>, and <em>Keyword</em> as a string, integer, and string attribute, respectively.  Since authors are represented by their ID, name, and affiliation, we define <em>Author</em> as a Composite attribute with 3 sub-attributes: <em>Author.Id</em>, <em>Author.Name</em>, and <em>Author.Affiliation</em>.</p>
+
+<p>By default, attributes support all operations available for their data type, including <em>equals</em>, <em>starts_with</em>, <em>is_between</em>, etc.  Since author ID is only used internally as an identifier, we override the default and specify <em>equals</em> as the only indexed operation.</p>
+
+<p>For the <em>Keyword</em> attribute, we allow synonyms to match the canonical keyword values by specifying the synonym file <em>Keyword.syn</em> in the attribute definition.  This file contains a list of canonical and synonym value pairs:</p>
+
+<div class="highlight highlight-source-json"><pre>...
+[<span class="pl-s"><span class="pl-pds">"</span>support vector machine<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>support vector machines<span class="pl-pds">"</span></span>]
+[<span class="pl-s"><span class="pl-pds">"</span>support vector machine<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>support vector networks<span class="pl-pds">"</span></span>]
+[<span class="pl-s"><span class="pl-pds">"</span>support vector machine<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>support vector regression<span class="pl-pds">"</span></span>]
+[<span class="pl-s"><span class="pl-pds">"</span>support vector machine<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>support vector<span class="pl-pds">"</span></span>]
+[<span class="pl-s"><span class="pl-pds">"</span>support vector machine<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>svm machine learning<span class="pl-pds">"</span></span>]
+[<span class="pl-s"><span class="pl-pds">"</span>support vector machine<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>svm<span class="pl-pds">"</span></span>]
+[<span class="pl-s"><span class="pl-pds">"</span>support vector machine<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>svms<span class="pl-pds">"</span></span>]
+[<span class="pl-s"><span class="pl-pds">"</span>support vector machine<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>vector machine<span class="pl-pds">"</span></span>]
+...</pre></div>
+
+<p>See <a href="SchemaFormat-3.html">Schema Format</a> for additional information about the schema definition.</p>
+
+<p><a name="user-content-generating-data"></a></p>
+
+<h2>
+<a id="user-content-generating-data" class="anchor" href="#generating-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Generating data</h2>
+
+<p>The data file describes the list of the publications to index, with each line specifying the attribute values of a paper in <a href="http://json.org/">JSON format</a>.  Below is a single line from the data file <em>Academic.data</em>, formatted for readability:</p>
+
+<pre><code>...
+{
+    "logprob": -16.714,
+    "Title": "the world wide telescope",
+    "Year": 2001,
+    "Author": [
+        {
+            "Id": 717694024,
+            "Name": "alexander s szalay",
+            "Affiliation": "microsoft"
+        },
+        {
+            "Id": 2131537204,
+            "Name": "jim gray",
+            "Affiliation": "microsoft"
+        }
+    ]
+}
+...
+</code></pre>
+
+<p>In this snippet, we specify the <em>Title</em> and <em>Year</em> attribute of the paper as a JSON string and number, respectively.  Multiple values are represented using JSON arrays.  Since "Author" is a composite attribute, each value is represented using a JSON object consisting of its sub-attributes.  Attributes with missing values, such as "Keyword" in this case, can be excluded from the JSON representation.</p>
+
+<p>To differentiate the likelihood of different papers, we specify the relative log probability using the built-in "logprob" attribute.  Given a probability <em>p</em> between 0 and 1, we compute the log probability as log(<em>p</em>), where log() is the natural log function.</p>
+
+<p>See <a href="DataFormat-3.html">Data Format</a> for additional information about the data format.</p>
+
+<p><a name="user-content-building-index"></a></p>
+
+<h2>
+<a id="user-content-building-index" class="anchor" href="#building-index" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Building index</h2>
+
+<p>Once we have a schema file and data file, we can build a compressed binary index of the data objects using <a href="CommandLine-3.html#build_index-command"><code>kes.exe build_index</code></a>.  In this example, we build the index file <em>Academic.index</em> from the input schema file <em>Academic.schema</em> and data file <em>Academic.data</em> using the following command:</p>
+
+<p><code>kes.exe build_index Academic.schema Academic.data Academic.index</code></p>
+
+<p>For rapid prototyping outside of Azure, <a href="CommandLine-3.html#build_index-command"><code>kes.exe build_index</code></a> can build small indices locally from data files containing up to 10,000 objects.  For larger data files, we can either run the command from within a <a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-tutorial/">Windows VM in Azure</a>, or perform a remote build in Azure.  See <a href="#scaling-up">Scaling up</a> for details.</p>
+
+<p><a name="user-content-authoring-grammar"></a></p>
+
+<h2>
+<a id="user-content-authoring-grammar" class="anchor" href="#authoring-grammar" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authoring grammar</h2>
+
+<p>The grammar specifies the set of natural language queries that the service can interpret, as well as how these natural language queries are translated into semantic query expressions.  In this example, we use the grammar specified in <em>academic.xml</em>:</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">grammar</span> <span class="pl-e">root</span>=<span class="pl-s"><span class="pl-pds">"</span>GetPapers<span class="pl-pds">"</span></span>&gt;
+
+  <span class="pl-c">&lt;!-- Import academic data schema--&gt;</span>
+  &lt;<span class="pl-ent">import</span> <span class="pl-e">schema</span>=<span class="pl-s"><span class="pl-pds">"</span>academic.schema<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>academic<span class="pl-pds">"</span></span>/&gt;
+
+  <span class="pl-c">&lt;!-- Define root rule--&gt;</span>
+  &lt;<span class="pl-ent">rule</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>GetPapers<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">example</span>&gt;papers about machine learning by michael jordan&lt;/<span class="pl-ent">example</span>&gt;
+
+    papers
+    &lt;<span class="pl-ent">tag</span>&gt;
+      yearOnce = false;
+      isBeyondEndOfQuery = false;
+      query = All();
+    &lt;/<span class="pl-ent">tag</span>&gt;
+
+    &lt;<span class="pl-ent">item</span> <span class="pl-e">repeat</span>=<span class="pl-s"><span class="pl-pds">"</span>1-<span class="pl-pds">"</span></span> <span class="pl-e">repeat-logprob</span>=<span class="pl-s"><span class="pl-pds">"</span>-10<span class="pl-pds">"</span></span>&gt;
+      <span class="pl-c">&lt;!-- Do not complete additional attributes beyond end of query --&gt;</span>
+      &lt;<span class="pl-ent">tag</span>&gt;AssertEquals(isBeyondEndOfQuery, false);&lt;/<span class="pl-ent">tag</span>&gt;
+
+      &lt;<span class="pl-ent">one-of</span>&gt;
+        <span class="pl-c">&lt;!-- about &lt;keyword&gt; --&gt;</span>
+        &lt;<span class="pl-ent">item</span> <span class="pl-e">logprob</span>=<span class="pl-s"><span class="pl-pds">"</span>-0.5<span class="pl-pds">"</span></span>&gt;
+          about &lt;<span class="pl-ent">attrref</span> <span class="pl-e">uri</span>=<span class="pl-s"><span class="pl-pds">"</span>academic#Keyword<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>keyword<span class="pl-pds">"</span></span>/&gt;
+          &lt;<span class="pl-ent">tag</span>&gt;query = And(query, keyword);&lt;/<span class="pl-ent">tag</span>&gt;
+        &lt;/<span class="pl-ent">item</span>&gt;
+
+        <span class="pl-c">&lt;!-- by &lt;authorName&gt; [while at &lt;authorAffiliation&gt;] --&gt;</span>
+        &lt;<span class="pl-ent">item</span> <span class="pl-e">logprob</span>=<span class="pl-s"><span class="pl-pds">"</span>-1<span class="pl-pds">"</span></span>&gt;
+          by &lt;<span class="pl-ent">attrref</span> <span class="pl-e">uri</span>=<span class="pl-s"><span class="pl-pds">"</span>academic#Author.Name<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>authorName<span class="pl-pds">"</span></span>/&gt;
+          &lt;<span class="pl-ent">tag</span>&gt;authorQuery = authorName;&lt;/<span class="pl-ent">tag</span>&gt;
+          &lt;<span class="pl-ent">item</span> <span class="pl-e">repeat</span>=<span class="pl-s"><span class="pl-pds">"</span>0-1<span class="pl-pds">"</span></span> <span class="pl-e">repeat-logprob</span>=<span class="pl-s"><span class="pl-pds">"</span>-1.5<span class="pl-pds">"</span></span>&gt;
+            while at &lt;<span class="pl-ent">attrref</span> <span class="pl-e">uri</span>=<span class="pl-s"><span class="pl-pds">"</span>academic#Author.Affiliation<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>authorAffiliation<span class="pl-pds">"</span></span>/&gt;
+            &lt;<span class="pl-ent">tag</span>&gt;authorQuery = And(authorQuery, authorAffiliation);&lt;/<span class="pl-ent">tag</span>&gt;
+          &lt;/<span class="pl-ent">item</span>&gt;
+          &lt;<span class="pl-ent">tag</span>&gt;
+            authorQuery = Composite(authorQuery);
+            query = And(query, authorQuery);
+          &lt;/<span class="pl-ent">tag</span>&gt;
+        &lt;/<span class="pl-ent">item</span>&gt;
+
+        <span class="pl-c">&lt;!-- written (in|before|after) &lt;year&gt; --&gt;</span>
+        &lt;<span class="pl-ent">item</span> <span class="pl-e">logprob</span>=<span class="pl-s"><span class="pl-pds">"</span>-1.5<span class="pl-pds">"</span></span>&gt;
+          <span class="pl-c">&lt;!-- Allow this grammar path to be traversed only once --&gt;</span>
+          &lt;<span class="pl-ent">tag</span>&gt;
+            AssertEquals(yearOnce, false);
+            yearOnce = true;
+          &lt;/<span class="pl-ent">tag</span>&gt;
+          &lt;<span class="pl-ent">ruleref</span> <span class="pl-e">uri</span>=<span class="pl-s"><span class="pl-pds">"</span>#GetPaperYear<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>year<span class="pl-pds">"</span></span>/&gt;
+          &lt;<span class="pl-ent">tag</span>&gt;query = And(query, year);&lt;/<span class="pl-ent">tag</span>&gt;
+        &lt;/<span class="pl-ent">item</span>&gt;
+      &lt;/<span class="pl-ent">one-of</span>&gt;
+
+      <span class="pl-c">&lt;!-- Determine if current parse position is beyond end of query --&gt;</span>
+      &lt;<span class="pl-ent">tag</span>&gt;isBeyondEndOfQuery = GetVariable("IsBeyondEndOfQuery", "system");&lt;/<span class="pl-ent">tag</span>&gt;
+    &lt;/<span class="pl-ent">item</span>&gt;
+    &lt;<span class="pl-ent">tag</span>&gt;out = query;&lt;/<span class="pl-ent">tag</span>&gt;
+  &lt;/<span class="pl-ent">rule</span>&gt;
+
+  &lt;<span class="pl-ent">rule</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>GetPaperYear<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">tag</span>&gt;year = All();&lt;/<span class="pl-ent">tag</span>&gt;
+    written
+    &lt;<span class="pl-ent">one-of</span>&gt;
+      &lt;<span class="pl-ent">item</span>&gt;
+        in &lt;<span class="pl-ent">attrref</span> <span class="pl-e">uri</span>=<span class="pl-s"><span class="pl-pds">"</span>academic#Year<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>year<span class="pl-pds">"</span></span>/&gt;
+      &lt;/<span class="pl-ent">item</span>&gt;
+      &lt;<span class="pl-ent">item</span>&gt;
+        before
+        &lt;<span class="pl-ent">one-of</span>&gt;
+          &lt;<span class="pl-ent">item</span>&gt;[year]&lt;/<span class="pl-ent">item</span>&gt;
+          &lt;<span class="pl-ent">item</span>&gt;
+            &lt;<span class="pl-ent">attrref</span> <span class="pl-e">uri</span>=<span class="pl-s"><span class="pl-pds">"</span>academic#Year<span class="pl-pds">"</span></span> <span class="pl-e">op</span>=<span class="pl-s"><span class="pl-pds">"</span>lt<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>year<span class="pl-pds">"</span></span>/&gt;
+          &lt;/<span class="pl-ent">item</span>&gt;
+        &lt;/<span class="pl-ent">one-of</span>&gt;
+      &lt;/<span class="pl-ent">item</span>&gt;
+      &lt;<span class="pl-ent">item</span>&gt;
+        after
+        &lt;<span class="pl-ent">one-of</span>&gt;
+          &lt;<span class="pl-ent">item</span>&gt;[year]&lt;/<span class="pl-ent">item</span>&gt;
+          &lt;<span class="pl-ent">item</span>&gt;
+            &lt;<span class="pl-ent">attrref</span> <span class="pl-e">uri</span>=<span class="pl-s"><span class="pl-pds">"</span>academic#Year<span class="pl-pds">"</span></span> <span class="pl-e">op</span>=<span class="pl-s"><span class="pl-pds">"</span>gt<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>year<span class="pl-pds">"</span></span>/&gt;
+          &lt;/<span class="pl-ent">item</span>&gt;
+        &lt;/<span class="pl-ent">one-of</span>&gt;
+      &lt;/<span class="pl-ent">item</span>&gt;
+    &lt;/<span class="pl-ent">one-of</span>&gt;
+    &lt;<span class="pl-ent">tag</span>&gt;out = year;&lt;/<span class="pl-ent">tag</span>&gt;
+  &lt;/<span class="pl-ent">rule</span>&gt;
+&lt;/<span class="pl-ent">grammar</span>&gt;</pre></div>
+
+<p>For more information about the grammar specification syntax, see <a href="GrammarFormat-3.html">Grammar Format</a>.</p>
+
+<p><a name="user-content-compiling-grammar"></a></p>
+
+<h2>
+<a id="user-content-compiling-grammar" class="anchor" href="#compiling-grammar" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compiling grammar</h2>
+
+<p>Once we have an XML grammar specification, we can compile it into a binary grammar using <a href="CommandLine-3.html#build_grammar-command"><code>kes.exe build_grammar</code></a>.  Note that if the grammar imports a schema, the schema file needs to be located in the same path as the grammar XML.  In this example, we build the binary grammar file <em>Academic.grammar</em> from the input XML grammar file <em>Academic.xml</em> using the following command:</p>
+
+<p><code>kes.exe build_grammar Academic.xml Academic.grammar</code></p>
+
+<p><a name="user-content-hosting-index"></a></p>
+
+<h2>
+<a id="user-content-hosting-service" class="anchor" href="#hosting-service" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hosting service</h2>
+
+<p>For rapid prototyping, we can host the grammar and index in a web service on the local machine using <a href="CommandLine-3.html#host_service-command"><code>kes.exe host_service</code></a>.  Once hosted, we can access the service via <a href="WebAPI-3.html">web APIs</a> to validate the data correctness and grammar design.  In this example, we host the grammar file <em>Academic.grammar</em> and index file <em>Academic.index</em> at http://localhost:8000/ using the following command:</p>
+
+<p><code>kes.exe host_service Academic.grammar Academic.index --port 8000</code></p>
+
+<p>This initiates a local instance of the web service.  We can interactively test the service by visiting <code>http::localhost:&lt;port&gt;</code> from a browser.  For more information, see <a href="#testing-service">Testing service</a>.  We can also directly call various <a href="WebAPI-3.html">web APIs</a> to test natural language interpretation, query completion, structured query evaluation, and histogram computation.  To stop the service, enter 'quit' into the <code>kes.exe host_service</code> command prompt or press 'Ctrl+C'.</p>
+
+<ul>
+<li><a href="http://localhost:8000/interpret?query=papers%20by%20susan%20t%20dumais">http://localhost:8000/interpret?query=papers by susan t dumais</a></li>
+<li><a href="http://localhost:8000/interpret?query=papers%20by%20susan%20t%20d&amp;complete=1">http://localhost:8000/interpret?query=papers by susan t d&amp;complete=1</a></li>
+<li><a href="http://localhost:8000/evaluate?expr=Composite%28Author.Name==%27susan%20t%20dumais%27%29&amp;attributes=Title,Year,Author.Name,Author.Id&amp;count=2">http://localhost:8000/evaluate?expr=Composite(Author.Name=='susan t dumais')&amp;attributes=Title,Year,Author.Name,Author.Id&amp;count=2</a></li>
+<li><a href="http://localhost:8000/calchistogram?expr=And%28Composite%28Author.Name=='susan%20t%20dumais'%29,Year%3E=2013%29&amp;attributes=Year,Keyword&amp;count=4">http://localhost:8000/calchistogram?expr=And(Composite(Author.Name=='susan t dumais'),Year&gt;=2013)&amp;attributes=Year,Keyword&amp;count=4</a></li>
+</ul>
+
+<p>Outside of Azure, <a href="CommandLine-3.html#host_service-command"><code>kes.exe host_service</code></a> is limited to indices of up to 10,000 objects, an API rate of 10 requests per second, and a total of 1000 requests before the process automatically terminates.  To bypass these restrictions, we can run the command from within a <a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-tutorial/">Windows VM in Azure</a>, or deploy to an Azure cloud service using the <a href="CommandLine-3.html#deploy_service-command"><code>kes.exe deploy_service</code></a> command.  See <a href="#deploying-service">Deploying service</a> for details.</p>
+
+<p><a name="user-content-scaling-up"></a></p>
+
+<h2>
+<a id="user-content-scaling-up" class="anchor" href="#scaling-up" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Scaling up</h2>
+
+<p>When running <code>kes.exe</code> outside of Azure, the index is limited to 10,000 objects.  Once we are ready to scale up, we can build and host larger indices using Azure.  We can sign up for a <a href="https://azure.microsoft.com/en-us/pricing/free-trial/">free trial</a>.  Alternatively, for Visual Studio/MSDN subscriber, we can <a href="https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/">activate subscriber benefits</a> which offer some Azure credits each month.</p>
+
+<p>To allow <code>kes.exe</code> access to an Azure account, visit <a href="https://manage.windowsazure.com/publishsettings/">https://manage.windowsazure.com/publishsettings/</a> to download the Azure Publish Settings file.  If prompted, sign into the desired Azure account.  Once signed in, the browser will automatically download the Publish Settings file.  Save it as <em>AzurePublishSettings.xml</em> in the working directory from where <code>kes.exe</code> runs.</p>
+
+<p>There are two ways to build and host large indices.  The first is to prepare the schema and data files in a Windows VM in Azure and run <a href="#building-index"><code>kes.exe build_index</code></a> to build the index locally on the VM without any size restrictions.  The resulting index can be hosted locally on the VM using <a href="#hosting-service"><code>kes.exe host_service</code></a> for rapid prototyping, again without any restrictions.  See the <a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-tutorial/">Azure VM tutorial</a> for detailed steps to create an Azure VM.</p>
+
+<p>The second method is to perform a remote Azure build using <a href="CommandLine-3.html#build_index-command"><code>kes.exe build_index</code></a> with the <code>--remote</code> parameter, which specifies an Azure VM size.  When the <code>--remote</code> parameter is specified, the command creates a temporary Azure VM of that size, builds the index on the VM, uploads the index to the target blob storage, and deletes the VM upon completion.  Your Azure subscription is charged for the cost of the VM while the index is being built.  This remote Azure build capability allows <a href="CommandLine-3.html#build_index-command"><code>kes.exe build_index</code></a> to be executed in any environment.  When performing a remote build, the input schema and data arguments may be local file paths or <a href="https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-how-to-use-blobs/">Azure blob storage</a> URLs.  The output index argument must be a blob storage URL.  To create an Azure storage account, see <a href="https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-how-to-use-blobs/">Create Storage Account</a>.  Note that only classic storage accounts are supported at this time.  We can use the utility <a href="https://azure.microsoft.com/en-us/documentation/articles/storage-use-azcopy/">AzCopy</a> to efficiently copy files to and from blob storage.</p>
+
+<p>In this example, we assume that the blob storage container http://&lt;<em>account</em>&gt;.blob.core.windows.net/&lt;<em>container</em>&gt;/ has already been created, containing the schema <em>Academic.schema</em>, referenced synonym file <em>Keywords.syn</em>, and full-scale data file <em>Academic.full.data</em>.  We can build the full index remotely using the following command:</p>
+
+<p><code>kes.exe build_index http://&lt;account&gt;.blob.core.windows.net/&lt;container&gt;/Academic.schema http://&lt;account&gt;.blob.core.windows.net/&lt;container&gt;/Academic.full.data http://&lt;account&gt;.blob.core.windows.net/&lt;container&gt;/Academic.full.index --remote Large</code></p>
+
+<p>Note that it may take 5-10 minutes to provision a temporay VM to build the index.  Thus, for rapid prototyping, we recommend one of two options:</p>
+
+<ol>
+<li>Develop with a smaller data set locally on any machine.</li>
+<li>Manually <a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-tutorial/">create an Azure VM</a>, <a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-hero-tutorial/#log-on-to-the-windows-virtual-machine">connect to it</a> via Remote Desktop, install the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=51488">Knowledge Exploration Service SDK</a>, and run <a href="CommandLine-3.html"><code>kes.exe</code></a> from within the VM.</li>
+</ol>
+
+<p>To avoid paging which slows down the build process, we recommend using a VM with 3 times the amount of RAM as the input data file size for index building, and a VM with 1 GB more RAM than the index size for hosting.  For a list of available VM sizes, see <a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/">Sizes for virtual machines</a>.</p>
+
+<p><a name="user-content-deploying-service"></a></p>
+
+<h2>
+<a id="user-content-deploying-service" class="anchor" href="#deploying-service" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Deploying service</h2>
+
+<p>Once we have a grammar and index, we are ready to deploy the service to an Azure cloud service.  To create a new Azure cloud service, see <a href="https://azure.microsoft.com/en-us/documentation/articles/cloud-services-how-to-create-deploy/">How to Create and Deploy a Cloud Service</a>.  Do not specify a deployment package at this point.  </p>
+
+<p>Once the cloud service has been created, we can use <a href="CommandLine-3.html#deploy_service-command"><code>kes.exe deploy_service</code></a> to deploy the service.  An Azure cloud service has two deployment slots: Production and Staging.  For a service that receives live user traffic, we should initially deploy to the Staging slot and wait for the service to start up and initialize itself.  Once the service is running, we can send a few requests to validate the deployment and verify that it passes basic tests.  Then, we <a href="https://azure.microsoft.com/en-us/documentation/articles/cloud-services-nodejs-stage-application/">swap</a> the contents of the Staging slot with the Production slot so that live traffic will now be directed to the newly deployed service.  We can repeat this process when deploying an updated version of the service with new data.  Like all other Azure cloud services, we can optionally use the Azure portal to configure <a href="https://azure.microsoft.com/en-us/documentation/articles/cloud-services-how-to-scale/">auto-scaling</a>.</p>
+
+<p>In this example, we will deploy the Academic index to the staging slot of an existing cloud service with <em>large</em> VMs using the following command:</p>
+
+<p><code>kes.exe deploy_service http://&lt;account&gt;.blob.core.windows.net/&lt;container&gt;/Academic.grammar http://&lt;account&gt;.blob.core.windows.net/&lt;container&gt;/Academic.index &lt;serviceName&gt; large --slot Staging</code></p>
+
+<p>For a list of available VM sizes, see <a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/">Sizes for virtual machines</a>.  Once the service has been deployed, we can call the various <a href="WebAPI-3.html">web APIs</a> to test natural language interpretation, query completion, structured query evaluation, and histogram computation.  </p>
+
+<p><a name="user-content-testing-service"></a></p>
+
+<h2>
+<a id="user-content-testing-service" class="anchor" href="#testing-service" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testing service</h2>
+
+<p>To debug a live service, we can simply navigate to the host machine from a web browser.  For a local service deployed via <a href="#hosting-service">host_service</a>, visit <code>http://localhost:&lt;port&gt;/</code>.  For an Azure cloud service deployed via <a href="#deploying-service">deploy_service</a>, visit <code>http://&lt;serviceName&gt;.cloudapp.net/</code>.  This page contains a link to information about basic API call statistics as well as the grammar and index hosted at this service. This page also contains an interactive search interface that demonstrates the use of the web APIs.  We can enter queries interactively into the search box to see the results of the <a href="interpretMethod-3.html">interpret</a>, <a href="evaluateMethod-3.html">evaluate</a>, and <a href="calchistogramMethod-3.html">calchistogram</a> API calls.  The underlying HTML source of this page also serves as an example of how to integrate the web APIs into an app to create a rich interactive search experience.</p>
+
+        </div>
+    </div>
+</article>
+
+<hr />
+
+<div class="container-fluid" style="margin-bottom:30px;">
+    <div class="text--reg text--xxs text--black">
+        Edit on <a href="http://go.microsoft.com/fwlink/p/?LinkID=780775" onclick="ga('send', 'event', 'outbound', 'gitHub', 'docFooter');" target="_blank">Github</a>
+        <span style="margin-left:20px;margin-right:20px">|</span>
+        Join our community on 
+        <a href="https://stackoverflow.com/questions/tagged/project-oxford+or+microsoft-cognitive" onclick="ga('send', 'event', 'outbound', 'stackOverflow', 'docFooter');" target="_blank">StackOverflow</a> and
+        <a href="https://cognitive.uservoice.com/" onclick="ga('send', 'event', 'outbound', 'userVoice', 'docFooter');" target="_blank">UserVoice</a>
+    </div>
+</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+        <footer id="layout-footer">
+            <div class="zone zone-footer">
+<article class="widget-footer widget-html-widget widget">
+    <div class="get-started-section" id="footer-cta-bar">
+<div class="container">
+<div class="text--light text--white text--md col-md-8 row">Ready to supercharge your app?</div>
+<div class="pull-right"><a class="btn--oxford btn--yellow text--sm text--semilight" href="../../sign-up.html">Get started for free</a></div>
+</div>
+</div>
+</article>
+<div id='translatorwidget_tmp' translate="no" style="display:none;">
+    <div class="row">
+        <div class="col-md-3 text-right translate-widget">
+            <img class="text--xs" src="../../../Themes/ProjectOxford/Images/footer/translate-icon.jpg" />
+            <span class="text--xs text--white translated">
+                Translated to
+            </span>
+            <a href="javascript:showtransbox();" class="translateresult text--xs text--black" style="text-decoration:underline !important;">English</a>
+            <span class="text--xs" id="dropdonwicon">
+                <i class="glyphicon glyphicon-menu-down" style="font-size: 12px;"></i>
+            </span>
+        </div>
+        <div class="col-md-3 translated-by">
+            <span style="color:white;" class="text--xs">by</span>
+            <span class="text--black text--xs">
+                <a href="https://www.microsoft.com/translator" target="_blank">Microsoft Translator</a>
+            </span>
+        </div>
+        <div class="col-md-6 show-original">
+            <div class="close">×</div>
+            <button class="text--xs" id="showOrigin" type="button" onclick="tranlateto('en','English')">Show original</button>
+        </div>
+    </div>
+</div>
+<div id="translator_box" translate="no" tabindex="1"></div>
+
+<div class="container-fluid footer-container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h4 class="text--semilight text--black">About</h4>
+                <div class="text--light text--black text--xs">
+                    <a href="../../news.html" id="gaNews" class="text--xxs text--semilight text--medgrey">
+                        Blog
+                    </a>
+                </div> 
+            </div>
+            <div class="col-md-3">
+                <h4 class="text--semilight text--black">Know before you code</h4>
+                <div class="text--light text--black text--xs">
+                    <a href="https://go.microsoft.com/fwlink/?LinkId=533207" target="_blank" onclick="trackOutboundLink('https://go.microsoft.com/fwlink/?LinkId=533207')" class="text--xxs text--semilight text--medgrey" style="white-space:nowrap">Microsoft Cognitive Services Terms</a>
+                </div>
+                <div class="text--light text--black text--xs">
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=698895" onclick="trackOutboundLink('http://go.microsoft.com/fwlink/?LinkId=698895')" target="_blank" class="text--xxs text--semilight text--medgrey">
+                        Developer Code of Conduct
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4 class="text--semilight text--black">Help & support</h4>
+                <div class="text--light text--black text--xs">
+                    <a href="https://stackoverflow.com/questions/tagged/microsoft-cognitive" onclick="trackOutboundLink('https://stackoverflow.com/questions/tagged/microsoft-cognitive')" target="_blank" class="text--xxs text--semilight text--black">
+                        Stack Overflow
+                    </a>
+                </div>
+                <div class="text--light text--black text--xs">
+                    <a href="https://cognitive.uservoice.com/" onclick="trackOutboundLink('https://cognitive.uservoice.com/')" target="_blank" class="text--xxs text--semilight text--medgrey">
+                        User Voice
+                    </a>
+                </div>
+                <div class="text--light text--black text--xs">
+                    <a href="#" id="general-inquiry-link" class="text--xxs text--semilight text--medgrey" style="white-space:nowrap" onclick="ga('send', 'event', 'userVoice', 'contactUs', 'footer');">Contact us</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4 class="text--semilight text--black">Go social</h4>
+                <div style="margin-top:20px;">
+                    <a href="https://www.facebook.com/Microsoft/?fref=ts" onclick="trackOutboundLink('https://www.facebook.com/');" target="_blank" class="text--xxs text--semilight text--medgrey" style="display: inline-block;height: 32px;">
+                        <i class="fa text--black" style="font-size:32px;float: left;">
+                            <img src="../../../Themes/ProjectOxford/Images/footer/facebook-icon.jpg" />
+                        </i>
+                        <span style="float: left;margin-left: 10px;" class="text--xxs text--semilight text--black">Facebook</span>
+                    </a>
+                </div>
+                <div style="margin-top:20px;">
+                    <a href="https://twitter.com/search?q=%22Microsoft%20Cognitive%20Services%22%20OR%20%22Project%20Oxford%22&amp;src=typd" class="text--xxs text--semilight text--medgrey" onclick="trackOutboundLink('https://www.twitter.com/');" target="_blank" style="display: inline-block;height: 32px;">
+                        <i class="fa text--black" style="font-size:32px;float: left;">
+                            <img src="../../../Themes/ProjectOxford/Images/footer/twitter-icon.jpg" />
+                        </i>
+                        <span style="float: left;margin-left: 10px;" class="text--xxs text--semilight text--black">Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row" style="margin:50px  -15px;">
+                            <div class="col-sm-6 col-xs-6">
+                                <a class="text--xxs text--semilight text--medgrey" href="https://www.azure.cn/cognitive-services" onclick="trackOutboundLink('https://www.azure.cn/cognitive-services')">
+                                    <span class="glyphicon glyphicon-globe" style="margin-right:10px;"></span>
+                                    中文
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-xs-6">
+                                <div style="cursor:pointer;display:inline-block;" onclick="showcontainer()">
+                                    <span class="glyphicon " style="margin-right:10px;">
+                                        <img src="../../../Themes/ProjectOxford/Images/footer/translate-icon.jpg" />
+                                    </span>
+                                    <div class="transwidgetcontainer" tabindex="1">
+                                        <div class="text--black text--xxs" translate="no">Select your language</div>
+                                        <ul id="langs" translate="no"></ul>
+                                        <div class="translateresult translateresult-teal text--black text--xs">English</div>
+                                    </div>
+                                    <a href="javascript:;" id="btnTranslate" style="position: relative; top: 3px;" translate="no" class="text--xxs text--semilight text--medgrey">Translate</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 text-lg-right">
+                <h4 class="text--xxs text--semilight text--black footer-links">
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=521839" onclick="trackOutboundLink('http://go.microsoft.com/fwlink/?LinkId=521839')" target="_blank" class="text--xxs text--semilight text--medgrey">
+                        Privacy & Cookies
+                    </a>
+                </h4>
+                <h4 class="text--xxs text--semilight text--black footer-links">
+                    <a href="https://go.microsoft.com/fwlink/?LinkID=206977" onclick="trackOutboundLink('https://go.microsoft.com/fwlink/?LinkID=206977')" target="_blank" class="text--xxs text--semilight text--medgrey">
+                        Terms of Use
+                    </a>
+                </h4>
+                <h4 class="text--xxs text--semilight text--black footer-links">
+                    <a href="https://go.microsoft.com/?linkid=9851308" onclick="trackOutboundLink('https://go.microsoft.com/?linkid=9851308')" target="_blank" class="text--xxs text--semilight text--medgrey">
+                        Trademarks
+                    </a>
+                </h4>
+                <h4 class="text--xxs text--semilight text--black footer-links">
+                    <a id="report-abuse-link" href="#" onclick="ga('send', 'event', 'userVoice', 'reportAbuse', 'reportAbuse');" class="text--xxs text--semilight text--medgrey  uv-btn-trigger">
+                        Report Abuse
+                    </a>
+                </h4>
+                <h4 class="text--xxs text--semilight text--black footer-links">
+                    ©2016 Microsoft
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+        </footer>
+    </div>
+</div>
+
+<script data-timestamped="true" src="../../../Themes/ProjectOxford/scripts/headroomf1f6.js?v=636141902459066948" type="text/javascript"></script>
+<script data-timestamped="true" src="../../../Themes/ProjectOxford/scripts/jquery.headroomf1f6.js?v=636141902459066948" type="text/javascript"></script>
+<script data-timestamped="true" src="../../../Themes/ProjectOxford/scripts/navf1f6.js?v=636141902459066948" type="text/javascript"></script>
+    <script type="text/JavaScript">
+        var varAutoFirePV = 1;
+        var varClickTracking = 1;
+        var varCustomerTracking = 1;
+        if ("en-us" == "zh-cn") {
+            var Route = "62584";
+        }
+        else {
+            var Route = "20049";
+        }
+        var Ctrl = " ";
+        document.write("<script type='text/javascript' src='" + (window.location.protocol) + "//c.microsoft.com/ms.js'" + "'><\/script>");
+        // code for google analytics.
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '../../../../../www.google-analytics.com/analytics.js', 'ga');
+
+        var trackOutboundLink = function (url) {
+            ga('send', 'event', 'outbound', 'click', url);
+        }
+
+        if ("en-us" == "zh-cn") {
+            ga('create', 'UA-72171728-3', 'auto');
+        }
+        else {
+            ga('create', 'UA-72171728-1', 'auto');
+        }
+
+        // Optimizely Universal Analytics Integration
+        window.optimizely = window.optimizely || [];
+        window.optimizely.push("activateUniversalAnalytics");
+        // End Optimizely Code
+
+        ga('require', 'linkid');
+        ga('send', 'pageview');
+    </script>
+
+    <script src="https://www.microsofttranslator.com/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**" type="text/javascript"></script>
+    <script type="text/javascript">
+        // Include the UserVoice JavaScript SDK (only needed once on a page)
+        UserVoice = window.UserVoice || [];
+        (function () {
+            var uv = document.createElement('script');
+            uv.type = 'text/javascript';
+            uv.async = true;
+            uv.src = '../../../../../widget.uservoice.com/6hW5Um5EzZ19G4o8yxeEw.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(uv, s)
+        })();
+
+        UserVoice.push(['set', {
+            // Options can also be set on specific widgets instead of globally
+            target: 'self', // 'none' for toaster popups, #id for a specific element on the page
+            accent_color: '#004b50', // Widget accent color
+            locale: 'en', // Defaults to your account’s localization
+        }]);
+
+        UserVoice.push(['addTrigger', '#general-inquiry-link', {
+            mode: 'contact',
+            position: 'top',
+            // Customize widget text
+            // (see documentation for all options)
+            strings: {
+                // Contact form
+                contact_title: 'General inquiry',
+                contact_message_placeholder: 'Give feedback or ask for help',
+                contact_skip_instant_answers_button: 'Skip and send message',
+                contact_details_title: 'Additional details',
+                contact_submit_button: 'Send message',
+                contact_success_title: 'Message sent!',
+                contact_success_body: 'We’ll be in touch.'
+            }
+        }]);
+
+        UserVoice.push(['addTrigger', '#report-abuse-link', {
+            mode: 'contact',
+            ticket_custom_fields: {
+                'Custom Widget': 'Abuse'
+            },
+
+            // Customize widget text
+            // (see documentation for all options)
+            strings: {
+                // Contact form
+                contact_title: 'Report abuse',
+                contact_message_placeholder: 'Whats going on?',
+                contact_skip_instant_answers_button: 'Skip and send message',
+                contact_details_title: 'Additional details',
+                contact_submit_button: 'Send message',
+                contact_success_title: 'Message sent!',
+                contact_success_body: 'We’ll be in touch.'
+            }
+        }]);
+
+        function fillList(listOfLanguages) {
+            var ddlLangs = document.getElementById('langs');
+            var box = document.getElementById("translator_box");
+            for (var key in listOfLanguages) {
+                $(ddlLangs).append('<li value="' + listOfLanguages[key].Code + '">' + listOfLanguages[key].Name + '</li>');
+                $(box).append("<a href='javascript:tranlateto(\"" + listOfLanguages[key].Code + "\",\"" + listOfLanguages[key].Name + "\");'>" + listOfLanguages[key].Name + "</a>");
+            }
+        }
+
+        var isfirst = true;
+
+        var layoutHeader = $("#layout-header").outerHeight();
+
+        function getlayoutheaderheight() {
+            if (window.innerWidth < 768) {
+                return 0;
+            }
+            return $("#layout-header").css('display') !== 'none' ? layoutHeader : 0;
+        }
+
+
+        function tranlateto(lang, text) {
+            $("#dropdonwicon").removeClass('select');
+
+            $('#translator_box').hide();
+
+            if ('en' === lang) {
+                $('#showOrigin').hide();
+            }
+            else {
+                $('#showOrigin').show();
+            }
+
+            if (isfirst) {
+                $("#layout-wrapper").prepend($("#translatorwidget_tmp").clone().prop('id', 'translatorwidget').show());
+                isfirst = false;
+            } else {
+                $("#translatorwidget").show();
+            }
+
+            var consValue = $("#translatorwidget").outerHeight();
+
+            var moveHeight = $('#translatorwidget').length > 0 ? ($("#translatorwidget").css('display') !== 'none' ? consValue : 0) : 0;
+
+            if (window.scrollY >= 350) {
+                $("#layout-header").hide();
+            }
+
+            $("#layout-header").css("margin-top", moveHeight);
+            $("#layout-navigation").css("margin-top", consValue + getlayoutheaderheight());
+            $(".hero-banner-container").css('margin-top', consValue + getlayoutheaderheight() + $("#layout-navigation").outerHeight() - 48);
+
+            Microsoft.Translator.Widget.Translate('en', lang,
+                function (value) {
+
+                },
+                function (err) {
+                    tranlateto(lang, text);
+                },
+                function (result) {
+                    $("#translatorwidget").attr('dir', 'ltr');
+                },
+                function (revert) {
+
+                }, 30000);
+
+            $(".translateresult").text(text);
+
+        }
+
+        function showtransbox() {
+            $('#translator_box').toggle();
+            $("#dropdonwicon").addClass('select');
+            $("#translator_box").focus();
+        }
+
+        function showcontainer() {
+            $(".transwidgetcontainer").show().focus();
+        }
+
+        $(document).ready(function () {
+            fillList(Microsoft.Translator.Widget.GetLanguagesForTranslateLocalized());
+
+            $("#langs").on('click', 'li', function (e) {
+                e.stopPropagation(); $(".transwidgetcontainer").hide();
+                tranlateto($(this).attr('value'), $(this).text());
+            });
+
+            $(".transwidgetcontainer").blur(function () {
+                $(this).hide();
+            });
+
+            $("#translator_box").blur(function () {
+                setTimeout(function () {
+                    $("#translator_box").hide();
+                    $("#dropdonwicon").removeClass('select');
+                }, 200);
+            });
+            $("#layout-wrapper").on('click', '.close', function () {
+                tranlateto('en', 'English');
+                $("#translatorwidget").hide();
+                $('#translator_box').hide();
+                if (window.scrollY >= 350) {
+                    $("#layout-header").hide();
+                    $("#layout-navigation").css("margin-top", "0px");
+                }
+                else {
+                    $("#layout-header").css("margin-top", "0px");
+                    $("#layout-navigation").css("margin-top", $("#layout-header").outerHeight());
+                    $(".dropdown-menu").css("top", "150px");
+                }
+                $(".hero-banner-container").css('margin-top', getlayoutheaderheight() + $("#layout-navigation").outerHeight() - 48);
+
+            });
+        });
+    </script>
+
+
+</body>
+
+<!-- Mirrored from www.microsoft.com/cognitive-services/en-us/KES/documentation/gettingstarted by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Nov 2016 10:37:28 GMT -->
+</html>

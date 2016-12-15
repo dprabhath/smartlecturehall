@@ -1,0 +1,1501 @@
+
+<!DOCTYPE html> 
+<html lang="en-US" class="static detail-api-detail-page dir-ltr contents" dir="ltr"> 
+
+<!-- Mirrored from www.microsoft.com/cognitive-services/en-us/speaker-recognition-api by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Nov 2016 10:29:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Microsoft Cognitive Services - Speaker Recognition API</title> 
+    <link data-timestamped="true" href="../Modules/Microsoft.ProjectOxford.Website.Content/Styles/ApiDetail7c34.css?v=636141902423279305" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../Modules/Microsoft.ProjectOxford.Website.Demos/Styles/spiddb8e.css?v=636141904066917500" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../Themes/ProjectOxford/Bootstrap/css/bootstrap.min7c34.css?v=636141902423279305" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../Themes/ProjectOxford/Bootstrap/css/bootstrap-theme.min7c34.css?v=636141902423279305" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../Themes/ProjectOxford/Styles/site.minc7c8.css?v=636141902423462979" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../Themes/ProjectOxford/Styles/main-navigationc7c8.css?v=636141902423462979" rel="stylesheet" type="text/css" />
+<script src="../Modules/Orchard.jQuery/scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Orchard.jQuery/Scripts/jquery.cookie.minfb61.js?v=636141902424695845" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/Bootstrap/js/bootstrap.min3832.js?v=636141902425175830" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/Scripts/angular.minec96.js?v=636141902425310581" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/Scripts/angular-contenteditableec96.js?v=636141902425310581" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/Scripts/appec96.js?v=636141902425310581" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/Scripts/siteec96.js?v=636141902425310581" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/cognitive-services/Core/Shapes/scripts/html5.js" type="text/javascript"></script>
+<![endif]-->
+<meta content="Orchard" name="generator" />
+<meta content="Identify individual speakers or use speech as a means of authentication with the Speaker Recognition API." name="description" />
+<meta content="Microsoft,cognitive services,project oxford,API,SDK,free,Azure,speaker recognition,voice authentication,voice biometrics,vioce authorization,voice identification,speaker identification,speaker verification,stronger authentication,authentication service,voice print,security,voice password,voice verification" name="keywords" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="width=device-width" name="viewport" />
+<link href="https://www.microsoft.com/cognitive-services/modules/orchard.themes/Content/orchard.ico" rel="shortcut icon" type="image/x-icon" />
+    <script type="text/javascript">
+        var antiForgeryToken = 'w3QnOwy0Y2eW9DsBCp-w9fNsVv2H0tEz96dr0BCkOWVAbco79HTCrJ5iCPUmT027MUtR1oPWEvQnbTP7c5tJs2N5trqpRw8Xf9IkE1vrsmM1';
+        var applicationRoot = '/cognitive-services';
+        if (applicationRoot == 'https://www.microsoft.com/') {
+            applicationRoot = '';
+        }
+        var SpidText = {
+            UploadFile: 'Upload an audio file reading the above phrase to enroll. Or change to a different browser with WebRTC support (Chrome, Microsoft Edge) to record directly from your browser.',
+            ReadThephrase: 'Read the phrase above or upload an audio file reading it to enroll your voice.',
+            WrongFileType: 'Wrong File Type. It should be .wav.',
+            BigFile: 'The demo does not support more than 5MB file, please upload again.',
+            SmallFile: 'The audio file is too small or invalid.',
+            AudioFile: 'Please upload an audio or choose an audio sample.',
+            Waiting: 'Please wait a moment...',
+            Congratulations: 'Congratulations! Your voice is successfully enrolled.  You can verify your voice now!',
+            Successful: 'Your first enrollment is successful! We need two more samples of your voice saying the same phrase.',
+            Cool: 'Cool. Just give me one more sample. Almost there!',
+            Sorry: 'Sorry that your enrollment wasn’t successful. Please try again.',
+            Ooops: 'Ooops, failed again. Please try another sample.',
+        };
+    </script>
+
+    <script type="text/javascript">
+        var antiForgeryToken = 'QYJLAqyPZNTaxbdSoPPi0HY-FtadFzYbNMjIcVOG5gB_P76zOy8v-7SQRpc85F33coSyjli4g46bEI-AaENuEy5o762GmTpuCO_fG07VBtU1';
+        var applicationRoot = '/cognitive-services';
+        if (applicationRoot == 'https://www.microsoft.com/') {
+            applicationRoot = '';
+        }
+
+    </script>
+
+    <script src="../../../cdn.optimizely.com/js/6213472562.js"></script>
+    <script>
+        var e = document.createElement("script");
+        e.async = true;
+        e.src = "https://ad.atdmt.com/m/a.js;m=11087206420460;cache=" + Math.random();
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(e, s);
+    </script>
+    <noscript>
+        <iframe style="display:none;"
+                src="https://ad.atdmt.com/m/a.html;m=11087206420460;noscript=1"></iframe>
+    </noscript>
+
+
+    <script>(function(d){d.className="dyn"+d.className.substring(6,d.className.length);})(document.documentElement);</script> 
+    <script>window.isRTL = false;</script>
+</head> 
+<body>
+
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+<div ng-app="projectOxfordApp">
+    <div id="layout-wrapper">
+        <header id="layout-header" role="banner" style="position:fixed;">
+            <div class="container">
+                <div class="zone zone-header"><!-- hero area -->
+<div id="branding">
+    <a id="microsoftLink" class="text--md" href="https://www.microsoft.com/"><img class="img-responsive" src="../Themes/ProjectOxford/Content/Images/microsoftLogo.png" alt="Microsoft Cognitive Services" /></a>
+    <a class="text--md" id="cognitiveservicelogo" href="https://www.microsoft.com/cognitive-services">Cognitive Services</a>
+</div>
+
+<article class="widget-UserLogin widget-header widget-user-login-form widget">
+    
+<div class="container">
+    <div id="loginWidget" class="login-profile nav navbar-nav navbar-right text--xs">
+            <div>
+                <a class="get-start-btn btn--yellow text--semilight" href="sign-up.html">Get started for free</a>
+                <a href="sign-up93d6.html" class="text-reg" onclick="ga('send','event','subscription','myaccount');">
+                    <span>
+                        My account
+                    </span>
+                    <img style="height:24px;vertical-align:middle;" src="../Modules/Microsoft.ProjectOxford.Website.Subscription/Images/Login/login.png" />
+                </a>
+            </div>
+    </div>
+</div>
+</article></div>
+            </div>
+        </header>
+            <div id="layout-navigation">
+            <div class="zone zone-navigation">
+<article class="widget-navigation widget-menu-widget widget">
+    
+<script type="text/javascript">
+    $(function () {
+        $('.navigation .sub-menuitem li a').each(function () {
+            if ($(this).attr('href').lastIndexOf('.') > 0) {
+                var urlDomain = $(this).attr('href').substring(0, $(this).attr('href').lastIndexOf('.')).toLowerCase();
+                if (urlDomain.indexOf('msdn') > 0) {
+                    $(this).attr("onclick", "ga('send', 'event', 'outbound', 'msdn', 'navbar')");
+                }
+                if (urlDomain.indexOf('stackoverflow') > 0) {
+                    $(this).attr("onclick", "ga('send', 'event', 'outbound', 'stackOverflow', 'navbar')");
+                }
+                if (urlDomain.indexOf('uservoice') > 0) {
+                    $(this).attr("onclick", "ga('send', 'event', 'outbound', 'userVoice', 'navbar')");
+                }
+            }
+        });
+
+    })
+</script>
+<div class="container main-navigation">
+
+    <nav class="col navbar navbar-default navbar-static-top" id="nav" role="navigation" aria-label="Main menu">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand visible-xs">
+                    <a href="https://www.microsoft.com/">
+                        <img class="brandImg" src="../Themes/ProjectOxford/Content/Images/microsoftLogo.png" alt="Microsoft">
+                    </a>
+                    <a href="https://www.microsoft.com/cognitive-services">
+                        <div class="brandTitle">Cognitive Services</div>
+                    </a>
+                </div>
+                <div id="newWidgetContainer" class="visible-xs">
+
+                </div>
+                <button type="button" id="brandBtn" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse @*hidden-xs*@" id="navbar-collapse-1" role="menubar">
+                <ul class="nav navbar-nav mobile-nav">
+                            <li aria-label="Home" class="mobile-nav-item dropdown-toggle" role="menuitem">
+                                
+                                                                            <a href="https://www.microsoft.com/cognitive-services" class="text--xs">Home</a>
+                            </li>
+                            <li aria-label="APIs" class="mobile-nav-item dropdown-toggle current dropdown dropActive" role="menuitem">
+                                
+                                    <a id="topLinkAPIs" href="#" class="text--xs">APIs<span class="arrow1"></span></a>
+                                    <div class="dropdown-menu tier-1">
+                                        <div class="container-fluid navigation">
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Vision" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Vision
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Vision</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="computer-vision-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Computer Vision
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="content-moderator.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Content Moderator
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="emotion-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Emotion
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="face-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Face
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="video-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Video
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Speech" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Speech
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Speech</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="speech-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Speech
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="custom-recognition-intelligent-service-cris.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Custom Recognition
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="speaker-recognition-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Speaker Recognition
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Language" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Language
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Language</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="bing-spell-check-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Spell Check
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="language-understanding-intelligent-service-luis.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Language Understanding
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="linguistic-analysis-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Linguistic Analysis
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="text-analytics-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Text Analytics
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="translator-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Translator
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="web-language-model-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                WebLM
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Knowledge" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Knowledge
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Knowledge</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="academic-knowledge-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Academic
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="entity-linking-intelligence-service.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Entity Linking
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="knowledge-exploration-service.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Knowledge Exploration
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="recommendations-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Recommendations
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Search" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Search
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Search</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="bing-autosuggest-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Autosuggest
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="bing-image-search-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Image Search
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="bing-news-search-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing News Search
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="bing-video-search-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Video Search
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="bing-web-search-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Web Search
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                            <div class="container-fluid row" id="nav-bar-footer">
+                                                <div class="container" style="margin-bottom:10px;border-top-style:solid;border-top-width:1px;border-top-color:#505050;text-align:right;">
+                                                    <h3 id="hideWhenMobil" class="text--reg text--black text--xs hidden-xs" style="display:inline-block">
+                                                        Still looking for the right API?
+                                                    </h3>
+                                                    <a class="text--xs text--reg text--darkteal" style="margin-left:20px;" href="apis.html">
+                                                        See the entire collection >
+                                                    </a>
+                                                </div>
+                                            </div>
+                                    </div>
+                            </li>
+                            <li aria-label="Applications" class="mobile-nav-item dropdown-toggle" role="menuitem">
+                                
+                                                                            <a href="applications.html" class="text--xs">Applications</a>
+                            </li>
+                            <li aria-label="Developers" class="mobile-nav-item dropdown-toggle dropdown" role="menuitem">
+                                
+                                    <a id="topLinkDevelopers" href="#" class="text--xs">Developers<span class="arrow1"></span></a>
+                                    <div class="dropdown-menu tier-1">
+                                        <div class="container-fluid navigation">
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Resources" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Resources
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Resources</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="documentation.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Documentation
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="SDK-Sample.html"  class="text--reg text--xs text--darkteal ">
+                                                                                SDKs &amp; Samples
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Community" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Community
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Community</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="https://stackoverflow.com/questions/tagged/microsoft-cognitive" target=&quot;_blank&quot; class="text--reg text--xs text--darkteal upgrade--img">
+                                                                                Stack Overflow
+                                                                                    <div class="darkreal"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="https://cognitive.uservoice.com/" target=&quot;_blank&quot; class="text--reg text--xs text--darkteal upgrade--img">
+                                                                                UserVoice
+                                                                                    <div class="darkreal"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                    </div>
+                            </li>
+                            <li aria-label="Pricing" class="mobile-nav-item dropdown-toggle" role="menuitem">
+                                
+                                                                            <a href="pricing.html" class="text--xs">Pricing</a>
+                            </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>
+</article></div>
+        </div>
+        <div id="layout-main-container" role="main">
+        <div id="layout-main">
+            <div id="layout-content">
+                
+                    <div id="content" class="clearfix">
+                        <div class="page-content-container">
+                            <div class="zone zone-content">
+<article class="api-detail-page content-item">
+    <header>
+        
+    </header>
+    
+<link rel="stylesheet" href="../../../npmcdn.com/flickity%402.0.5/dist/flickity.min.css">
+
+<!--hero area-->
+<div class="hero-banner-container row" style="background-image:url('../../../portalstoragewuprod2.azureedge.net_443/media/Default/Media/Speaker%20Recognition/Speaker-Recognition-API.jpg')">
+    <div class="hero-banner__content-container container">
+        <div class="hero-banner__content col-sm-12 col-md-6">
+            <h1 class="text--light text--lg text--white">Speaker Recognition API</h1>
+            <p class="text--semilight text--sm text--white">
+                Identify individual speakers or use speech as a means of authentication with the Speaker Recognition API.
+            </p>
+                <div class="hero-banner-btn">
+                    <a id="topGetStartedForFree" href="sign-up2a84.html?productId=/products/56331f9ae597ed1444efaec6" class="btn--oxford btn--yellow text--sm text--semilight">Get started for free</a>
+                </div>
+        </div>
+    </div>
+</div>
+
+<!--resources cta bar-->
+<div class="api-detail-cta-bar row">
+    <div class="api-detail-cta-bar__btn-container container">
+        <div class="pull-right">
+            <div class="api-detail-btn">
+                <a id="topDocumentationLink" href="speaker-recognition-api/documentation.html" class="btn--oxford btn--teal text--sm text--semilight">
+                    Documentation
+                </a>
+            </div>
+                <div class="api-detail-btn">
+                    <a id="topApiReferenceLink" href="https://dev.projectoxford.ai/docs/services/563309b6778daf02acc0a508" target="_blank" class="btn--oxford btn--teal text--sm text--semilight">
+                        API Reference
+                    </a>
+                </div>
+
+                <div class="api-detail-btn">
+                    <a id="topSDKLink" href="SDK-Sample1924.html?api=speaker%20recognition" onclick="trackOutboundLink('/en-us/SDK-Sample?api=speaker%20recognition')" class="btn--oxford btn--teal text--sm text--semilight">
+                        SDK
+                    </a>
+                </div>
+                                </div>
+    </div>
+</div>
+
+<!--features with demos-->
+        <div class="feature-item-container row">
+                    <div class="feature-item-content container">
+                                <div class="feature-item-content__details text--centered">
+                                        <h2 class="text--md text--reg text--black col-xs-12">
+                                            Speaker Verification
+                                        </h2>
+
+                                        <p class="text--xs text--reg text--black col-xs-12 col-md-8 col-md-offset-2" style="white-space:pre-line">
+                                            Use your voice for authentication. The API can be used to power applications with an intelligent verification tool. If the speaker claims to be of a certain identity use voice to verify this claim.
+To see how is works, select a pass phrase from the given list of phrases. Use that phrase and record/upload three audio samples to register your voice with the service, this step is called &quot;enrollment&quot;. After your enrollment is completed, you can start the verification step using a different voice recording or phrase to test the service.
+
+When you use the speaker demonstration applications you consent to providing your voice input data to Microsoft for service improvement purposes.
+                                        </p>
+                                </div>
+
+
+                            <div class="feature-item-content__demo col-xs-12">
+                                
+
+<style type="text/css">
+    header[role='heading'],
+    .navbar,
+    footer[role='contentinfo'],
+    .ed_layout {
+        overflow: visible;
+    }
+
+    .layout-row-content > .layout {
+        max-width: none;
+        overflow: visible;
+    }
+
+    .layout {
+        min-width: 920px;
+    }
+
+    .layout-row-content > .layout .ed_layout {
+        padding-top: 0;
+        min-width: 836px;
+    }
+</style>
+
+
+<div id="verification" class="scroll_item reCaptcha-demo reCaptcha-SpeakerVerification-demo" style="width:100%;">
+    <div data-demo-type="verification" class="detection-demo">
+        <div class="detection-demo-left">
+            <input type="hidden" data-name="finishNum" value="-1" />
+            <div data-name="phraseList" class="phraseList">
+                <select data-name="selectItem"></select>
+                <div data-name="downIcon" class="downIcon">
+                </div>
+                <input type="hidden" data-name="selectedPhrase" value="" />
+            </div>
+            <div class="demo-codes detection-demo-text">
+                
+                <div data-name="selectedText" class="selectedText"></div>
+                <div data-name="NotificationText" class="NotificationText">Read the phrase above or upload an audio file reading it to enroll your voice.</div>
+                <div class="operateIcon">
+                    <div data-name="micBtn" class="micBtn"></div>
+                    <div data-name="upLoadBtn" class="uploadBtn2"></div>
+                    <div data-name="guidingText" class="guidingText">Click on the microphone to start speaking</div>
+                </div>
+            </div>
+            <div class="filler"></div>
+        </div>
+        <div class="detection-demo-right">
+            <div class="demo-codes detection-demo-response">
+                <pre data-name="code" class="code"></pre>
+            </div>
+            <div class="filler"></div>
+            <div data-name="dealing" class="responsefloatingDiv displaynone">
+                <div class="floatingCirclesG">
+                    <div class="f_circleG frotateG_11">
+                    </div>
+                    <div class="f_circleG frotateG_12">
+                    </div>
+                    <div class="f_circleG frotateG_13">
+                    </div>
+                    <div class="f_circleG frotateG_14">
+                    </div>
+                    <div class="f_circleG frotateG_15">
+                    </div>
+                    <div class="f_circleG frotateG_16">
+                    </div>
+                    <div class="f_circleG frotateG_17">
+                    </div>
+                    <div class="f_circleG frotateG_18">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-name="VerificationDialog" data-demo-type="Dialog" class="dialog">
+            <div class="title">
+                <span>Upload audio…</span>
+            </div>
+            <div data-name="cancel" class="cancel">
+            </div>
+            <div class="content">
+                <div class="left">
+                    <div class="innerContent">
+                        <span>Accept format</span>
+                        <ul>
+                            <li>Format: WAV</li>
+                            <li>Encoding: PCM</li>
+                            <li>Rate: 16K</li>
+                            <li>Sample Format.: 16 bit</li>
+                            <li>Channels: Mono</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="audioinfo">
+                        <span>Audio:</span>
+                        <div style="height:30px;">
+                            <input type="text" data-name="upLoadAudioPath" />
+                            <div data-name="browse" class="browse">
+                                Browse...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div data-name="cancel" class="cancel2"><span>Cancel</span></div>
+                <div data-name="ok" class="ok"><span>OK</span></div>
+            </div>
+        </div>
+        <div class="displaynone">
+            <input type="file" value="" />
+        </div>
+    </div>
+</div>
+
+                            </div>
+                    </div>
+
+        </div>
+        <div class="feature-item-container--grey row">
+                    <div class="feature-item-content container">
+                                <div class="feature-item-content__details text--centered">
+                                        <h2 class="text--md text--reg text--black col-xs-12">
+                                            Speaker Identification
+                                        </h2>
+
+                                        <p class="text--xs text--reg text--black col-xs-12 col-md-8 col-md-offset-2" style="white-space:pre-line">
+                                            Identify who is speaking. The API can be used to determine the identity of an unknown speaker. Input audio of the unknown speaker is paired against a group of selected speakers, and in the case there is a match found, the speaker’s identity is returned.
+
+We have selected 5 different US presidents and enrolled them to the service using one of the speeches they gave. To see how the demo works, select a speech for one of the presidents by clicking on the sample audios below, or upload one of your own, to test how to automatically identify which president is speaking.
+
+When you use the speaker demonstration applications you consent to providing your voice input data to Microsoft for service improvement purposes.
+                                        </p>
+                                </div>
+
+
+                            <div class="feature-item-content__demo col-xs-12">
+                                
+
+<style type="text/css">
+    header[role='heading'],
+    .navbar,
+    footer[role='contentinfo'],
+    .ed_layout {
+        overflow: visible;
+    }
+
+    .layout-row-content > .layout {
+        max-width: none;
+        overflow: visible;
+    }
+
+    .layout {
+        min-width: 920px;
+    }
+
+    .layout-row-content > .layout .ed_layout {
+        padding-top: 0;
+        min-width: 836px;
+    }
+</style>
+
+
+
+<div id="identification" class="scroll_item reCaptcha-demo reCaptcha-SpeakerIdentification-demo" style="width:100%;">
+    <div data-demo-type="Identification" class="detection-demo">
+        <div style="width:49%;height:40px;text-align:left;">
+            <span style="font-size:20px;color:#767676;">Speakers provided</span>
+        </div>
+        <div class="image-list">
+            <div class="image-item">
+                <img src=../Modules/Microsoft.ProjectOxford.Website.Demos/Images/spid/Picture1.jpg />
+                <div class="speakerInfo">
+                    <div class="icons">
+                        <div data-name="start_stop" class="play2">
+                        </div>
+                    </div>
+                    <div class="textCheck">
+                        <span>Enrollment speech</span>
+                    </div>
+                    <div class="textName">
+                        <span>Barack Obama</span>
+                        <input type="hidden" data-name="identificationProfield" value="bf058f39-538d-4145-bf56-3bb9ec8fa662" />
+                    </div>
+                    <audio preload="auto" style="display:none">
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/Barack_Obama-Inaugural_Address-enrollment.ogg" type="audio/ogg" />
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/Barack_Obama-Inaugural_Address-enrollment.mp3" type="audio/mp3" />
+                    </audio>
+                </div>
+                <div id="highLight">
+                </div>
+            </div>
+            <div class="image-item">
+                <img src=../Modules/Microsoft.ProjectOxford.Website.Demos/Images/spid/Picture2.jpg />
+                <div class="speakerInfo">
+                    <div class="icons">
+                        <div data-name="start_stop" class="play2">
+                        </div>
+                    </div>
+                    <div class="textCheck">
+                        <span>Enrollment speech</span>
+                    </div>
+                    <div class="textName">
+                        <span>George W Bush</span>
+                    </div>
+                    <input type="hidden" data-name="identificationProfield" value="f6af5ac0-1333-43f8-b0eb-307821567b2c">
+                    <audio preload="auto" style="display:none">
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/George_W_Bush-Inaugural_Address-enrollment.ogg" type="audio/ogg" />
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/George_W_Bush-Inaugural_Address-enrollment.mp3" type="audio/mp3" />
+                    </audio>
+                </div>
+                <div id="highLight">
+                </div>
+            </div>
+            <div class="image-item">
+                <img src=../Modules/Microsoft.ProjectOxford.Website.Demos/Images/spid/Picture3.jpg />
+                <div class="speakerInfo">
+                    <div class="icons">
+                        <div data-name="start_stop" class="play2">
+                        </div>
+                    </div>
+                    <div class="textCheck">
+                        <span>Enrollment speech</span>
+                    </div>
+                    <div class="textName">
+                        <span>William J Clinton</span>
+                    </div>
+                    <input type="hidden" data-name="identificationProfield" value="a435a5dc-ed25-49ef-a2d2-ccd4b2e9d65b">
+                    <audio preload="auto" style="display:none">
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/William_J_Clinton-Inaugural_Address-enrollment.ogg" type="audio/ogg" />
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/William_J_Clinton-Inaugural_Address-enrollment.mp3" type="audio/mp3" />
+                    </audio>
+                </div>
+                <div id="highLight">
+                </div>
+            </div>
+            <div class="image-item">
+                <img src=../Modules/Microsoft.ProjectOxford.Website.Demos/Images/spid/Picture4.jpg />
+                <div class="speakerInfo">
+                    <div class="icons">
+                        <div data-name="start_stop" class="play2">
+                        </div>
+                    </div>
+                    <div class="textCheck">
+                        <span>Enrollment speech</span>
+                    </div>
+                    <div class="textName">
+                        <span>George H W Bush</span>
+                    </div>
+                    <input type="hidden" data-name="identificationProfield" value="d6cdb1c5-6e1f-401e-a627-adc068fdc0a3">
+                    <audio preload="auto" style="display:none">
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/George_H_W_Bush-Inaugural_Address-enrollment.ogg" type="audio/ogg" />
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/George_H_W_Bush-Inaugural_Address-enrollment.mp3" type="audio/mp3" />
+                    </audio>
+
+                </div>
+                <div id="highLight">
+                </div>
+            </div>
+            <div class="image-item">
+                <img src=../Modules/Microsoft.ProjectOxford.Website.Demos/Images/spid/Picture5.jpg />
+                <div class="speakerInfo">
+                    <div class="icons">
+                        <div data-name="start_stop" class="play2">
+                        </div>
+                    </div>
+                    <div class="textCheck">
+                        <span>Enrollment speech</span>
+                    </div>
+                    <div class="textName">
+                        <span>Ronald Reagan</span>
+                    </div>
+                    <input type="hidden" data-name="identificationProfield" value="b4421a6b-70e9-45c0-b300-81557a371925">
+                    <audio preload="auto" style="display:none">
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/Ronald_Reagan-Inaugural_Address-enrollment.ogg" type="audio/ogg" />
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/Ronald_Reagan-Inaugural_Address-enrollment.mp3" type="audio/mp3" />
+                    </audio>
+
+                </div>
+                <div id="highLight">
+                </div>
+            </div>
+            <div class="image-item">
+                <img src=../Modules/Microsoft.ProjectOxford.Website.Demos/Images/spid/Picture6.png />
+                <div class="upLoadDiv">
+                    <div data-name="upLoadBtn" class="upLoadIcon"></div>
+                    <div class="upLoadText">
+                        <div>Upload audio</div>
+                        <div>for identification</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="detection-demo-result detection-identification-demo">
+            <ul class="ui-tabs-nav ui-corner-all">
+                <li class="ui-corner-top ui-nav-active"><a data-name="tabItem" id="Result">Result</a></li>
+                <li class="ui-corner-top ui-corner-top-a-white"><a data-name="tabItem" id="JSON">JSON</a></li>
+            </ul>
+            <div class="demo-codes detection-demo-codes">
+                <pre data-name="code" class="code"></pre>
+            </div>
+            <div class="filler"></div>
+            <div class="clear"></div>
+            <div data-name="dealing" class="floatingDiv displaynone">
+                <div class="floatingCirclesG">
+                    <div class="f_circleG frotateG_01">
+                    </div>
+                    <div class="f_circleG frotateG_02">
+                    </div>
+                    <div class="f_circleG frotateG_03">
+                    </div>
+                    <div class="f_circleG frotateG_04">
+                    </div>
+                    <div class="f_circleG frotateG_05">
+                    </div>
+                    <div class="f_circleG frotateG_06">
+                    </div>
+                    <div class="f_circleG frotateG_07">
+                    </div>
+                    <div class="f_circleG frotateG_08">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="audioList">
+            <div class="audioItem">
+                <div data-name="audioPlay" class="audioStart"></div>
+                <div class="item">
+                    <span>Audio 1</span>
+                    <input type="hidden" data-name="profield" value="bf058f39-538d-4145-bf56-3bb9ec8fa662" />
+                    <audio preload="auto" style="display:none">
+                        
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/Barack_Obama-Inaugural_Address-test1.ogg" type="audio/ogg" />
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/Barack_Obama-Inaugural_Address-test1.mp3" type="audio/mp3" />
+                    </audio>
+                </div>
+            </div>
+            <div class="audioItem">
+                <div data-name="audioPlay" class="audioStart"></div>
+                <div class="item">
+                    <span>Audio 2</span>
+                    <input type="hidden" data-name="profield" value="f6af5ac0-1333-43f8-b0eb-307821567b2c">
+                    <audio preload="auto" style="display:none">
+                        
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/George_W_Bush-Inaugural_Address-test1.ogg" type="audio/ogg" />
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/George_W_Bush-Inaugural_Address-test1.mp3" type="audio/mp3" />
+                    </audio>
+                </div>
+            </div>
+            <div class="audioItem">
+                <div data-name="audioPlay" class="audioStart"></div>
+                <div class="item">
+                    <span>Audio 3</span>
+                    <input type="hidden" data-name="profield" value="a435a5dc-ed25-49ef-a2d2-ccd4b2e9d65b">
+                    <audio preload="auto" style="display:none">
+                        
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/William_J_Clinton-Inaugural_Address-test1.ogg" type="audio/ogg" />
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/William_J_Clinton-Inaugural_Address-test1.mp3" type="audio/mp3" />
+                    </audio>
+                </div>
+            </div>
+            <div class="audioItem">
+                <div data-name="audioPlay" class="audioStart"></div>
+                <div class="item">
+                    <span>Audio 4</span>
+                    <input type="hidden" data-name="profield" value="d6cdb1c5-6e1f-401e-a627-adc068fdc0a3">
+                    <audio preload="auto" style="display:none">
+                        
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/George_H_W_Bush-Inaugural_Address-test1.ogg" type="audio/ogg" />
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/George_H_W_Bush-Inaugural_Address-test1.mp3" type="audio/mp3" />
+                    </audio>
+                </div>
+            </div>
+            <div class="audioItem">
+                <div data-name="audioPlay" class="audioStart"></div>
+                <div class="item">
+                    <span>Audio 5</span>
+                    <input type="hidden" data-name="profield" value="b4421a6b-70e9-45c0-b300-81557a371925">
+                    <audio preload="auto" style="display:none">
+                        
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/Ronald_Reagan-Inaugural_Address-test1.ogg" type="audio/ogg" />
+                        <source src="https://portalstoragewuprod2.azureedge.net/spid/Ronald_Reagan-Inaugural_Address-test1.mp3" type="audio/mp3" />
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div data-name="IdentificationDialog" data-demo-type="Dialog" class="dialog">
+            <div class="title">
+                <span>Upload audio…</span>
+            </div>
+            <div data-name="cancel" class="cancel">
+            </div>
+            <div class="content">
+                <div class="left">
+                    <div class="innerContent">
+                        <span>Accept format</span>
+                        <ul>
+                            <li>Format: WAV</li>
+                            <li>Encoding: PCM</li>
+                            <li>Rate: 16K</li>
+                            <li>Sample Format: 16 bit</li>
+                            <li>Channels: Mono</li>
+                            <li>Length: at least 1 min</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="audioinfo">
+                        <span>Audio:</span>
+                        <div style="height:30px;">
+                            <input type="text" data-name="upLoadAudioPath" />
+                            <div data-name="browse" class="browse">
+                                Browse...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div data-name="cancel" class="cancel2"><span>Cancel</span></div>
+                <div data-name="ok" class="ok"><span>OK</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="displaynone">
+        <input type="file" value="" />
+    </div>
+</div>
+                            </div>
+                    </div>
+
+        </div>
+
+<!-- Flickity HTML init -->
+<!-- quote section-->
+
+    <div class="pricing-section row feature-item-container">
+        <div class="pricing-section-content container">
+            <h2 class="text--md text--centered text--light" style="margin-bottom:20px;">Pricing options</h2>
+            <table class="table apidetail-pricing-options">
+                <tbody>
+                                <tr>
+                                    <th class="text--semibold">Plan</th>
+                                    <th class="text--semibold">Description</th>
+                                    <th class="text--semibold">Price</th>
+                                </tr>
+                            <tr>
+                                <td class="text--semibold">Free</td>
+                                <td class="text--reg">
+                                    10K calls per month
+                                </td>
+                                <td class="text--reg">Free</td>
+                            </tr>
+                            <tr>
+                                <td class="text--semibold">Standard</td>
+                                <td class="text--reg">
+                                    5 TPS
+                                </td>
+                                <td class="text--reg">0-50k at $5; 50-100k at $4.5; 100-250k at $4; 250-500k at $3.5; over 500k at $3</td>
+                            </tr>
+                            <tr>
+                                <td class="text--semibold">Standard</td>
+                                <td class="text--reg">
+                                    5 TPS
+                                </td>
+                                <td class="text--reg">0-50k at $10; 50-100k at $9; 100-250k at $8; over 250k at $7</td>
+                            </tr>
+                                            <tr style="border:none">
+                                                <td colspan="3" style="border:none; padding:0px !important">
+                                                    <a href="https://portal.azure.com/#create/Microsoft.CognitiveServices/apitype/SpeakerRecognition/pricingtier/S0" target="_blank" class="btn--oxford btn--yellow col-xs-4 col-md-2 btn-buynow text--sm text--semilight" onclick="ga('send','event','subscription','buyonazure','Speaker Recognition');">
+                                                        Buy on Azure
+                                                        <span class="buy-on-azure-img" style="margin-left:5px"></span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="feature-item-container--grey row">
+        <div class="similar-apis-section-content container">
+            <h2 class="text--md text--light text--black text--centered">You might also be interested in</h2>
+                        <div class="similar-api-item col-xs-12 col-sm-6 col-md-3 col-md-offset-1">
+                            
+<article class="api-detail-page content-item">
+    <header>
+        
+    </header>
+    <a id="ApiRelatedLink" href="speech-api.html">
+    <img class="img-responsive similar-api-item-img ApiIcon" src="https://portalstoragewuprod2.azureedge.net:443/media/Default/Media/Speech/Icons_Speech_Speech.svg">
+    <h3 class="text--sm text--light text--centered ApiTitle">Bing Speech API</h3>
+</a>
+
+</article>
+                        </div>
+                        <div class="similar-api-item col-xs-12 col-sm-6 col-md-3">
+                            
+<article class="api-detail-page content-item">
+    <header>
+        
+    </header>
+    <a id="ApiRelatedLink" href="custom-recognition-intelligent-service-cris.html">
+    <img class="img-responsive similar-api-item-img ApiIcon" src="https://portalstoragewuprod2.azureedge.net:443/media/Default/Media/CRIS/Icons_Speech_CRIS.svg">
+    <h3 class="text--sm text--light text--centered ApiTitle">Custom Recognition Intelligent Service (CRIS)</h3>
+</a>
+
+</article>
+                        </div>
+                        <div class="similar-api-item col-xs-12 col-sm-6 col-md-3">
+                            
+<article class="api-detail-page content-item">
+    <header>
+        
+    </header>
+    <a id="ApiRelatedLink" href="language-understanding-intelligent-service-luis.html">
+    <img class="img-responsive similar-api-item-img ApiIcon" src="https://portalstoragewuprod2.azureedge.net:443/media/Default/Media/LUIS/Icons_Language_LUIS.svg">
+    <h3 class="text--sm text--light text--centered ApiTitle">Language Understanding Intelligent Service (LUIS)</h3>
+</a>
+
+</article>
+                        </div>
+
+        </div>
+    </div>
+
+<!-- Resources bar -->
+<div class="api-resources-section row">
+
+    <div class="api-resources-section-content container ">
+        <h2 class="text--md text--light text--white text--centered">Developer resources for Speaker Recognition API</h2>
+        <div class="api-resources-section-content__btn-container text--centered">
+            <div class="api-detail-btn">
+                <a id="bottomDocumentationLink" href="speaker-recognition-api/documentation.html" class="btn--oxford btn--teal text--sm text--semilight">
+                    Documentation
+                </a>
+            </div>
+                <div class="api-detail-btn">
+                    <a id="bottomApiReferenceLink" href="https://dev.projectoxford.ai/docs/services/563309b6778daf02acc0a508" target="_blank" class="btn--oxford btn--teal text--sm text--semilight">
+                        API Reference
+                    </a>
+                </div>
+                            <div class="api-detail-btn">
+                    <a id="bottomSdkLink" href="SDK-Sample1924.html?api=speaker%20recognition" onclick="trackOutboundLink('/en-us/SDK-Sample?api=speaker%20recognition')" class="btn--oxford btn--teal text--sm text--semilight">
+                        SDK
+                    </a>
+                </div>
+                                </div>
+    </div>
+
+</div>
+
+    <!--Footer CTA-->
+    <div class="get-started-section" id="footer-cta-bar">
+        <div class="container">
+            <div class="text--light text--white text--md col-md-8 row">
+                Ready to supercharge your app?
+            </div>
+            <div class="pull-right">
+                <div class="hero-banner-btn">
+                    <a id="bottomGetStartedForFree" href="sign-up2a84.html?productId=/products/56331f9ae597ed1444efaec6" class="btn--oxford btn--yellow text--sm text--semilight">
+                        Get started for free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</article></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+        <footer id="layout-footer">
+            <div class="zone zone-footer">
+<div id='translatorwidget_tmp' translate="no" style="display:none;">
+    <div class="row">
+        <div class="col-md-3 text-right translate-widget">
+            <img class="text--xs" src="../Themes/ProjectOxford/Images/footer/translate-icon.jpg" />
+            <span class="text--xs text--white translated">
+                Translated to
+            </span>
+            <a href="javascript:showtransbox();" class="translateresult text--xs text--black" style="text-decoration:underline !important;">English</a>
+            <span class="text--xs" id="dropdonwicon">
+                <i class="glyphicon glyphicon-menu-down" style="font-size: 12px;"></i>
+            </span>
+        </div>
+        <div class="col-md-3 translated-by">
+            <span style="color:white;" class="text--xs">by</span>
+            <span class="text--black text--xs">
+                <a href="https://www.microsoft.com/translator" target="_blank">Microsoft Translator</a>
+            </span>
+        </div>
+        <div class="col-md-6 show-original">
+            <div class="close">×</div>
+            <button class="text--xs" id="showOrigin" type="button" onclick="tranlateto('en','English')">Show original</button>
+        </div>
+    </div>
+</div>
+<div id="translator_box" translate="no" tabindex="1"></div>
+
+<div class="container-fluid footer-container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h4 class="text--semilight text--black">About</h4>
+                <div class="text--light text--black text--xs">
+                    <a href="news.html" id="gaNews" class="text--xxs text--semilight text--medgrey">
+                        Blog
+                    </a>
+                </div> 
+            </div>
+            <div class="col-md-3">
+                <h4 class="text--semilight text--black">Know before you code</h4>
+                <div class="text--light text--black text--xs">
+                    <a href="https://go.microsoft.com/fwlink/?LinkId=533207" target="_blank" onclick="trackOutboundLink('https://go.microsoft.com/fwlink/?LinkId=533207')" class="text--xxs text--semilight text--medgrey" style="white-space:nowrap">Microsoft Cognitive Services Terms</a>
+                </div>
+                <div class="text--light text--black text--xs">
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=698895" onclick="trackOutboundLink('http://go.microsoft.com/fwlink/?LinkId=698895')" target="_blank" class="text--xxs text--semilight text--medgrey">
+                        Developer Code of Conduct
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4 class="text--semilight text--black">Help & support</h4>
+                <div class="text--light text--black text--xs">
+                    <a href="https://stackoverflow.com/questions/tagged/microsoft-cognitive" onclick="trackOutboundLink('https://stackoverflow.com/questions/tagged/microsoft-cognitive')" target="_blank" class="text--xxs text--semilight text--black">
+                        Stack Overflow
+                    </a>
+                </div>
+                <div class="text--light text--black text--xs">
+                    <a href="https://cognitive.uservoice.com/" onclick="trackOutboundLink('https://cognitive.uservoice.com/')" target="_blank" class="text--xxs text--semilight text--medgrey">
+                        User Voice
+                    </a>
+                </div>
+                <div class="text--light text--black text--xs">
+                    <a href="#" id="general-inquiry-link" class="text--xxs text--semilight text--medgrey" style="white-space:nowrap" onclick="ga('send', 'event', 'userVoice', 'contactUs', 'footer');">Contact us</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4 class="text--semilight text--black">Go social</h4>
+                <div style="margin-top:20px;">
+                    <a href="https://www.facebook.com/Microsoft/?fref=ts" onclick="trackOutboundLink('https://www.facebook.com/');" target="_blank" class="text--xxs text--semilight text--medgrey" style="display: inline-block;height: 32px;">
+                        <i class="fa text--black" style="font-size:32px;float: left;">
+                            <img src="../Themes/ProjectOxford/Images/footer/facebook-icon.jpg" />
+                        </i>
+                        <span style="float: left;margin-left: 10px;" class="text--xxs text--semilight text--black">Facebook</span>
+                    </a>
+                </div>
+                <div style="margin-top:20px;">
+                    <a href="https://twitter.com/search?q=%22Microsoft%20Cognitive%20Services%22%20OR%20%22Project%20Oxford%22&amp;src=typd" class="text--xxs text--semilight text--medgrey" onclick="trackOutboundLink('https://www.twitter.com/');" target="_blank" style="display: inline-block;height: 32px;">
+                        <i class="fa text--black" style="font-size:32px;float: left;">
+                            <img src="../Themes/ProjectOxford/Images/footer/twitter-icon.jpg" />
+                        </i>
+                        <span style="float: left;margin-left: 10px;" class="text--xxs text--semilight text--black">Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row" style="margin:50px  -15px;">
+                            <div class="col-sm-6 col-xs-6">
+                                <a class="text--xxs text--semilight text--medgrey" href="https://www.azure.cn/cognitive-services" onclick="trackOutboundLink('https://www.azure.cn/cognitive-services')">
+                                    <span class="glyphicon glyphicon-globe" style="margin-right:10px;"></span>
+                                    中文
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-xs-6">
+                                <div style="cursor:pointer;display:inline-block;" onclick="showcontainer()">
+                                    <span class="glyphicon " style="margin-right:10px;">
+                                        <img src="../Themes/ProjectOxford/Images/footer/translate-icon.jpg" />
+                                    </span>
+                                    <div class="transwidgetcontainer" tabindex="1">
+                                        <div class="text--black text--xxs" translate="no">Select your language</div>
+                                        <ul id="langs" translate="no"></ul>
+                                        <div class="translateresult translateresult-teal text--black text--xs">English</div>
+                                    </div>
+                                    <a href="javascript:;" id="btnTranslate" style="position: relative; top: 3px;" translate="no" class="text--xxs text--semilight text--medgrey">Translate</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 text-lg-right">
+                <h4 class="text--xxs text--semilight text--black footer-links">
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=521839" onclick="trackOutboundLink('http://go.microsoft.com/fwlink/?LinkId=521839')" target="_blank" class="text--xxs text--semilight text--medgrey">
+                        Privacy & Cookies
+                    </a>
+                </h4>
+                <h4 class="text--xxs text--semilight text--black footer-links">
+                    <a href="https://go.microsoft.com/fwlink/?LinkID=206977" onclick="trackOutboundLink('https://go.microsoft.com/fwlink/?LinkID=206977')" target="_blank" class="text--xxs text--semilight text--medgrey">
+                        Terms of Use
+                    </a>
+                </h4>
+                <h4 class="text--xxs text--semilight text--black footer-links">
+                    <a href="https://go.microsoft.com/?linkid=9851308" onclick="trackOutboundLink('https://go.microsoft.com/?linkid=9851308')" target="_blank" class="text--xxs text--semilight text--medgrey">
+                        Trademarks
+                    </a>
+                </h4>
+                <h4 class="text--xxs text--semilight text--black footer-links">
+                    <a id="report-abuse-link" href="#" onclick="ga('send', 'event', 'userVoice', 'reportAbuse', 'reportAbuse');" class="text--xxs text--semilight text--medgrey  uv-btn-trigger">
+                        Report Abuse
+                    </a>
+                </h4>
+                <h4 class="text--xxs text--semilight text--black footer-links">
+                    ©2016 Microsoft
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+        </footer>
+    </div>
+</div>
+
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Content/scripts/flickity.pkgd489f.js?v=636141902458904552" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Content/scripts/ApiDetailPart489f.js?v=636141902458904552" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Demos/scripts/extension489f.js?v=636141902458904552" type="text/javascript"></script>
+<script src="../Modules/Microsoft.ProjectOxford.Website.Demos/scripts/jqueryToken.js" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Demos/scripts/spid/maindb8e.js?v=636141904066917500" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Demos/scripts/spid/recorderWorkerdb8e.js?v=636141904066917500" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Demos/scripts/spid/speakerVerificationdb8e.js?v=636141904066917500" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Demos/scripts/spid/speakerIdentificationdb8e.js?v=636141904066917500" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Demos/scripts/Recaptchaf1f6.js?v=636141902459066948" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/scripts/headroomf1f6.js?v=636141902459066948" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/scripts/jquery.headroomf1f6.js?v=636141902459066948" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/scripts/navf1f6.js?v=636141902459066948" type="text/javascript"></script>
+    <script type="text/JavaScript">
+        var varAutoFirePV = 1;
+        var varClickTracking = 1;
+        var varCustomerTracking = 1;
+        if ("en-us" == "zh-cn") {
+            var Route = "62584";
+        }
+        else {
+            var Route = "20049";
+        }
+        var Ctrl = " ";
+        document.write("<script type='text/javascript' src='" + (window.location.protocol) + "//c.microsoft.com/ms.js'" + "'><\/script>");
+        // code for google analytics.
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '../../../www.google-analytics.com/analytics.js', 'ga');
+
+        var trackOutboundLink = function (url) {
+            ga('send', 'event', 'outbound', 'click', url);
+        }
+
+        if ("en-us" == "zh-cn") {
+            ga('create', 'UA-72171728-3', 'auto');
+        }
+        else {
+            ga('create', 'UA-72171728-1', 'auto');
+        }
+
+        // Optimizely Universal Analytics Integration
+        window.optimizely = window.optimizely || [];
+        window.optimizely.push("activateUniversalAnalytics");
+        // End Optimizely Code
+
+        ga('require', 'linkid');
+        ga('send', 'pageview');
+    </script>
+
+    <script src="https://www.microsofttranslator.com/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**" type="text/javascript"></script>
+    <script type="text/javascript">
+        // Include the UserVoice JavaScript SDK (only needed once on a page)
+        UserVoice = window.UserVoice || [];
+        (function () {
+            var uv = document.createElement('script');
+            uv.type = 'text/javascript';
+            uv.async = true;
+            uv.src = '../../../widget.uservoice.com/6hW5Um5EzZ19G4o8yxeEw.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(uv, s)
+        })();
+
+        UserVoice.push(['set', {
+            // Options can also be set on specific widgets instead of globally
+            target: 'self', // 'none' for toaster popups, #id for a specific element on the page
+            accent_color: '#004b50', // Widget accent color
+            locale: 'en', // Defaults to your account’s localization
+        }]);
+
+        UserVoice.push(['addTrigger', '#general-inquiry-link', {
+            mode: 'contact',
+            position: 'top',
+            // Customize widget text
+            // (see documentation for all options)
+            strings: {
+                // Contact form
+                contact_title: 'General inquiry',
+                contact_message_placeholder: 'Give feedback or ask for help',
+                contact_skip_instant_answers_button: 'Skip and send message',
+                contact_details_title: 'Additional details',
+                contact_submit_button: 'Send message',
+                contact_success_title: 'Message sent!',
+                contact_success_body: 'We’ll be in touch.'
+            }
+        }]);
+
+        UserVoice.push(['addTrigger', '#report-abuse-link', {
+            mode: 'contact',
+            ticket_custom_fields: {
+                'Custom Widget': 'Abuse'
+            },
+
+            // Customize widget text
+            // (see documentation for all options)
+            strings: {
+                // Contact form
+                contact_title: 'Report abuse',
+                contact_message_placeholder: 'Whats going on?',
+                contact_skip_instant_answers_button: 'Skip and send message',
+                contact_details_title: 'Additional details',
+                contact_submit_button: 'Send message',
+                contact_success_title: 'Message sent!',
+                contact_success_body: 'We’ll be in touch.'
+            }
+        }]);
+
+        function fillList(listOfLanguages) {
+            var ddlLangs = document.getElementById('langs');
+            var box = document.getElementById("translator_box");
+            for (var key in listOfLanguages) {
+                $(ddlLangs).append('<li value="' + listOfLanguages[key].Code + '">' + listOfLanguages[key].Name + '</li>');
+                $(box).append("<a href='javascript:tranlateto(\"" + listOfLanguages[key].Code + "\",\"" + listOfLanguages[key].Name + "\");'>" + listOfLanguages[key].Name + "</a>");
+            }
+        }
+
+        var isfirst = true;
+
+        var layoutHeader = $("#layout-header").outerHeight();
+
+        function getlayoutheaderheight() {
+            if (window.innerWidth < 768) {
+                return 0;
+            }
+            return $("#layout-header").css('display') !== 'none' ? layoutHeader : 0;
+        }
+
+
+        function tranlateto(lang, text) {
+            $("#dropdonwicon").removeClass('select');
+
+            $('#translator_box').hide();
+
+            if ('en' === lang) {
+                $('#showOrigin').hide();
+            }
+            else {
+                $('#showOrigin').show();
+            }
+
+            if (isfirst) {
+                $("#layout-wrapper").prepend($("#translatorwidget_tmp").clone().prop('id', 'translatorwidget').show());
+                isfirst = false;
+            } else {
+                $("#translatorwidget").show();
+            }
+
+            var consValue = $("#translatorwidget").outerHeight();
+
+            var moveHeight = $('#translatorwidget').length > 0 ? ($("#translatorwidget").css('display') !== 'none' ? consValue : 0) : 0;
+
+            if (window.scrollY >= 350) {
+                $("#layout-header").hide();
+            }
+
+            $("#layout-header").css("margin-top", moveHeight);
+            $("#layout-navigation").css("margin-top", consValue + getlayoutheaderheight());
+            $(".hero-banner-container").css('margin-top', consValue + getlayoutheaderheight() + $("#layout-navigation").outerHeight() - 48);
+
+            Microsoft.Translator.Widget.Translate('en', lang,
+                function (value) {
+
+                },
+                function (err) {
+                    tranlateto(lang, text);
+                },
+                function (result) {
+                    $("#translatorwidget").attr('dir', 'ltr');
+                },
+                function (revert) {
+
+                }, 30000);
+
+            $(".translateresult").text(text);
+
+        }
+
+        function showtransbox() {
+            $('#translator_box').toggle();
+            $("#dropdonwicon").addClass('select');
+            $("#translator_box").focus();
+        }
+
+        function showcontainer() {
+            $(".transwidgetcontainer").show().focus();
+        }
+
+        $(document).ready(function () {
+            fillList(Microsoft.Translator.Widget.GetLanguagesForTranslateLocalized());
+
+            $("#langs").on('click', 'li', function (e) {
+                e.stopPropagation(); $(".transwidgetcontainer").hide();
+                tranlateto($(this).attr('value'), $(this).text());
+            });
+
+            $(".transwidgetcontainer").blur(function () {
+                $(this).hide();
+            });
+
+            $("#translator_box").blur(function () {
+                setTimeout(function () {
+                    $("#translator_box").hide();
+                    $("#dropdonwicon").removeClass('select');
+                }, 200);
+            });
+            $("#layout-wrapper").on('click', '.close', function () {
+                tranlateto('en', 'English');
+                $("#translatorwidget").hide();
+                $('#translator_box').hide();
+                if (window.scrollY >= 350) {
+                    $("#layout-header").hide();
+                    $("#layout-navigation").css("margin-top", "0px");
+                }
+                else {
+                    $("#layout-header").css("margin-top", "0px");
+                    $("#layout-navigation").css("margin-top", $("#layout-header").outerHeight());
+                    $(".dropdown-menu").css("top", "150px");
+                }
+                $(".hero-banner-container").css('margin-top', getlayoutheaderheight() + $("#layout-navigation").outerHeight() - 48);
+
+            });
+        });
+    </script>
+
+
+</body>
+
+<!-- Mirrored from www.microsoft.com/cognitive-services/en-us/speaker-recognition-api by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Nov 2016 10:29:39 GMT -->
+</html>

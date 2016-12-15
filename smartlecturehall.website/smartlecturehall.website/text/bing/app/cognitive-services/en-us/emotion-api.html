@@ -1,0 +1,1487 @@
+
+<!DOCTYPE html> 
+<html lang="en-US" class="static detail-api-detail-page dir-ltr contents" dir="ltr"> 
+
+<!-- Mirrored from www.microsoft.com/cognitive-services/en-us/emotion-api by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Nov 2016 10:28:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Microsoft Cognitive Services - Emotion API</title> 
+    <link data-timestamped="true" href="../Modules/Microsoft.ProjectOxford.Website.Content/Styles/ApiDetail7c34.css?v=636141902423279305" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../Modules/Microsoft.ProjectOxford.Website.Demos/Styles/DemoBase7c34.css?v=636141902423279305" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../Modules/Microsoft.ProjectOxford.Website.Demos/Styles/Demos7c34.css?v=636141902423279305" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../Modules/Microsoft.ProjectOxford.Website.Demos/Styles/video1f3b.css?v=636141902445310725" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../Themes/ProjectOxford/Bootstrap/css/bootstrap.min7c34.css?v=636141902423279305" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../Themes/ProjectOxford/Bootstrap/css/bootstrap-theme.min7c34.css?v=636141902423279305" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../Themes/ProjectOxford/Styles/site.minc7c8.css?v=636141902423462979" rel="stylesheet" type="text/css" />
+<link data-timestamped="true" href="../Themes/ProjectOxford/Styles/main-navigationc7c8.css?v=636141902423462979" rel="stylesheet" type="text/css" />
+<script src="../Modules/Orchard.jQuery/scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Orchard.jQuery/Scripts/jquery.cookie.minfb61.js?v=636141902424695845" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/Bootstrap/js/bootstrap.min3832.js?v=636141902425175830" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/Scripts/angular.minec96.js?v=636141902425310581" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/Scripts/angular-contenteditableec96.js?v=636141902425310581" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/Scripts/appec96.js?v=636141902425310581" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/Scripts/siteec96.js?v=636141902425310581" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/cognitive-services/Core/Shapes/scripts/html5.js" type="text/javascript"></script>
+<![endif]-->
+<meta content="Orchard" name="generator" />
+<meta content="Analyze faces to detect a range of feelings and personalize your app&#39;s responses." name="description" />
+<meta content="Microsoft,cognitive services,project oxford,API,SDK,free,emotion,emotion recognition,emotion detection,affective computing,user testing,market research,software,mood,recognition,detection,ad analysis, facial expression" name="keywords" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="width=device-width" name="viewport" />
+<link href="https://www.microsoft.com/cognitive-services/modules/orchard.themes/Content/orchard.ico" rel="shortcut icon" type="image/x-icon" />
+    <script type="text/javascript">
+        var antiForgeryToken = 'LM-QfY7zLOdWdusa05o2Jc7uDkb4ocSspc653PPT9VwFZp1WhEiKs16kRxF9-nfGtKveIl_-N54kVZZg-FORfLbIAnYIHFQQStxjufG6MUA1';
+        var applicationRoot = '/cognitive-services';
+        if (applicationRoot == 'https://www.microsoft.com/') {
+            applicationRoot = '';
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        var applicationRoot = '/cognitive-services';
+        if (applicationRoot == 'https://www.microsoft.com/') {
+            applicationRoot = '';
+        }
+
+    </script>
+
+    <script src="../../../cdn.optimizely.com/js/6213472562.js"></script>
+    <script>
+        var e = document.createElement("script");
+        e.async = true;
+        e.src = "https://ad.atdmt.com/m/a.js;m=11087206420460;cache=" + Math.random();
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(e, s);
+    </script>
+    <noscript>
+        <iframe style="display:none;"
+                src="https://ad.atdmt.com/m/a.html;m=11087206420460;noscript=1"></iframe>
+    </noscript>
+
+
+    <script>(function(d){d.className="dyn"+d.className.substring(6,d.className.length);})(document.documentElement);</script> 
+    <script>window.isRTL = false;</script>
+</head> 
+<body>
+
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+<div ng-app="projectOxfordApp">
+    <div id="layout-wrapper">
+        <header id="layout-header" role="banner" style="position:fixed;">
+            <div class="container">
+                <div class="zone zone-header"><!-- hero area -->
+<div id="branding">
+    <a id="microsoftLink" class="text--md" href="https://www.microsoft.com/"><img class="img-responsive" src="../Themes/ProjectOxford/Content/Images/microsoftLogo.png" alt="Microsoft Cognitive Services" /></a>
+    <a class="text--md" id="cognitiveservicelogo" href="https://www.microsoft.com/cognitive-services">Cognitive Services</a>
+</div>
+
+<article class="widget-UserLogin widget-header widget-user-login-form widget">
+    
+<div class="container">
+    <div id="loginWidget" class="login-profile nav navbar-nav navbar-right text--xs">
+            <div>
+                <a class="get-start-btn btn--yellow text--semilight" href="sign-up.html">Get started for free</a>
+                <a href="sign-up93d6.html" class="text-reg" onclick="ga('send','event','subscription','myaccount');">
+                    <span>
+                        My account
+                    </span>
+                    <img style="height:24px;vertical-align:middle;" src="../Modules/Microsoft.ProjectOxford.Website.Subscription/Images/Login/login.png" />
+                </a>
+            </div>
+    </div>
+</div>
+</article></div>
+            </div>
+        </header>
+            <div id="layout-navigation">
+            <div class="zone zone-navigation">
+<article class="widget-navigation widget-menu-widget widget">
+    
+<script type="text/javascript">
+    $(function () {
+        $('.navigation .sub-menuitem li a').each(function () {
+            if ($(this).attr('href').lastIndexOf('.') > 0) {
+                var urlDomain = $(this).attr('href').substring(0, $(this).attr('href').lastIndexOf('.')).toLowerCase();
+                if (urlDomain.indexOf('msdn') > 0) {
+                    $(this).attr("onclick", "ga('send', 'event', 'outbound', 'msdn', 'navbar')");
+                }
+                if (urlDomain.indexOf('stackoverflow') > 0) {
+                    $(this).attr("onclick", "ga('send', 'event', 'outbound', 'stackOverflow', 'navbar')");
+                }
+                if (urlDomain.indexOf('uservoice') > 0) {
+                    $(this).attr("onclick", "ga('send', 'event', 'outbound', 'userVoice', 'navbar')");
+                }
+            }
+        });
+
+    })
+</script>
+<div class="container main-navigation">
+
+    <nav class="col navbar navbar-default navbar-static-top" id="nav" role="navigation" aria-label="Main menu">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand visible-xs">
+                    <a href="https://www.microsoft.com/">
+                        <img class="brandImg" src="../Themes/ProjectOxford/Content/Images/microsoftLogo.png" alt="Microsoft">
+                    </a>
+                    <a href="https://www.microsoft.com/cognitive-services">
+                        <div class="brandTitle">Cognitive Services</div>
+                    </a>
+                </div>
+                <div id="newWidgetContainer" class="visible-xs">
+
+                </div>
+                <button type="button" id="brandBtn" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse @*hidden-xs*@" id="navbar-collapse-1" role="menubar">
+                <ul class="nav navbar-nav mobile-nav">
+                            <li aria-label="Home" class="mobile-nav-item dropdown-toggle" role="menuitem">
+                                
+                                                                            <a href="https://www.microsoft.com/cognitive-services" class="text--xs">Home</a>
+                            </li>
+                            <li aria-label="APIs" class="mobile-nav-item dropdown-toggle current dropdown dropActive" role="menuitem">
+                                
+                                    <a id="topLinkAPIs" href="#" class="text--xs">APIs<span class="arrow1"></span></a>
+                                    <div class="dropdown-menu tier-1">
+                                        <div class="container-fluid navigation">
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Vision" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Vision
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Vision</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="computer-vision-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Computer Vision
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="content-moderator.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Content Moderator
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="emotion-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Emotion
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="face-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Face
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="video-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Video
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Speech" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Speech
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Speech</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="speech-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Speech
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="custom-recognition-intelligent-service-cris.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Custom Recognition
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="speaker-recognition-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Speaker Recognition
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Language" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Language
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Language</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="bing-spell-check-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Spell Check
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="language-understanding-intelligent-service-luis.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Language Understanding
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="linguistic-analysis-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Linguistic Analysis
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="text-analytics-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Text Analytics
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="translator-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Translator
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="web-language-model-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                WebLM
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Knowledge" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Knowledge
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Knowledge</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="academic-knowledge-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Academic
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="entity-linking-intelligence-service.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Entity Linking
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="knowledge-exploration-service.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Knowledge Exploration
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="recommendations-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Recommendations
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Search" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Search
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Search</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="bing-autosuggest-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Autosuggest
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="bing-image-search-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Image Search
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="bing-news-search-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing News Search
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="bing-video-search-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Video Search
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="bing-web-search-api.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Bing Web Search
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                            <div class="container-fluid row" id="nav-bar-footer">
+                                                <div class="container" style="margin-bottom:10px;border-top-style:solid;border-top-width:1px;border-top-color:#505050;text-align:right;">
+                                                    <h3 id="hideWhenMobil" class="text--reg text--black text--xs hidden-xs" style="display:inline-block">
+                                                        Still looking for the right API?
+                                                    </h3>
+                                                    <a class="text--xs text--reg text--darkteal" style="margin-left:20px;" href="apis.html">
+                                                        See the entire collection >
+                                                    </a>
+                                                </div>
+                                            </div>
+                                    </div>
+                            </li>
+                            <li aria-label="Applications" class="mobile-nav-item dropdown-toggle" role="menuitem">
+                                
+                                                                            <a href="applications.html" class="text--xs">Applications</a>
+                            </li>
+                            <li aria-label="Developers" class="mobile-nav-item dropdown-toggle dropdown" role="menuitem">
+                                
+                                    <a id="topLinkDevelopers" href="#" class="text--xs">Developers<span class="arrow1"></span></a>
+                                    <div class="dropdown-menu tier-1">
+                                        <div class="container-fluid navigation">
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Resources" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Resources
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Resources</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="documentation.html"  class="text--reg text--xs text--darkteal ">
+                                                                                Documentation
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="SDK-Sample.html"  class="text--reg text--xs text--darkteal ">
+                                                                                SDKs &amp; Samples
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <ul class="mobile-nav">
+                                                        <li class="mobile-nav-item" aria-label="Community" role="menuitem">
+                                                            <h3 class="text--bold text--black text--xs hidden-xs">
+                                                                Community
+                                                                    <span class="arrow"></span>
+                                                            </h3>
+                                                            <div class="visible-xs">
+                                                                <span>Community</span>
+                                                                    <span class="arrow"></span>
+                                                            </div>
+                                                        </li>
+                                                            <li class="sub-menuitem mobile-nav-item">
+                                                                <ul class="mobile-nav">
+
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="https://stackoverflow.com/questions/tagged/microsoft-cognitive" target=&quot;_blank&quot; class="text--reg text--xs text--darkteal upgrade--img">
+                                                                                Stack Overflow
+                                                                                    <div class="darkreal"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="mobile-nav-item">
+                                                                            <a href="https://cognitive.uservoice.com/" target=&quot;_blank&quot; class="text--reg text--xs text--darkteal upgrade--img">
+                                                                                UserVoice
+                                                                                    <div class="darkreal"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                    </div>
+                            </li>
+                            <li aria-label="Pricing" class="mobile-nav-item dropdown-toggle" role="menuitem">
+                                
+                                                                            <a href="pricing.html" class="text--xs">Pricing</a>
+                            </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>
+</article></div>
+        </div>
+        <div id="layout-main-container" role="main">
+        <div id="layout-main">
+            <div id="layout-content">
+                
+                    <div id="content" class="clearfix">
+                        <div class="page-content-container">
+                            <div class="zone zone-content">
+<article class="api-detail-page content-item">
+    <header>
+        
+    </header>
+    
+<link rel="stylesheet" href="../../../npmcdn.com/flickity%402.0.5/dist/flickity.min.css">
+
+<!--hero area-->
+<div class="hero-banner-container row" style="background-image:url('../../../portalstoragewuprod2.azureedge.net_443/media/Default/Media/EmotionAPI/Emotion.jpg')">
+    <div class="hero-banner__content-container container">
+        <div class="hero-banner__content col-sm-12 col-md-6">
+            <h1 class="text--light text--lg text--white">Emotion API</h1>
+            <p class="text--semilight text--sm text--white">
+                Analyze faces to detect a range of feelings and personalize your app&#39;s responses.
+            </p>
+                <div class="hero-banner-btn">
+                    <a id="topGetStartedForFree" href="sign-up014b.html?productId=/products/5639d8afca73072154c1ce88" class="btn--oxford btn--yellow text--sm text--semilight">Get started for free</a>
+                </div>
+        </div>
+    </div>
+</div>
+
+<!--resources cta bar-->
+<div class="api-detail-cta-bar row">
+    <div class="api-detail-cta-bar__btn-container container">
+        <div class="pull-right">
+            <div class="api-detail-btn">
+                <a id="topDocumentationLink" href="emotion-api/documentation.html" class="btn--oxford btn--teal text--sm text--semilight">
+                    Documentation
+                </a>
+            </div>
+                <div class="api-detail-btn">
+                    <a id="topApiReferenceLink" href="https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89" target="_blank" class="btn--oxford btn--teal text--sm text--semilight">
+                        API Reference
+                    </a>
+                </div>
+
+                <div class="api-detail-btn">
+                    <a id="topSDKLink" href="SDK-Sample2306.html?api=emotion" onclick="trackOutboundLink('/en-us/SDK-Sample?api=emotion')" class="btn--oxford btn--teal text--sm text--semilight">
+                        SDK
+                    </a>
+                </div>
+                                </div>
+    </div>
+</div>
+
+<!--features with demos-->
+        <div class="feature-item-container row">
+                    <div class="feature-item-content container">
+                                <div class="feature-item-content__details text--centered">
+                                        <h2 class="text--md text--reg text--black col-xs-12">
+                                            Recognize Emotions in Images
+                                        </h2>
+
+                                        <p class="text--xs text--reg text--black col-xs-12 col-md-8 col-md-offset-2" style="white-space:pre-line">
+                                            The Emotion API takes a facial expression in an image as an input, and returns the confidence across a set of emotions for each face in the image, as well as bounding box for the face, using the Face API. If a user has already called the Face API, they can submit the face rectangle as an optional input. 
+
+The emotions detected are anger, contempt, disgust, fear, happiness, neutral, sadness, and surprise. These emotions are understood to be cross-culturally and universally communicated with particular facial expressions.
+
+For the demo below please click the image samples to see how Emotion API uses world-class machine learning techniques to provide these results. You can also click the open image button or drag-and-drop to upload your own images, or input a URL for a remote image. We don’t keep your images for this demo.
+                                        </p>
+                                </div>
+
+
+                            <div class="feature-item-content__demo col-xs-12">
+                                
+
+<style type="text/css">
+    header[role='heading'],
+    .navbar,
+    footer[role='contentinfo'],
+    .ed_layout {
+        overflow: visible;
+    }
+
+    .layout-row-content > .layout {
+        max-width: none;
+        overflow: visible;
+    }
+
+    .layout {
+        min-width: 920px;
+    }
+
+    .layout-row-content > .layout .ed_layout {
+        padding-top: 0;
+        min-width: 836px;
+    }
+
+    .faceinfo {
+        position: absolute;
+        background-color: #7A7A7A;
+        color: #ffffff;
+        height: auto;
+        padding: 10px;
+        display: none;
+        z-index: 100;
+        font-size: 16px;
+        opacity: 0.85;
+    }
+
+        .faceinfo > span:first-child {
+            position: absolute;
+            width: 0;
+            height: 0;
+            font-size: 0;
+        }
+
+        .faceinfo .tiparrowleft {
+            left: -10px;
+            border: solid 5px;
+            border-color: rgba(255,255,255,0) #7A7A7A rgba(255,255,255,0) rgba(255,255,255,0);
+        }
+
+        .faceinfo .tiparrowright {
+            right: -10px;
+            border: solid 5px;
+            border-color: rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0) #7A7A7A;
+        }
+
+    .facecode p {
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+
+        .facecode p span {
+            width: 85px;
+            display: inline-block;
+        }
+
+    .demo-bar-input {
+        position: absolute;
+        left: 5px;
+        right: 150px;
+    }
+
+        .demo-bar-input input {
+            display: inline-block;
+            width: 100%;
+            border: solid 2px #ccced0;
+            float: left;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            color: #000000;
+            padding: 2px;
+            padding-left: 6px;
+            margin-top: 2px;
+        }
+
+    .malelabelboxborder {
+        border: solid 3px #4cc9b4;
+        z-index: 98;
+    }
+
+    #recognition {
+        display: inline-block;
+    }
+
+    .flickity-viewport {
+        height: 120px !important;
+    }
+
+    .image-list {
+        display: block;
+    }
+
+    .mobile-image-list {
+        margin-top: 30px;
+        display: none;
+    }
+    .mobile-image-list .image-item{
+        opacity:0.5;
+    }
+        .mobile-image-list img {
+            height: 120px;
+            margin-right: 5px;
+        }
+     
+    .flickity-prev-next-button.previous {
+        left: 0px !important;
+    }
+
+    .flickity-prev-next-button.next {
+        right: 0px !important;
+    }
+
+    @media(max-width:321px) {
+        .mobile-image-list {
+            height: 82px !important;
+        }
+
+            .mobile-image-list img {
+                height: 82px !important;
+            }
+    }
+
+    @media(min-width:321px) and (max-width:400px) {
+        .mobile-image-list {
+            height: 100px !important;
+        }
+
+            .mobile-image-list img {
+                height: 100px !important;
+            }
+    }
+
+    @media(max-width:920px) {
+        .mobile-image-list {
+            display: block;
+        }
+
+        .image-list {
+            display: none;
+        }
+    }
+</style>
+
+
+<script type="text/javascript">
+        var azureCdnEndpoint = 'https://portalstoragewuprod2.azureedge.net/';
+    </script>
+
+<div id="Emotion" class="scroll_item reCaptcha-demo  reCaptcha-Emotion-demo">
+    <div data-demo-type="detection" class="detection-demo">
+        <input type="hidden" data-name="demoId" value="Emotion" />
+        <input type="hidden" data-name="demoResult" value="" />
+        <div class="demo-content">
+            <div data-name="container" class="img_container" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <input type="hidden" name="imageIndex" value="0" />
+                <div class="img_drop img_drop_background">
+                    <img class="visionImage" src="#" hidden />
+                    <div class="visionInforamtion" hidden>
+                        <div class="vision-isAdultContent"></div>
+                        <div class="vision-categories"></div>
+                    </div>
+                    <div class="visionfaces" hidden>
+                        <div></div>
+                    </div>
+                </div>
+                <span class="faceinfo"><span data-type="tiparrow"></span><span class="facecode"></span></span>
+                <div class="floatingCirclesG">
+                    <div class="f_circleG frotateG_01">
+                    </div>
+                    <div class="f_circleG frotateG_02">
+                    </div>
+                    <div class="f_circleG frotateG_03">
+                    </div>
+                    <div class="f_circleG frotateG_04">
+                    </div>
+                    <div class="f_circleG frotateG_05">
+                    </div>
+                    <div class="f_circleG frotateG_06">
+                    </div>
+                    <div class="f_circleG frotateG_07">
+                    </div>
+                    <div class="f_circleG frotateG_08">
+                    </div>
+                </div>
+                <div class='dummy'></div>
+            </div>
+            <div class="demo-bar">
+                <div class="demo-bar-button">
+                    <div class="informationbutton">
+                        <img class="markercontrol" src="../Modules/Microsoft.ProjectOxford.Website.Demos/Images/Information_icon_ON-2.png" />
+                        <span data-name="showinformation" class="buttontooltip switchon"><span class="tiparrow"></span>Show information</span>
+                        <span data-name="hideinformation" class="buttontooltip switchoff"><span class="tiparrow"></span>Hide information</span>
+                        <input type="hidden" name="infromationshowornot" value="1" />
+                        <div class="buttonMask"></div>
+                    </div>
+                    <div class="smartcroppingbutton">
+                        <img class="markercontrol" src="../Modules/Microsoft.ProjectOxford.Website.Demos/Images/SmartCropping_ON.png" />
+                        <span data-name="smartcroppingon" class="buttontooltip switchon"><span class="tiparrow"></span>Smart Cropping on</span>
+                        <span data-name="smartcroppingoff" class="buttontooltip switchon"><span class="tiparrow"></span>Smart Cropping off</span>
+                        <input type="hidden" name="smartcroppingOnorOff" value="1" />
+                        <div class="buttonMask"></div>
+                    </div>
+                    <div class="demo-bar-input">
+                        <input type="text" class="imgUrl defaultvalue" data-defultvalue='Image URL' value='Image URL' />
+                    </div>
+                    <div class="demo-bar-submit">
+                        <img src="../Modules/Microsoft.ProjectOxford.Website.Demos/Images/Submit_URL.png" />
+                        <span class="buttontooltip imgurltitle"><span class="tiparrow"></span>Submit</span>
+                        <div class="buttonMask" data-name="sumbitbutton"></div>
+                    </div>
+                    <div class="demo-bar-fileupload">
+                        <input name="localFile" class="localFile" type="file" accept="image/bmp,image/jpeg,image/png,image/gif" />
+                        <img class="localFileImg" src="../Modules/Microsoft.ProjectOxford.Website.Demos/Images/Upload_Image-2.png" />
+                        <span class="buttontooltip localfiletitle"><span class="tiparrow"></span>Open Image</span>
+                        <div class="buttonMask" data-name="localFilebutton"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="detection-demo-right">
+            <div class="demo-codes detection-demo-codes">
+                <pre data-name="code" class="code"></pre>
+            </div>
+            <div class="filler"></div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+        <div class="image-list" id="detection-image-list">
+            <div class="image-item" data-type="InitImage">
+                <img data-large-src="https://portalstoragewuprod2.azureedge.net/emotion/recognition1.jpg" src="../../../portalstoragewuprod2.azureedge.net/emotion/recognition1-thumbnail.jpg" /><div></div>
+            </div>
+            <div class="image-item">
+                <img data-large-src="https://portalstoragewuprod2.azureedge.net/face/demo/detection 5.jpg" src="../../../portalstoragewuprod2.azureedge.net/face/demo/detection%205%20thumbnail.jpg" /><div></div>
+            </div>
+            <div class="image-item">
+                <img data-large-src="https://portalstoragewuprod2.azureedge.net/face/demo/detection 6.jpg" src="../../../portalstoragewuprod2.azureedge.net/face/demo/detection%206%20thumbnail.jpg" /><div></div>
+            </div>
+            <div class="image-item">
+                <img data-large-src="https://portalstoragewuprod2.azureedge.net/emotion/recognition2.jpg" src="../../../portalstoragewuprod2.azureedge.net/emotion/recognition2-thumbnail.jpg" /><div></div>
+            </div>
+
+            <div class="image-item">
+                <img data-large-src="https://portalstoragewuprod2.azureedge.net/emotion/recognition3.jpg" src="../../../portalstoragewuprod2.azureedge.net/emotion/recognition3-thumbnail.jpg" /><div></div>
+            </div>
+
+            <div class="image-item">
+                <img data-large-src="https://portalstoragewuprod2.azureedge.net/emotion/recognition4.jpg" src="../../../portalstoragewuprod2.azureedge.net/emotion/recognition4-thumbnail.jpg" /><div></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+
+        <div class="mobile-image-list carousel" data-flickity='{ "groupCells": true }'>
+            <img class="image-item" data-large-src="https://portalstoragewuprod2.azureedge.net/emotion/recognition1.jpg" src="../../../portalstoragewuprod2.azureedge.net/emotion/recognition1-thumbnail.jpg" />
+            <img class="image-item" data-large-src="https://portalstoragewuprod2.azureedge.net/face/demo/detection 5.jpg" src="../../../portalstoragewuprod2.azureedge.net/face/demo/detection%205%20thumbnail.jpg" />
+            <img class="image-item" data-large-src="https://portalstoragewuprod2.azureedge.net/face/demo/detection 6.jpg" src="../../../portalstoragewuprod2.azureedge.net/face/demo/detection%206%20thumbnail.jpg" />
+            <img class="image-item" data-large-src="https://portalstoragewuprod2.azureedge.net/emotion/recognition2.jpg" src="../../../portalstoragewuprod2.azureedge.net/emotion/recognition2-thumbnail.jpg" />
+            <img class="image-item" data-large-src="https://portalstoragewuprod2.azureedge.net/emotion/recognition3.jpg" src="../../../portalstoragewuprod2.azureedge.net/emotion/recognition3-thumbnail.jpg" />
+            <img class="image-item" data-large-src="https://portalstoragewuprod2.azureedge.net/emotion/recognition4.jpg" src="../../../portalstoragewuprod2.azureedge.net/emotion/recognition4-thumbnail.jpg" />       
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".carousel").flickity({
+            cellAlign: 'center',
+            contain: true,
+            groupCells: 3
+        })
+    })
+
+</script>
+                            </div>
+                    </div>
+
+        </div>
+        <div class="feature-item-container--grey row">
+                    <div class="feature-item-content container">
+                                <div class="feature-item-content__details text--centered">
+                                        <h2 class="text--md text--reg text--black col-xs-12">
+                                            Recognize Emotions in Video
+                                        </h2>
+
+                                        <p class="text--xs text--reg text--black col-xs-12 col-md-8 col-md-offset-2" style="white-space:pre-line">
+                                            The Emotion API for Video recognizes the facial expressions of people in a video, and returns a summary of their emotions. You can use this API to track how a person or a crowd responds to your content over time. The emotions detected are anger, contempt, disgust, fear, happiness, neutral, sadness, and surprise.
+&#160;
+Recognize emotions in near real-time by extracting frames of a video and then sending those frames to the API calls of your choice. Get results faster and quickly start coding using our sample on GitHub.
+                                                <a href="emotion-api/documentation/emotion-api-how-to-topics/HowtoAnazlyzeVideo_Emotion.html">
+                                                    Learn more
+                                                </a>
+                                        </p>
+                                </div>
+
+
+                            <div class="feature-item-content__demo col-xs-12">
+                                
+
+<style type="text/css">
+    header[role='heading'],
+    .navbar,
+    footer[role='contentinfo'],
+    .ed_layout {
+        overflow: visible;
+    }
+
+    .layout-row-content > .layout {
+        max-width: none;
+        overflow: visible;
+    }
+
+    .layout {
+        min-width: 920px;
+    }
+
+    .layout-row-content > .layout .ed_layout {
+        padding-top: 0;
+        min-width: 836px;
+    }
+</style>
+
+
+
+<div id="fbfEmotion" class="scroll_item video-demo-css" style="width:100%;">
+    <div class="video-demo" data-demo-type="video" data-name="fbfEmotion">
+        <input type="hidden" data-name="videoId" value="fbfE1" />
+        <div class="videoF">
+            <div class="demo_video_large">
+                <video oncontextmenu="return false;"
+                       preload="metadata"
+                       class="video_style">
+                    <source data-name="MP4" src="https://portalstoragewuprod2.azureedge.net/media/Default/Media/EmotionAPI/framebyframe_demo_emotion1.mp4" type="video/mp4" />
+                    <source data-name="webm" src="#" type="video/webm" />
+                    <p>Sorry, Your browser does not support the video tag.</p>
+                </video>
+                <div class="video_style" data-name="PlayOrPauseDiv">
+                </div>
+                <div class="videocontrol">
+                    <div data-name="PlayOrPause" class="Play-Style" onclick="PlayOrPauseVideo(this);"></div>
+                    <div class="currentTimeDiv">
+                        <span class="currentTime">00:00:00</span>
+                    </div>
+                    <div class="progressBar">
+                        <div class="timeBar">
+                        </div>
+                    </div>
+                    <div data-name="volumeIcon" class="volumeIcon" onclick="VolumeClick(this);"></div>
+                    <div data-name="volumeData" class="volumeData displaynone">
+                        <div data-name="volumeValue" class="volumeValue"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Sdummy"></div>
+            <div data-name="ImgDiv" class="topDivLarge" style="background:url(../Modules/Microsoft.ProjectOxford.Website.Demos/Images/framebyframe/Emotion1_Preload.png) no-repeat center 0px / 100% 100%;">
+                <div data-name="play_icon" class="play_icon_style" onclick="PlayVideo(this);">
+                </div>
+            </div>
+            <div data-name="loading_icon" class="floatingDiv displaynone">
+                <div class="floatingCirclesG">
+                    <div class="f_circleG frotateG_01">
+                    </div>
+                    <div class="f_circleG frotateG_02">
+                    </div>
+                    <div class="f_circleG frotateG_03">
+                    </div>
+                    <div class="f_circleG frotateG_04">
+                    </div>
+                    <div class="f_circleG frotateG_05">
+                    </div>
+                    <div class="f_circleG frotateG_06">
+                    </div>
+                    <div class="f_circleG frotateG_07">
+                    </div>
+                    <div class="f_circleG frotateG_08">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image-list">
+            <div class="image-item" data-type="InitImage" onclick="ChangeVideoSrcUrl(this, 'fbfE1', 'https://portalstoragewuprod2.azureedge.net/media/Default/Media/EmotionAPI/framebyframe_demo_emotion1.mp4', '', '../Modules/Microsoft.ProjectOxford.Website.Demos/Images/framebyframe/Emotion1_Preload.png');">
+                <img src=../Modules/Microsoft.ProjectOxford.Website.Demos/Images/framebyframe/Emotion1_Thumb.png /><div class="image-item-hover" style="background:url(../Modules/Microsoft.ProjectOxford.Website.Demos/Images/framebyframe/Emotion1_Hover.png) no-repeat center /100% 100%;display:none;"></div>
+            </div>
+            <div class="image-item" onclick="ChangeVideoSrcUrl(this, 'fbfE2', 'https://portalstoragewuprod2.azureedge.net/media/Default/Media/EmotionAPI/framebyframe_demo_emotion2.mp4', '', '../Modules/Microsoft.ProjectOxford.Website.Demos/Images/framebyframe/Emotion2_Preload.png');">
+                <img src=../Modules/Microsoft.ProjectOxford.Website.Demos/images/framebyframe/Emotion2_Thumb.png /><div class="image-item-hover" style="background:url(../Modules/Microsoft.ProjectOxford.Website.Demos/Images/framebyframe/Emotion2_Hover.png) no-repeat center /100% 100%;display:none;"></div>
+            </div>
+            <div class="image-item" onclick="ChangeVideoSrcUrl(this, 'fbfE3', 'https://portalstoragewuprod2.azureedge.net/media/Default/Media/EmotionAPI/framebyframe_demo_emotion3.mp4', '', '../Modules/Microsoft.ProjectOxford.Website.Demos/Images/framebyframe/Emotion3_Preload.png');">
+                <img src=../Modules/Microsoft.ProjectOxford.Website.Demos/images/framebyframe/Emotion3_Thumb.png /><div class="image-item-hover" style="background:url(../Modules/Microsoft.ProjectOxford.Website.Demos/Images/framebyframe/Emotion3_Hover.png) no-repeat center /100% 100%;display:none;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                            </div>
+                    </div>
+
+        </div>
+
+<!-- Flickity HTML init -->
+<!-- quote section-->
+
+    <div class="pricing-section row feature-item-container">
+        <div class="pricing-section-content container">
+            <h2 class="text--md text--centered text--light" style="margin-bottom:20px;">Pricing options</h2>
+            <table class="table apidetail-pricing-options">
+                <tbody>
+                                <tr>
+                                    <th class="text--semibold">Plan</th>
+                                    <th class="text--semibold">Description</th>
+                                    <th class="text--semibold">Price</th>
+                                </tr>
+                            <tr>
+                                <td class="text--semibold">Free</td>
+                                <td class="text--reg">
+                                    Images: 30K calls per month <br/>
+Video (uploads): 300 per month  <br/>
+Video (query status): 3000 per month
+                                </td>
+                                <td class="text--reg">Free</td>
+                            </tr>
+                            <tr>
+                                <td class="text--semibold">Basic</td>
+                                <td class="text--reg">
+                                    Images: 10 TPS <br/>
+Video (uploads): 300 per month <br/>
+Video (query status): 3000 per month
+                                </td>
+                                <td class="text--reg">$0.10 per 1000 calls <br/>
+Free for video</td>
+                            </tr>
+                            <tr>
+                                <td class="text--semibold">Standard</td>
+                                <td class="text--reg">
+                                    Images: 10 TPS <br/>
+Video (uploads): 3000 per month <br/>
+Video (query status): 30K per month
+                                </td>
+                                <td class="text--reg">$0.25 per 1000 calls <br/>
+Free for video</td>
+                            </tr>
+                                            <tr style="border:none">
+                                                <td colspan="3" style="border:none; padding:0px !important">
+                                                    <a href="https://portal.azure.com/#create/Microsoft.CognitiveServices/apitype/Emotion/pricingtier/S0" target="_blank" class="btn--oxford btn--yellow col-xs-4 col-md-2 btn-buynow text--sm text--semilight" onclick="ga('send','event','subscription','buyonazure','Emotion');">
+                                                        Buy on Azure
+                                                        <span class="buy-on-azure-img" style="margin-left:5px"></span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="feature-item-container--grey row">
+        <div class="similar-apis-section-content container">
+            <h2 class="text--md text--light text--black text--centered">You might also be interested in</h2>
+                        <div class="similar-api-item col-xs-12 col-sm-6 col-md-3 col-md-offset-1">
+                            
+<article class="api-detail-page content-item">
+    <header>
+        
+    </header>
+    <a id="ApiRelatedLink" href="face-api.html">
+    <img class="img-responsive similar-api-item-img ApiIcon" src="https://portalstoragewuprod2.azureedge.net:443/media/Default/Media/FaceAPI/Icons_Vision_Face.svg">
+    <h3 class="text--sm text--light text--centered ApiTitle">Face API </h3>
+</a>
+
+</article>
+                        </div>
+                        <div class="similar-api-item col-xs-12 col-sm-6 col-md-3">
+                            
+<article class="api-detail-page content-item">
+    <header>
+        
+    </header>
+    <a id="ApiRelatedLink" href="computer-vision-api.html">
+    <img class="img-responsive similar-api-item-img ApiIcon" src="https://portalstoragewuprod2.azureedge.net:443/media/Default/Media/Computer Vision/Icons_Vision_Vision.svg">
+    <h3 class="text--sm text--light text--centered ApiTitle">Computer Vision API</h3>
+</a>
+
+</article>
+                        </div>
+                        <div class="similar-api-item col-xs-12 col-sm-6 col-md-3">
+                            
+<article class="api-detail-page content-item">
+    <header>
+        
+    </header>
+    <a id="ApiRelatedLink" href="video-api.html">
+    <img class="img-responsive similar-api-item-img ApiIcon" src="https://portalstoragewuprod2.azureedge.net:443/media/Default/Media/Video API/Icons_Vision_Video.svg">
+    <h3 class="text--sm text--light text--centered ApiTitle">Video API</h3>
+</a>
+
+</article>
+                        </div>
+
+        </div>
+    </div>
+
+<!-- Resources bar -->
+<div class="api-resources-section row">
+
+    <div class="api-resources-section-content container ">
+        <h2 class="text--md text--light text--white text--centered">Developer resources for Emotion API</h2>
+        <div class="api-resources-section-content__btn-container text--centered">
+            <div class="api-detail-btn">
+                <a id="bottomDocumentationLink" href="emotion-api/documentation.html" class="btn--oxford btn--teal text--sm text--semilight">
+                    Documentation
+                </a>
+            </div>
+                <div class="api-detail-btn">
+                    <a id="bottomApiReferenceLink" href="https://dev.projectoxford.ai/docs/services/5639d931ca73072154c1ce89" target="_blank" class="btn--oxford btn--teal text--sm text--semilight">
+                        API Reference
+                    </a>
+                </div>
+                            <div class="api-detail-btn">
+                    <a id="bottomSdkLink" href="SDK-Sample2306.html?api=emotion" onclick="trackOutboundLink('/en-us/SDK-Sample?api=emotion')" class="btn--oxford btn--teal text--sm text--semilight">
+                        SDK
+                    </a>
+                </div>
+                                </div>
+    </div>
+
+</div>
+
+    <!--Footer CTA-->
+    <div class="get-started-section" id="footer-cta-bar">
+        <div class="container">
+            <div class="text--light text--white text--md col-md-8 row">
+                Ready to supercharge your app?
+            </div>
+            <div class="pull-right">
+                <div class="hero-banner-btn">
+                    <a id="bottomGetStartedForFree" href="sign-up014b.html?productId=/products/5639d8afca73072154c1ce88" class="btn--oxford btn--yellow text--sm text--semilight">
+                        Get started for free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</article></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+        <footer id="layout-footer">
+            <div class="zone zone-footer">
+<div id='translatorwidget_tmp' translate="no" style="display:none;">
+    <div class="row">
+        <div class="col-md-3 text-right translate-widget">
+            <img class="text--xs" src="../Themes/ProjectOxford/Images/footer/translate-icon.jpg" />
+            <span class="text--xs text--white translated">
+                Translated to
+            </span>
+            <a href="javascript:showtransbox();" class="translateresult text--xs text--black" style="text-decoration:underline !important;">English</a>
+            <span class="text--xs" id="dropdonwicon">
+                <i class="glyphicon glyphicon-menu-down" style="font-size: 12px;"></i>
+            </span>
+        </div>
+        <div class="col-md-3 translated-by">
+            <span style="color:white;" class="text--xs">by</span>
+            <span class="text--black text--xs">
+                <a href="https://www.microsoft.com/translator" target="_blank">Microsoft Translator</a>
+            </span>
+        </div>
+        <div class="col-md-6 show-original">
+            <div class="close">×</div>
+            <button class="text--xs" id="showOrigin" type="button" onclick="tranlateto('en','English')">Show original</button>
+        </div>
+    </div>
+</div>
+<div id="translator_box" translate="no" tabindex="1"></div>
+
+<div class="container-fluid footer-container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h4 class="text--semilight text--black">About</h4>
+                <div class="text--light text--black text--xs">
+                    <a href="news.html" id="gaNews" class="text--xxs text--semilight text--medgrey">
+                        Blog
+                    </a>
+                </div> 
+            </div>
+            <div class="col-md-3">
+                <h4 class="text--semilight text--black">Know before you code</h4>
+                <div class="text--light text--black text--xs">
+                    <a href="https://go.microsoft.com/fwlink/?LinkId=533207" target="_blank" onclick="trackOutboundLink('https://go.microsoft.com/fwlink/?LinkId=533207')" class="text--xxs text--semilight text--medgrey" style="white-space:nowrap">Microsoft Cognitive Services Terms</a>
+                </div>
+                <div class="text--light text--black text--xs">
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=698895" onclick="trackOutboundLink('http://go.microsoft.com/fwlink/?LinkId=698895')" target="_blank" class="text--xxs text--semilight text--medgrey">
+                        Developer Code of Conduct
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4 class="text--semilight text--black">Help & support</h4>
+                <div class="text--light text--black text--xs">
+                    <a href="https://stackoverflow.com/questions/tagged/microsoft-cognitive" onclick="trackOutboundLink('https://stackoverflow.com/questions/tagged/microsoft-cognitive')" target="_blank" class="text--xxs text--semilight text--black">
+                        Stack Overflow
+                    </a>
+                </div>
+                <div class="text--light text--black text--xs">
+                    <a href="https://cognitive.uservoice.com/" onclick="trackOutboundLink('https://cognitive.uservoice.com/')" target="_blank" class="text--xxs text--semilight text--medgrey">
+                        User Voice
+                    </a>
+                </div>
+                <div class="text--light text--black text--xs">
+                    <a href="#" id="general-inquiry-link" class="text--xxs text--semilight text--medgrey" style="white-space:nowrap" onclick="ga('send', 'event', 'userVoice', 'contactUs', 'footer');">Contact us</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4 class="text--semilight text--black">Go social</h4>
+                <div style="margin-top:20px;">
+                    <a href="https://www.facebook.com/Microsoft/?fref=ts" onclick="trackOutboundLink('https://www.facebook.com/');" target="_blank" class="text--xxs text--semilight text--medgrey" style="display: inline-block;height: 32px;">
+                        <i class="fa text--black" style="font-size:32px;float: left;">
+                            <img src="../Themes/ProjectOxford/Images/footer/facebook-icon.jpg" />
+                        </i>
+                        <span style="float: left;margin-left: 10px;" class="text--xxs text--semilight text--black">Facebook</span>
+                    </a>
+                </div>
+                <div style="margin-top:20px;">
+                    <a href="https://twitter.com/search?q=%22Microsoft%20Cognitive%20Services%22%20OR%20%22Project%20Oxford%22&amp;src=typd" class="text--xxs text--semilight text--medgrey" onclick="trackOutboundLink('https://www.twitter.com/');" target="_blank" style="display: inline-block;height: 32px;">
+                        <i class="fa text--black" style="font-size:32px;float: left;">
+                            <img src="../Themes/ProjectOxford/Images/footer/twitter-icon.jpg" />
+                        </i>
+                        <span style="float: left;margin-left: 10px;" class="text--xxs text--semilight text--black">Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row" style="margin:50px  -15px;">
+                            <div class="col-sm-6 col-xs-6">
+                                <a class="text--xxs text--semilight text--medgrey" href="https://www.azure.cn/cognitive-services" onclick="trackOutboundLink('https://www.azure.cn/cognitive-services')">
+                                    <span class="glyphicon glyphicon-globe" style="margin-right:10px;"></span>
+                                    中文
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-xs-6">
+                                <div style="cursor:pointer;display:inline-block;" onclick="showcontainer()">
+                                    <span class="glyphicon " style="margin-right:10px;">
+                                        <img src="../Themes/ProjectOxford/Images/footer/translate-icon.jpg" />
+                                    </span>
+                                    <div class="transwidgetcontainer" tabindex="1">
+                                        <div class="text--black text--xxs" translate="no">Select your language</div>
+                                        <ul id="langs" translate="no"></ul>
+                                        <div class="translateresult translateresult-teal text--black text--xs">English</div>
+                                    </div>
+                                    <a href="javascript:;" id="btnTranslate" style="position: relative; top: 3px;" translate="no" class="text--xxs text--semilight text--medgrey">Translate</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 text-lg-right">
+                <h4 class="text--xxs text--semilight text--black footer-links">
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=521839" onclick="trackOutboundLink('http://go.microsoft.com/fwlink/?LinkId=521839')" target="_blank" class="text--xxs text--semilight text--medgrey">
+                        Privacy & Cookies
+                    </a>
+                </h4>
+                <h4 class="text--xxs text--semilight text--black footer-links">
+                    <a href="https://go.microsoft.com/fwlink/?LinkID=206977" onclick="trackOutboundLink('https://go.microsoft.com/fwlink/?LinkID=206977')" target="_blank" class="text--xxs text--semilight text--medgrey">
+                        Terms of Use
+                    </a>
+                </h4>
+                <h4 class="text--xxs text--semilight text--black footer-links">
+                    <a href="https://go.microsoft.com/?linkid=9851308" onclick="trackOutboundLink('https://go.microsoft.com/?linkid=9851308')" target="_blank" class="text--xxs text--semilight text--medgrey">
+                        Trademarks
+                    </a>
+                </h4>
+                <h4 class="text--xxs text--semilight text--black footer-links">
+                    <a id="report-abuse-link" href="#" onclick="ga('send', 'event', 'userVoice', 'reportAbuse', 'reportAbuse');" class="text--xxs text--semilight text--medgrey  uv-btn-trigger">
+                        Report Abuse
+                    </a>
+                </h4>
+                <h4 class="text--xxs text--semilight text--black footer-links">
+                    ©2016 Microsoft
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+        </footer>
+    </div>
+</div>
+
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Content/scripts/flickity.pkgd489f.js?v=636141902458904552" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Content/scripts/ApiDetailPart489f.js?v=636141902458904552" type="text/javascript"></script>
+<script src="../Modules/Microsoft.ProjectOxford.Website.Demos/scripts/jqueryToken.js" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Demos/scripts/extension489f.js?v=636141902458904552" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Demos/scripts/EmotionDemof1f6.js?v=636141902459066948" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Demos/scripts/Demosf1f6.js?v=636141902459066948" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Demos/scripts/Recaptchaf1f6.js?v=636141902459066948" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Demos/scripts/video/video50cd.js?v=636141902459373318" type="text/javascript"></script>
+<script data-timestamped="true" src="../Modules/Microsoft.ProjectOxford.Website.Demos/scripts/video/FrameByFrameEmotion2ea1.js?v=636141902511404951" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/scripts/headroomf1f6.js?v=636141902459066948" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/scripts/jquery.headroomf1f6.js?v=636141902459066948" type="text/javascript"></script>
+<script data-timestamped="true" src="../Themes/ProjectOxford/scripts/navf1f6.js?v=636141902459066948" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(window).ready(function () {
+
+            var DetectedImgInfo = JSON.parse('[{"faceRectangle": {"left": 488,"top": 263,"width": 148,"height": 148},"scores": {"anger": 9.075572E-13,"contempt": 7.048959E-09,"disgust": 1.02152783E-11,"fear": 1.778957E-14,"happiness": 0.9999999,"neutral": 1.31694478E-07,"sadness": 6.04054263E-12,"surprise": 3.92249462E-11}},{"faceRectangle": {"left": 153,"top": 251,"width": 133,"height": 133},"scores": {"anger": 6.2065344E-09,"contempt": 1.08080636E-11,"disgust": 3.30821842E-10,"fear": 1.02974018E-11,"happiness": 1.0,"neutral": 1.2882297E-08,"sadness": 2.63420341E-10,"surprise": 4.30664E-10}},{"faceRectangle": {"left": 762,"top": 325,"width": 123,"height": 123},"scores": {"anger": 0.00019452213,"contempt": 0.000333736039,"disgust": 0.000693641952,"fear": 1.72743637E-06,"happiness": 0.9509745,"neutral": 0.04753512,"sadness": 0.000177138063,"surprise": 8.960857E-05}},{"faceRectangle": {"left": 1065,"top": 270,"width": 99,"height": 99},"scores": {"anger": 3.784958E-09,"contempt": 2.17644625E-10,"disgust": 8.470069E-09,"fear": 1.8734023E-11,"happiness": 0.99999994,"neutral": 2.52160586E-08,"sadness": 3.50126363E-08,"surprise": 1.243408E-10}},{"faceRectangle": {"left": 900,"top": 356,"width": 69,"height": 69},"scores": {"anger": 1.61575272E-07,"contempt": 4.247503E-06,"disgust": 2.36979556E-08,"fear": 6.178071E-08,"happiness": 0.9946751,"neutral": 0.00531783467,"sadness": 2.16178728E-06,"surprise": 4.332052E-07}}]');
+
+            emotionsdk.preview('imageUrl', $("div[data-demo-type='detection']")
+                .find(".image-item[data-type='InitImage'] div").hide().siblings("img:eq(0)").attr("data-large-src"), DetectedImgInfo, 0);
+        });
+        var Message = { ImageSizeImproper: { "code": "InvalidImageSize", "message": "Image size is too small or too big.", "requestId": "00000000-0000-0000-0000-000000000000" } };
+        function verificationResultInit() {
+            VerifyResultShow("true", 0.637);
+        }
+    </script>
+
+    <script type="text/JavaScript">
+        var varAutoFirePV = 1;
+        var varClickTracking = 1;
+        var varCustomerTracking = 1;
+        if ("en-us" == "zh-cn") {
+            var Route = "62584";
+        }
+        else {
+            var Route = "20049";
+        }
+        var Ctrl = " ";
+        document.write("<script type='text/javascript' src='" + (window.location.protocol) + "//c.microsoft.com/ms.js'" + "'><\/script>");
+        // code for google analytics.
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '../../../www.google-analytics.com/analytics.js', 'ga');
+
+        var trackOutboundLink = function (url) {
+            ga('send', 'event', 'outbound', 'click', url);
+        }
+
+        if ("en-us" == "zh-cn") {
+            ga('create', 'UA-72171728-3', 'auto');
+        }
+        else {
+            ga('create', 'UA-72171728-1', 'auto');
+        }
+
+        // Optimizely Universal Analytics Integration
+        window.optimizely = window.optimizely || [];
+        window.optimizely.push("activateUniversalAnalytics");
+        // End Optimizely Code
+
+        ga('require', 'linkid');
+        ga('send', 'pageview');
+    </script>
+
+    <script src="https://www.microsofttranslator.com/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**" type="text/javascript"></script>
+    <script type="text/javascript">
+        // Include the UserVoice JavaScript SDK (only needed once on a page)
+        UserVoice = window.UserVoice || [];
+        (function () {
+            var uv = document.createElement('script');
+            uv.type = 'text/javascript';
+            uv.async = true;
+            uv.src = '../../../widget.uservoice.com/6hW5Um5EzZ19G4o8yxeEw.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(uv, s)
+        })();
+
+        UserVoice.push(['set', {
+            // Options can also be set on specific widgets instead of globally
+            target: 'self', // 'none' for toaster popups, #id for a specific element on the page
+            accent_color: '#004b50', // Widget accent color
+            locale: 'en', // Defaults to your account’s localization
+        }]);
+
+        UserVoice.push(['addTrigger', '#general-inquiry-link', {
+            mode: 'contact',
+            position: 'top',
+            // Customize widget text
+            // (see documentation for all options)
+            strings: {
+                // Contact form
+                contact_title: 'General inquiry',
+                contact_message_placeholder: 'Give feedback or ask for help',
+                contact_skip_instant_answers_button: 'Skip and send message',
+                contact_details_title: 'Additional details',
+                contact_submit_button: 'Send message',
+                contact_success_title: 'Message sent!',
+                contact_success_body: 'We’ll be in touch.'
+            }
+        }]);
+
+        UserVoice.push(['addTrigger', '#report-abuse-link', {
+            mode: 'contact',
+            ticket_custom_fields: {
+                'Custom Widget': 'Abuse'
+            },
+
+            // Customize widget text
+            // (see documentation for all options)
+            strings: {
+                // Contact form
+                contact_title: 'Report abuse',
+                contact_message_placeholder: 'Whats going on?',
+                contact_skip_instant_answers_button: 'Skip and send message',
+                contact_details_title: 'Additional details',
+                contact_submit_button: 'Send message',
+                contact_success_title: 'Message sent!',
+                contact_success_body: 'We’ll be in touch.'
+            }
+        }]);
+
+        function fillList(listOfLanguages) {
+            var ddlLangs = document.getElementById('langs');
+            var box = document.getElementById("translator_box");
+            for (var key in listOfLanguages) {
+                $(ddlLangs).append('<li value="' + listOfLanguages[key].Code + '">' + listOfLanguages[key].Name + '</li>');
+                $(box).append("<a href='javascript:tranlateto(\"" + listOfLanguages[key].Code + "\",\"" + listOfLanguages[key].Name + "\");'>" + listOfLanguages[key].Name + "</a>");
+            }
+        }
+
+        var isfirst = true;
+
+        var layoutHeader = $("#layout-header").outerHeight();
+
+        function getlayoutheaderheight() {
+            if (window.innerWidth < 768) {
+                return 0;
+            }
+            return $("#layout-header").css('display') !== 'none' ? layoutHeader : 0;
+        }
+
+
+        function tranlateto(lang, text) {
+            $("#dropdonwicon").removeClass('select');
+
+            $('#translator_box').hide();
+
+            if ('en' === lang) {
+                $('#showOrigin').hide();
+            }
+            else {
+                $('#showOrigin').show();
+            }
+
+            if (isfirst) {
+                $("#layout-wrapper").prepend($("#translatorwidget_tmp").clone().prop('id', 'translatorwidget').show());
+                isfirst = false;
+            } else {
+                $("#translatorwidget").show();
+            }
+
+            var consValue = $("#translatorwidget").outerHeight();
+
+            var moveHeight = $('#translatorwidget').length > 0 ? ($("#translatorwidget").css('display') !== 'none' ? consValue : 0) : 0;
+
+            if (window.scrollY >= 350) {
+                $("#layout-header").hide();
+            }
+
+            $("#layout-header").css("margin-top", moveHeight);
+            $("#layout-navigation").css("margin-top", consValue + getlayoutheaderheight());
+            $(".hero-banner-container").css('margin-top', consValue + getlayoutheaderheight() + $("#layout-navigation").outerHeight() - 48);
+
+            Microsoft.Translator.Widget.Translate('en', lang,
+                function (value) {
+
+                },
+                function (err) {
+                    tranlateto(lang, text);
+                },
+                function (result) {
+                    $("#translatorwidget").attr('dir', 'ltr');
+                },
+                function (revert) {
+
+                }, 30000);
+
+            $(".translateresult").text(text);
+
+        }
+
+        function showtransbox() {
+            $('#translator_box').toggle();
+            $("#dropdonwicon").addClass('select');
+            $("#translator_box").focus();
+        }
+
+        function showcontainer() {
+            $(".transwidgetcontainer").show().focus();
+        }
+
+        $(document).ready(function () {
+            fillList(Microsoft.Translator.Widget.GetLanguagesForTranslateLocalized());
+
+            $("#langs").on('click', 'li', function (e) {
+                e.stopPropagation(); $(".transwidgetcontainer").hide();
+                tranlateto($(this).attr('value'), $(this).text());
+            });
+
+            $(".transwidgetcontainer").blur(function () {
+                $(this).hide();
+            });
+
+            $("#translator_box").blur(function () {
+                setTimeout(function () {
+                    $("#translator_box").hide();
+                    $("#dropdonwicon").removeClass('select');
+                }, 200);
+            });
+            $("#layout-wrapper").on('click', '.close', function () {
+                tranlateto('en', 'English');
+                $("#translatorwidget").hide();
+                $('#translator_box').hide();
+                if (window.scrollY >= 350) {
+                    $("#layout-header").hide();
+                    $("#layout-navigation").css("margin-top", "0px");
+                }
+                else {
+                    $("#layout-header").css("margin-top", "0px");
+                    $("#layout-navigation").css("margin-top", $("#layout-header").outerHeight());
+                    $(".dropdown-menu").css("top", "150px");
+                }
+                $(".hero-banner-container").css('margin-top', getlayoutheaderheight() + $("#layout-navigation").outerHeight() - 48);
+
+            });
+        });
+    </script>
+
+
+</body>
+
+<!-- Mirrored from www.microsoft.com/cognitive-services/en-us/emotion-api by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Nov 2016 10:28:43 GMT -->
+</html>

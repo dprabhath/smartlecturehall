@@ -1,0 +1,7 @@
+[13-Dec-2016 04:43:28 America/New_York] PHP Parse error:  syntax error, unexpected 'var' (T_VAR) in /home/etunesxy/smartlecturehall.website/easy2present/speech.php on line 174
+[13-Dec-2016 04:45:22 America/New_York] PHP Parse error:  syntax error, unexpected '=' in /home/etunesxy/smartlecturehall.website/easy2present/speech.php on line 174
+[13-Dec-2016 04:47:02 America/New_York] PHP Parse error:  syntax error, unexpected '<' in /home/etunesxy/smartlecturehall.website/easy2present/speech.php on line 180
+[13-Dec-2016 04:48:45 America/New_York] PHP Parse error:  syntax error, unexpected '<' in /home/etunesxy/smartlecturehall.website/easy2present/speech.php on line 178
+[13-Dec-2016 04:50:16 America/New_York] PHP Parse error:  syntax error, unexpected '<' in /home/etunesxy/smartlecturehall.website/easy2present/speech.php on line 178
+[13-Dec-2016 04:52:29 America/New_York] PHP Parse error:  syntax error, unexpected '1026' (T_LNUMBER), expecting ',' or ';' in /home/etunesxy/smartlecturehall.website/easy2present/speech.php on line 178
+[13-Dec-2016 04:56:07 America/New_York] PHP Parse error:  syntax error, unexpected '1026' (T_LNUMBER), expecting ',' or ';' in /home/etunesxy/smartlecturehall.website/easy2present/speech.php on line 178

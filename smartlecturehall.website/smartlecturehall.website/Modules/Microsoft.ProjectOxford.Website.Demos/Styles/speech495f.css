@@ -1,0 +1,218 @@
+﻿div#hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+div#messages {
+    min-height: 20px;
+}
+
+.buttonArea {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.playtext {
+    color: white;
+    font-size: 20px;
+    height: 50px;
+    line-height: 45px;
+}
+
+.demoArea {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.warnInfo {
+    display: none;
+}
+
+.firstRow {
+    background-color: #e5e5e5;
+}
+
+    .firstRow > .sel_wrap {
+        border-right: 0px solid #fff;
+    }
+
+div#microphoneText {
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    margin-top: -30px;
+    margin-right: 10px;
+    vertical-align: central;
+    font-size: 18px;
+    color: #505050;
+    /*font-family: Segoe UI Semilight;*/
+}
+
+.mic {
+    float: right;
+    margin-top: -48px;
+    margin-right: 36px;
+}
+
+.sel_wrap {
+    width: 160px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.sel_wrap {
+    margin-right: 3px;
+}
+
+    /*.sel_wrap > select:last-child {
+        margin-left: 20px;
+    }*/
+
+    .sel_wrap > select {
+        padding: 5px 0 5px 10px;
+        width: 180px;
+        border-style: none;
+        color: #ffffff;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background: #cfcfcf url('../Images/utility/arraw-down-white.png') no-repeat right 30px center;
+        background-size: 10px;
+        cursor: pointer;
+        background-color: #505050;
+        margin-left: 0px;
+        /*font-family: 'Segoe UI Semilight';*/
+        font-size: 20px;
+    }
+
+    .sel_wrap.sel_ext_wd {
+        width: 220px;
+    }
+
+        .sel_wrap.sel_ext_wd > select {
+            width: 240px;
+        }
+
+.demo_btn {
+    padding: 5px 20px;
+    border-style: none;
+    background-color: #00b294;
+    color: #ffffff;
+    /*font-family: 'Segoe UI Semilight';*/
+    font-size: 24px;
+}
+
+    .demo_btn:hover {
+        background-color: #008272;
+    }
+
+    .demo_btn:focus {
+        background-color: #00b294;
+    }
+
+.demo_btn_circle {
+    padding: 0;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 35px;
+    text-indent: -300px;
+}
+
+.demo_btn_wplay {
+    padding-left: 40px;
+    background: #004b50 url('../Images/utility/wplay.png') no-repeat 10px center;
+    background-size: auto 24px;
+}
+
+    .demo_btn_wplay.playing {
+        background: #004b50 url('../images/utility/wstop.png') no-repeat 10px center;
+        background-size: auto 24px;
+    }
+
+.demo_btn_ssml {
+    padding-left: 50px;
+    background: #004b50 url('../images/utility/viewInfo.png') no-repeat 10px center;
+    background-size: auto 24px;
+}
+
+.demo_btn_download {
+    padding-left: 50px;
+    background: #004b50 url('../images/utility/download.png') no-repeat 10px center;
+    background-size: auto 24px;
+}
+
+.demo_btn_speak {
+    background: #004b50 url('../Images/utility/speak.png') no-repeat center center;
+    background-size: 60%;
+}
+
+.demo_btn_mic {
+    background: #004b50 url('../Images/utility/mic.png') no-repeat center center;
+    background-size: 38%;
+}
+
+    .demo_btn_mic.listening {
+        background: #004b50 url('../Images/speech/listening.gif') no-repeat center center;
+        background-size: 100%;
+    }
+
+.textarea {
+    padding: 10px;
+    width: 100%;
+    height: 300px;
+    background-color: #e5e5e5;
+    border-style: none;
+}
+
+.textarea {
+    margin-top: 20px;
+    margin-bottom: 3px;
+}
+
+#moreDemo a {
+    color: #00bcf8;
+}
+
+    #moreDemo a:hover, #moreDemo a:focus {
+        color: #0c72c6;
+    }
+
+
+.demo_btn_wplay:not(:first-child) {
+    margin-left: 30px;
+}
+
+@media (max-width: 992px) {
+    .reCaptcha-Speech2Text-demo .firstRow {
+        text-align: center;
+    }
+
+    .reCaptcha-Speech2Text-demo .textarea {
+        margin-top: 50px;
+    }
+
+    .reCaptcha-Speech2Text-demo .firstRow .mic {
+        margin-top: 0px;
+        float: none;
+        margin-right: 0px;
+    }
+
+    .reCaptcha-Speech2Text-demo .firstRow #microphoneText {
+        margin-top: 10px;
+    }
+
+    .reCaptcha-Speech2Text-demo .firstRow #languageoptions {
+        padding-left: calc(50% - 55px);
+    }
+
+    .reCaptcha-Speech2Text-demo .firstRow .sel_wrap {
+        width: 100%;
+        overflow: visible;
+    }
+
+        .reCaptcha-Speech2Text-demo .firstRow .sel_wrap > select {
+            width: 100%;
+            text-align: center;
+        }
+}

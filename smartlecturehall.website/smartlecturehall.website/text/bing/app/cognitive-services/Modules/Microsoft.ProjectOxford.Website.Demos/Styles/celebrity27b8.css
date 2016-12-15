@@ -1,0 +1,557 @@
+﻿.Celebrity-demo-content {
+    width: 49%;
+    min-width: 400px;
+    position: relative;
+    display: inline-block;
+    background-color:#505050;
+}
+
+.Celebrity-demo-right {
+    float: right;
+    min-width: 416.67px;
+    width: 49%;
+    position: relative;
+    display: inline-block;
+}
+
+    .Celebrity-demo-right .fill {
+        margin-top: calc(70% + 25px);
+    }
+
+.input-group-new {
+    position: relative;
+    background-color: #fff;
+}
+
+    .input-group-new .form-control {
+        display: block;
+        float: left;
+        width: calc(100% - 70px);
+        height: 35px;
+        border: none;
+        color: #2c708b;
+        padding: 0;
+    }
+
+.bfc {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.input-group-addon-new {
+    width: 35px;
+    height: 35px;
+}
+
+.com_fl {
+    float: left;
+}
+
+.input-group-btn {
+    box-sizing: initial;
+}
+
+.b_searchboxSubmit {
+    border: none;
+    background: url(../Images/vision/How-Similar-Asset--BingSearch.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 35px;
+    height: 35px;
+    padding: 0px;
+    background-position: 0px center;
+    text-indent: -999px;
+}
+
+.doc_bg {
+    background: #59b3d8;
+}
+
+.bfc {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.doc_bg_w {
+    background: #fff;
+}
+
+.abtn {
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+    .abtn span {
+        margin-right: 5px;
+        line-height: 47px;
+        font-size: 20px;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+
+#maincontent {
+    margin: 20px auto 10px;
+    overflow: hidden;
+}
+
+.selectPicContainer, #edgeCase .doc_bg_w, #edgeCase1 .doc_bg_w, #edgeCase2 .doc_bg_w {
+    width: 240px;
+    height: 300px;
+    margin: 0 auto;
+    box-sizing: content-box;
+}
+
+.public-btn img {
+    margin-top: 15px;
+}
+
+    .public-btn img.nomargin {
+        margin-top: 0px;
+    }
+
+
+
+.srhBox {
+    width: 90%;
+    height: 35px;
+    margin: 20px auto 20px;
+    display: block;
+    overflow: hidden;
+}
+
+
+.selectImg {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+}
+
+.ScrollAreaWrapper {
+    width: 240px;
+    position: relative;
+}
+
+.ScrollArea {
+    height: 240px;
+    width: 20000px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    transform: translate(-2400px, 0px) translateZ(0px);
+    transition-duration: 0ms;
+    transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
+}
+
+    .ScrollArea p {
+        width: 240px;
+        height: 240px;
+        background-color: #fff;
+        float: left;
+        /*margin-top:0px;
+        margin-left: 0px;
+        margin-right: 0px;*/
+        margin: 0px;
+        overflow: hidden;
+        display: block;
+        line-height:240px;
+    }
+
+        .ScrollArea p img {
+            display: inline-block;
+            /*height: 200px;*/
+            width: 200px;
+            margin: 0px 20px 0 20px;
+            /*-ms-opacity: 0.4;*/
+            opacity: 0.4;
+            -moz-filter: alpha(opacity=40);
+            /*-o-filter: alpha(opacity=40);*/
+            filter: alpha(opacity=40);
+        }
+
+.searchImg {
+    height: 240px;
+    float: left;
+    width: 240px;
+    position: relative;
+}
+
+    .searchImg .doc_bg {
+        width: 200px;
+        height: 220px;
+        margin: 20px;
+    }
+
+.selectBox {
+    border: solid white;
+    border-width: 16px 20px 0px 20px;
+    width: 240px;
+    height: 300px;
+    position: absolute;
+    pointer-events: none;
+    left: 0px;
+    top: 0;
+}
+
+.selectedImage img {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+
+#edgeCase .center-block, #edgeCase1 .center-block, #edgeCase2 .center-block {
+    width: 320px;
+    height: 330px;
+}
+
+    #edgeCase .center-block .thumbnailDiv, #edgeCase1 .center-block .thumbnailDiv, #edgeCase2 .center-block .thumbnailDiv {
+        width: 280px;
+        height: 280px;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+@-webkit-keyframes bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0.0);
+    }
+
+    40% {
+        -webkit-transform: scale(1.0);
+    }
+}
+
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+
+    40% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+.imgAttribution {
+    position: absolute;
+    bottom: 40px;
+    left: 0px;
+    background: #59b3d8;
+    background: rgba(0,178,148,.5);
+    padding: 1px 4px;
+    color: #fff;
+    pointer-events: all !important;
+    margin: 0;
+    display: none;
+    max-width: 280px;
+    height: 20px;
+    overflow: hidden;
+    font: 14px Segoe UI Light,CustomSegoeUILight,Helvetica Neue,Arial;
+}
+
+    .imgAttribution:hover{
+        background: rgba(0,178,148,.7);
+        color:#fff;
+    }
+
+.CelebrityfloatingDiv {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.CelebrityfloatingCirclesG {
+    display: block;
+    position: absolute;
+    width: 240px;
+    height: 300px;
+    top: 20px;
+    left: calc(50% - 120px);
+    z-index: 474;
+}
+
+.Celebrityf_circleG {
+    position: absolute;
+    background-color: #FFFFFF;
+    height: 12px;
+    width: 12px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    -webkit-animation-name: f_fadeG;
+    -webkit-animation-duration: 1.6s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -moz-animation-name: f_fadeG;
+    -moz-animation-duration: 1.6s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+    -o-animation-name: f_fadeG;
+    -o-animation-duration: 1.6s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-direction: normal;
+    -ms-animation-name: f_fadeG;
+    -ms-animation-duration: 1.6s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-direction: normal;
+}
+
+.CelebrityfrotateG_01 {
+    left: calc(30% - 6px);
+    top: calc(45% - 6px);
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    -ms-animation-delay: 0.6s;
+}
+
+.CelebrityfrotateG_02 {
+    left: calc(36% - 6px);
+    top: calc(34% - 6px);
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    -o-animation-delay: 0.8s;
+    -ms-animation-delay: 0.8s;
+}
+
+.CelebrityfrotateG_03 {
+    left: calc(50% - 6px);
+    top: calc(29% - 6px);
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+}
+
+.CelebrityfrotateG_04 {
+    right: calc(36% - 6px);
+    top: calc(35% - 6px);
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    -ms-animation-delay: 1.2s;
+}
+
+.CelebrityfrotateG_05 {
+    right: calc(30% - 6px);
+    top: calc(45% - 6px);
+    -webkit-animation-delay: 1.4s;
+    -moz-animation-delay: 1.4s;
+    -o-animation-delay: 1.4s;
+    -ms-animation-delay: 1.4s;
+}
+
+.CelebrityfrotateG_06 {
+    right: calc(36% - 6px);
+    bottom: calc(45% - 6px);
+    -webkit-animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    -o-animation-delay: 1.6s;
+    -ms-animation-delay: 1.6s;
+}
+
+.CelebrityfrotateG_07 {
+    left: calc(50% - 6px);
+    bottom: calc(40% - 6px);
+    -webkit-animation-delay: 1.8s;
+    -moz-animation-delay: 1.8s;
+    -o-animation-delay: 1.8s;
+    -ms-animation-delay: 1.8s;
+}
+
+.CelebrityfrotateG_08 {
+    left: calc(36% - 6px);
+    bottom: calc(45% - 6px);
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    -ms-animation-delay: 2s;
+}
+
+@-webkit-keyframes f_fadeG {
+    0% {
+        background-color: #000000;
+    }
+
+    100% {
+        background-color: #FFFFFF;
+    }
+}
+
+@-moz-keyframes f_fadeG {
+    0% {
+        background-color: #000000;
+    }
+
+    100% {
+        background-color: #FFFFFF;
+    }
+}
+
+@-o-keyframes f_fadeG {
+    0% {
+        background-color: #000000;
+    }
+
+    100% {
+        background-color: #FFFFFF;
+    }
+}
+
+@-ms-keyframes f_fadeG {
+    0% {
+        background-color: #000000;
+    }
+
+    100% {
+        background-color: #FFFFFF;
+    }
+}
+
+
+
+/**phone**/
+@media only screen and (max-width: 999px) {
+
+    .Celebrity-demo-right .fill {
+        margin-top: calc(60% + 50px);
+    }
+
+    .abtn {
+        font-size: 14px;
+        text-decoration: none;
+        margin-top: 5px;
+        margin-left: 30px;
+        cursor: pointer;
+    }
+
+        .abtn span {
+            margin-right: 5px;
+            line-height: 23.5px;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+
+    .selectPicContainer, #edgeCase .doc_bg_w, #edgeCase1 .doc_bg_w, #edgeCase2 .doc_bg_w {
+        width: 160px;
+        height: 193.5px;
+    }
+
+    .searchImg {
+        width: 160px;
+        height: 160px;
+    }
+
+        .selectPicfront, .selectPicback, .searchImg .doc_bg, .ScrollArea p, #edgeCase .center-block .thumbnailDiv, #edgeCase1 .center-block .thumbnailDiv, #edgeCase2 .center-block .thumbnailDiv, .fiximg {
+            width: 140px;
+            height: 140px;
+            padding: 10px;
+            line-height: 140px;
+            display: block;
+        }
+
+            .ScrollArea p img {
+                width: 120px;
+                /*height: 120px;*/
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: 0px;
+            }
+
+    .imgAttribution {
+        max-width: 120px;
+        left:8px;
+        bottom:33px;
+    }
+
+    .searchImg .doc_bg {
+        padding: 0;
+        margin: 10px;
+    }
+
+    /*.ScrollArea img {
+        height: 140px;
+        margin-top: 0;
+    }*/
+
+    .ScrollArea p, #edgeCase .center-block .thumbnailDiv #thumbnailL_edge, #edgeCase1 .center-block .thumbnailDiv #thumbnailL_edge1, #edgeCase2 .center-block .thumbnailDiv #thumbnailL_edge2, #uploadfilel, .fiximg {
+        padding: 0;
+    }
+
+    #edgeCase .center-block, #edgeCase1 .center-block, #edgeCase2 .center-block {
+        width: 160px;
+        height: 165px;
+    }
+
+    .ScrollAreaWrapper {
+        width: 140px;
+    }
+
+    .ScrollArea {
+        height: 140px;
+    }
+
+    .selectPicfront .btn {
+        margin-top: 12.5px;
+    }
+
+    a.btn span {
+        margin-left: 5px;
+        margin-right: 5px;
+        line-height: 23.5px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+
+
+    .selectImg {
+        top: 10px;
+        left: 10px;
+    }
+
+    .selectBox {
+        width: 160px;
+        height: 183.5px;
+        border-width: 10px 12.5px 0 12.5px;
+    }
+
+    .public-btn img {
+        width: 16.5px;
+        height: 13px;
+        margin-top: 5.5px;
+    }
+
+        .public-btn img.nomargin {
+            width: 31.5px;
+            height: 23.5px;
+            margin-top: 0px;
+        }
+
+    .srhBox {
+        width: 275px;
+    }
+
+    .CelebrityfloatingCirclesG {
+        display: block;
+        position: absolute;
+        width: 160px;
+        height: 193.5px;
+        top: 20px;
+        left: calc(50% - 80px);
+        z-index: 474;
+    }
+}

@@ -1,0 +1,144 @@
+﻿@media only screen and (max-height:768px) {
+    #luisActionsDemo .btn--suggestion {
+        display: block;
+    }
+}
+
+#luisActionsDemo .btn--suggestion {
+    max-width: 100%;
+    height: 2.5em;
+    margin: 10px 0;
+    color: black;
+    background-color: white;
+    border-width: 2px;
+    border-color: #00b294;
+    border-radius: 15px;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+    #luisActionsDemo .btn--suggestion:focus {
+        color: white;
+        background-color: #004b50;
+        border-width: 0;
+    }
+
+#luisActionsDemo .btn--headline {
+    line-height: 45px;
+    background-color: white;
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+#luisActionsDemo .headline-button-selected {
+    color: #004b50;
+    border-top: solid;
+    border-left: solid;
+    border-right: solid;
+    border-bottom: none;
+    border-color: teal;
+    border-width: 2px;
+}
+
+#luisActionsDemo .headline-button {
+    color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid;
+    border-color: teal;
+    border-width: 2px;
+}
+
+#luisActionsDemo .result-header {
+    font-size: 20px;
+    line-height: 2em;
+    color: black;
+}
+
+#luisActionsDemo .result-header-question-sign {
+    color: teal;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+#luisActionsDemo .spacer-bottom-40 {
+    margin-bottom: 40px;
+}
+
+#luisActionsDemo .result-background {
+    background-color: #D2D2D2;
+}
+
+    #luisActionsDemo .result-background pre {
+        height: 340px;
+    }
+
+#luisActionsDemo .text-input-box {
+    width: 100%;
+    height: 45px;
+    border-width: 1px;
+    border-color: #505050;
+    border-radius: 0;
+    margin: 0;
+}
+
+#luisActionsDemo .behavior-selectbox {
+    line-height: 40px;
+    height: 40px;
+}
+
+#luisActionsDemo .behavior-selected {
+    border: #004b50 2px solid;
+    text-align: center;
+    font-size: 18px;
+    color: #004b50;
+    font-family: 'Segoe UI Symbol';
+}
+
+#luisActionsDemo .glyphicon-question-sign {
+    color: #00b294;
+}
+
+#luisActionsDemo .glyphicon-chevron-down {
+    -moz-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+
+#luisActionsDemo .selected .glyphicon-chevron-down {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+#luisActionsDemo .behavior-options {
+    position: relative;
+    z-index: 100;
+    background-color: white;
+    display: none;
+}
+
+    #luisActionsDemo .behavior-options.selecting {
+        display: block;
+    }
+
+#luisActionsDemo .behavior-options-item {
+    line-height: 40px;
+    height: 40px;
+    border: #004b50 2px solid;
+    text-align: center;
+    font-size: 18px;
+    color: #004b50;
+    border-top: none;
+}
+
+    #luisActionsDemo .behavior-options-item:hover {
+        color: #004b50;
+    }

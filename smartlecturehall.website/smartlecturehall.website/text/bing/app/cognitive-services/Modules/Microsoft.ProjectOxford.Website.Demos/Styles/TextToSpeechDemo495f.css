@@ -1,0 +1,50 @@
+﻿
+.pop-box {
+    z-index: 9999; /*on topest*/
+    margin-bottom: 3px;
+    display: none;
+    position: absolute;
+    background: #FFF;
+    border-style: none;
+    border: 0px;
+}
+
+    .pop-box h4 {
+        color: #FFF;
+        cursor: default;
+        height: 18px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: left;
+        padding-left: 8px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        background: url("../Images/headerh4.png");
+        background-repeat: repeat;
+    }
+
+.pop-box-body {
+    clear: both;
+    margin: 4px;
+    padding: 4px;
+}
+
+.sel_wrap {
+    margin-right: 0;
+}
+
+#DropDownList_Lang, #DropDownList_VoiceName, #DropDownList_Rate, #ButtonSSML, #ButtonDownload {
+    margin-top: 5px;
+}
+
+    #ButtonSSML.press {
+        background-color: #8ECEC0;
+    }
+
+        #ButtonSSML.press:hover {
+            background-color: #004B50;
+        }
+
+#ButtonDownload {
+    /*width: 118px;*/
+}

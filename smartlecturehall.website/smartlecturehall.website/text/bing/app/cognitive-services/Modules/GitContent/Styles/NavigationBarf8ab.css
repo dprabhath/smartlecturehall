@@ -1,0 +1,226 @@
+﻿/* CSS used here will be applied after bootstrap.css */
+.panel a {
+    color: #777;
+}
+
+.panel-scroll {
+    max-height: 320px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.panel a:hover {
+    text-decoration: none;
+    color: #222;
+}
+
+.panel .table td {
+    border-color: #f3f3f3;
+}
+
+@media screen and (min-width: 1084px) {
+    .nav-blade.top-fixed {
+        position: fixed !important;
+        top: 70px !important;
+        height: calc(100vh - 70px) !important;
+    }
+}
+
+.nav-blade .nav-title {
+    padding: 0.7em 16px !important;
+    color: #e4e4e4 !important;
+}
+
+.nav-blade#home-nav-blade {
+    left: 0 !important;
+}
+
+.nav-blade#anchor-nav-blade {
+    right: 0 !important;
+}
+
+    .nav-blade#anchor-nav-blade hr {
+        margin: 1rem !important;
+        border: 0 !important;
+        height: 1px !important;
+    }
+
+.nav-blade ul.nav-list {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.nav-blade a {
+    display: inline-block;
+    margin: 0.7em 16px 0 !important;
+}
+
+.nav-blade ul, ol {
+    list-style: none;
+    padding-left: 0px;
+}
+
+    .nav-blade ul.nav-list a {
+        display: block;
+        color: #505050 !important;
+        font-family: segoe-ui-semilight, sans-serif;
+        text-decoration: none !important;
+        padding: 0.7em 16px !important;
+        margin: 0 !important;
+        font-size: 18px !important;
+        cursor: pointer !important;
+        -webkit-transition: background-color 0.2s !important;
+        transition: background-color 0.2s !important;
+        outline: 0;
+    }
+
+    .nav-blade ul.nav-list > li ul {
+        overflow: hidden !important;
+    }
+
+    .nav-blade ul.nav-list > li a:hover {
+        background-color: #00b294 !important;
+    }
+
+    .nav-blade ul.nav-list > li a.active:hover {
+        background-color: #004b50 !important;
+    }
+
+    .nav-blade ul.nav-list > li a.active-submenu:hover {
+        background-color: #00b294 !important;
+    }
+
+.nav-blade .margin-top {
+    margin-top: 60px !important;
+}
+
+    .nav-blade .margin-top.extra {
+        margin-top: 70px !important;
+    }
+
+.nav-blade ul.nav-list li a {
+    padding: 15px 15px !important;
+}
+
+.nav-blade ul.nav-list li li a {
+    padding-left: 31px !important;
+}
+
+.nav-blade ul.nav-list li li li a {
+    padding-left: 47px !important;
+}
+
+.nav-blade ul.nav-list li li li li a {
+    padding-left: 63px !important;
+}
+
+.nav-blade ul.nav-list li li li li li a {
+    padding-left: 79px !important;
+}
+
+.nav-blade ul.nav-list > li {
+    border-style: solid;
+    border-width: 1px;
+}
+
+    .nav-blade ul.nav-list > li a.active {
+        background-color: #004b50 !important;
+        color: white !important;
+    }
+
+#arrow {
+    padding-left: 5px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    float: right;
+}
+/* Navigation Dropdowns */
+.active-submenu > .arrow:before {
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-size: 13px;
+    font-weight: 100;
+    content: '\e113';
+    margin-left: 10px;
+    width: 15px;
+    height: 12px;
+    margin-top: 6px;
+    line-height: 12px;
+    -moz-transition: all ease-in 0.2s;
+    -o-transition: all ease-in 0.2s;
+    -webkit-transition: all ease-in 0.2s;
+    transition: all ease-in 0.2s;
+    vertical-align: middle;
+    float: right;
+    padding-left: 2px;
+}
+
+.active-submenu.collapsed > .arrow:before {
+    -moz-transform: rotate('angle');
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    float: right;
+} 
+
+.topMenu {
+    font-weight: bold;
+    font-size: 12px !important;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 1px;
+    height: 33px;
+    line-height: 33px;
+    padding-left: 20px;
+    font-family: segoe-ui-semilight, sans-serif;
+    color: #666;
+    background-color: white;
+    padding-right: 20px;
+    position: relative;
+}
+
+    .topMenu .arrow {
+        position: absolute;
+        right: 28px;
+        top: 4px;
+    }
+
+#menu-content {
+    border: 0px !important;
+    border-image: none !important;
+    width: 220px;
+    padding-top: 25px;
+    padding-right: 0px !important;
+    padding-bottom: 25px !important;
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+    display: block;
+    float: left;
+}
+
+    #menu-content nav {
+        width: 305px;
+        margin-right: 50px;
+    }
+
+.container .clearfix.col-md-9 {
+    position: relative;
+    left: 50px;
+}
+
+@media (max-width:768px) {
+    .container .clearfix.col-md-9 {
+        position: initial;
+    }
+
+    .text--xlg {
+        font-size: 43px;
+    }
+}
+
+.text--bold {
+    font-weight: bold;
+    }
+.home-nav-list button, a:hover {
+    text-shadow: 0 0 0 #004b50 !important;
+}
